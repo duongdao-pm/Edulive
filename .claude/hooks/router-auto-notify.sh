@@ -4,7 +4,7 @@
 # Pure bash — khong dung jq, khong dung python.
 # Human KHONG can lam gi — hook tu dong chay.
 
-BOT_TOKEN="8652328774:AAHbn4n13fykJkem-08FNCH4GIUpynE96LU"
+BOT_TOKEN="8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E"
 CHAT_ID="EDULIVE_CHAT_ID"  # TODO: Replace with actual Edulive Telegram group chat ID
 
 # Read hook input from stdin

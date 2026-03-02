@@ -44,7 +44,7 @@ Task: [task]
 ```
 
 ### Telegram Config
-- Bot Token: `8652328774:AAHbn4n13fykJkem-08FNCH4GIUpynE96LU`
+- Bot Token: `8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E`
 - Chat ID: `EDULIVE_CHAT_ID` (TBD — thay the khi co Telegram group)
 - Script: `.claude/hooks/router-auto-notify.sh`
 
