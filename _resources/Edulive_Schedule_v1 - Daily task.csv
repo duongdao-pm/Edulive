@@ -1,0 +1,917 @@
+"Dữ liệu lấy về theo ngày.
+Điều kiện lấy về task là : có thời gian bắt đầu và kết thúc tính đến hiện tại. 
+Trạng thái xử lý : bỏ qua những task đã hoàn thành và hủy bỏ
+Dữ liệu cập nhật trong ngày mỗi 5 phút.
+Dữ liệu ngày trước đó đóng băng ",,,,,,,,,Cập nhật: 17:55 - 27/02,,
+Nhân sự ,Req ID,Project,Start date,End date,Estimate,Tiến độ ,Trạng thái xử lý,Mô tả yêu cầu,Nội dung,Kết quả mong muốn,REF
+📅 27/02/2026 (Hôm nay),,,,,,,,,,,
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 4 tập 1,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+ANH NGỌC,,,,,,,,,,,
+,EDL_RL_017,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu giáo viên,Tỉ lệ giáo viên sử dụng học liệu số để giảng dạy/ tổng thời lượng dạy học / theo môn,,
+,EDL_RL_019,DataWarehouse,28/01/2026,31/03/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,Đơn vị kiến thức học sinh hay mắc lỗi theo khối,,
+,EDL_RL_020,DataWarehouse,28/01/2026,30/03/2026,,50% - Đang thực hiện,Đang thực hiện,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Thống kê nhóm nguy cơ theo tháng: tần suất trả lời sai các câu hỏi cơ bản, không làm bài hoặc nộp bài tập muộn thường xuyên (tần suất trên ngưỡng nào đấy thì liệt vào nhóm nguy cơ)",,
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-C44AZ,BE Checklist,27/01/2026,28/01/2026,,100% - Hoàn thành,Đang thực hiện,Cập nhật native BE,,,
+,REQ-BE-S9I8X,Chuyển School (PHP) sang Java,03/02/2026,06/02/2026,,100% - Hoàn thành,Đang thực hiện,Thực hiện chuyển đổi kiến trúc hệ thống (PHP sang Java) theo kế hoạch chung,Thực hiện chuyển đổi all services. Toại sẽ support,,
+,REQ-BE-TC9CW,BE Checklist,03/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Phát triển bộ đóng gói (Installer) tích hợp cho giải pháp Smartroom.,Đóng gói Service điều khiển hệ thống chạy Silent trên máy Client; hỗ trợ quản lý tập trung.,,
+,REQ-BE-3XYCJ,BE Checklist,03/02/2026,06/02/2026,,0% -Chưa thực hiện,Đã tiếp nhân,Phát triển Servies On/Off từ xa theo bộ cài đặt,Phát triển Servies On/Off từ xa theo bộ cài đặt,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+BE - TOẠI,,,,,,,,,,,
+,,Support,24/02/2026,25/02/2026,3h,50% - Đang thực hiện,Đang thực hiện,hỗ trợ phòng hành chính đặt hàng sạc và ốp 25 con tablet,,,
+,,BE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+,,FE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,test lại và debug tất cả api bên sv253 (nexta) cả backend lẫn frontend ,,,
+,,BE Checklist,26/02/2026,26/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,test lại và debug tất cả api bên sv253 (nexta) cả backend lẫn frontend ,,,
+,,BE Checklist,27/02/2026,27/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,tiếp tục test và sửa giao diện và api ở sv253 (nexta),,,
+BE DŨNG,,,,,,,,,,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,75% - Gần hoàn thành,Đang thực hiện,Dữ liệu từ server biên đẩy lên kafka rồi đồng bộ lên db online,,,
+BE LỰC,,,,,,,,,,,
+,,Social,03/02/2026,04/02/2026,6,75% - Gần hoàn thành,Yêu cầu tạm dừng,Rà soát và lên plan APIS checklist cho Social,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,24/02/2026,,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,24/02/2026,,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,24/02/2026,24/02/2026,,100% - Hoàn thành,Yêu cầu tạm dừng,fix cấu hìn API phần đồng bộ về các server biên,"fix cấu hình API cho phần đồng bộ LessonSeries, TeachChannel về các server biên",,
+,,Social,24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,26/02/2026,27/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,27/02/2026,27/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+FE - HÙNG,,,,,,,,,,,
+,REQ-FE-ZXRJJ,Apps Học Sinh,03/02/2026,03/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bugs liên quan đến apps học sinh phần chức năng vẽ,,,
+,,Apps Học Sinh,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,hoàn thiện chức năng vẽ,,,
+,,Apps Học Sinh,27/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,fix bug 5d ,,,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-2VB5V,Apps Phụ Huynh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật giao diện mới theo yêu cầu,"Màn hình News "" tin tức",Cập nhật phiên bản mới theo yêu cầu mới,Figma
+,,Web - School (Parent - Pupil),24/02/2026,27,,25% - Phân tích làm rõ,Đang thực hiện,hoàn thiện luồng bài tập,,,
+,,Web - School (Parent - Pupil),24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,hoàn thiện luồng bài tập,,,
+FE - MR HƯNG,,,,,,,,,,,
+,REQ-FE-MN1M2,Demo - Triển khai,27/01/2026,28/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật và chuẩn bị sv 202 phụ vụ demo,Đóng gói và chuẩn bị nội dung demo,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình approve cho bộ bài giảng,Cấu hình UI approve trong lesson_series,,
+,,Tool tạo bài giảng - AI,24/02/2026,24/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,https://docs.google.com/spreadsheets/d/1hfy_RA2-RzfwlsZmV736kMAlv5I1v9FpK3gTVHhX8jU/edit?gid=0#gid=0,,
+,,Tool tạo bài giảng - AI,24/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+,,Tool tạo bài giảng - AI,25/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+,,Tool tạo bài giảng - AI,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+,,Tool tạo bài giảng - AI,26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Chỉnh luồng tạo file trên các dòng sp Tool,,,
+,,Tool tạo bài giảng - AI,27/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Chỉnh luồng tạo file trên các dòng sp Tool,,,
+,,Tool tạo bài giảng - AI,27/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-6S5P9,Web - School,03/02/2026,04/02/2026,,25% - Phân tích làm rõ,Yêu cầu tạm dừng,Quản lý lớp học - LMS - Học Liệu,"Hoàn thiện thêm học liệu, 
+Đang xử lý tìm kiếm học liệu, upload học liệu, xử lý nhiều trường hợp học liệu (View)
+Api chưa đáp ứng thêm các học liệu ngoài phạm vi content_id (Đã order BE)",,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,,25% - Phân tích làm rõ,Yêu cầu tạm dừng,Thư viện của tôi - Được tạo bởi tôi,"Tạo folder, upload file, delete file (Xử lý hiển thị kèm sắp xếp file theo loại)",,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Web - School (Parent - Pupil),12/02/2026,13/02/2026,,50% - Đang thực hiện,Đang thực hiện,Xây dựng trang chủ với danh sách tin,,,
+,,Web - School (Parent - Pupil),26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Xây dựng trang chủ với danh sách tin
++ Xử lý lấy data preview cho các tin con lại
+",,,
+FE - QUANG,,,,,,,,,,,
+,REQ-FE-03K5V,Apps Giáo Viên,03/02/2026,03/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Hoàn thiện smartroom,,,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,2,75% - Gần hoàn thành,Đang thực hiện,Fix bug Tool Draw,,,
+,,Apps Giáo Viên,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bug,Fix bug from QC,,
+,,Apps Giáo Viên,23/02/2026,23/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Add Sync Data button in ""Classes"" view","Sync the latest data through the button on the BaseNav, refresh app and update data",,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Preview Question in Doing Slide,,,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Preview Question,,,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Camera AI Classes,,,
+,,Apps Giáo Viên,27/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,,,,
+FE - VĂN ,,,,,,,,,,,
+,REQ-FE-DFW9R,Apps Giáo Viên,03/02/2026,,,50% - Đang thực hiện,Đang thực hiện,Hoàn thiện smartroom,"Cải thiện performance app, tránh tình trạng crash app thường xuyên, support fix bug tồn đọng","App chạy mượt không bị quá tải, không còn bị lỗi",
+,,Apps Giáo Viên,06/02/2026,,,50% - Đang thực hiện,Đang thực hiện,Load thư viện xử lý 3D từ sv biên,,,
+,,Apps Giáo Viên,24/02/2026,24/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Kiểm tra lại tính năng trên app smartroom (vẽ, bài tập, game)",rà soát lại các tính năng chính của app kết hợp với fixbug từ team QC,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Test thông luồng đồng bộ làm bài tập và kết quả,"Chờ team BE (Dũng) fix lại api ở product, trên 251 đã bắn và nhận được kết quả trên school.edu (192.168.110.251)",,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,render 5d ,,,
+,,Apps Giáo Viên,27/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"fixbugsmartroom, chuẩn bị cho demo trên sv17",,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,25/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Test bản 252 chuẩn bị cho VP,,,
+,,Smart room,26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test phòng học ngoại ngữ SV 17 phục vụ demo,Test content và check AI question,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Social ,26/02/2026,27/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Testcase TVCT-UI,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smartroom_tablet ,25/02/2026,01/03/2026,,50% - Đang thực hiện,Đang thực hiện,Test tablet chuẩn bị cho VP,Tesst các luồng chính của smart room HS ,,
+📅 25/02/2026,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Test thông luồng đồng bộ làm bài tập và kết quả,"Chờ team BE (Dũng) fix lại api ở product, trên 251 đã bắn và nhận được kết quả trên school.edu (192.168.110.251)",,
+,,Tool tạo bài giảng - AI,25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+,,Tool tạo bài giảng - AI,25/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Preview Question in Doing Slide,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,Move function from Vue project to ReactJS,,,
+,,App airlib,25/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,bắt thông tin qua kênh mới khi đã kết nối,,,
+,,Web - School (Parent - Pupil),24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,hoàn thiện luồng bài tập,,,
+,,Social,24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Web - School (Parent - Pupil),25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,"Xây dựng trang chủ với danh sách tin
++ Xử lý lấy data preview cho tin Event, 
++ Xử lý token màu sắc responsive",,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+BE - TOẠI,,,,,,,,,,,
+,,Support,24/02/2026,25/02/2026,3h,50% - Đang thực hiện,Đang thực hiện,hỗ trợ phòng hành chính đặt hàng sạc và ốp 25 con tablet,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,test lại và debug tất cả api bên sv253 (nexta) cả backend lẫn frontend ,,,
+BE LỰC,,,,,,,,,,,
+,,LMS,25/02/2026,25/02/2026,3h,75% - Gần hoàn thành,Đang thực hiện,- Đồng bộ slide (3h),,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test smart room bản native,Test đồng bộ 251,,BUG Trường học thông minh
+,,Smart room,25/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Test bản 252 chuẩn bị cho VP,,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,25/02/2026,28/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social ,Test Validation + Function CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",Testcase Social Bug MXH Bug MXH
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test và cập nhật testcase,Thực hiện test Content ,,
+,,Smartroom_tablet ,25/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test đăng nhập vào tablet,Test đăng nhập vào tablet,,
+,,Smartroom_tablet ,25/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test tablet chuẩn bị cho VP,Tesst các luồng chính của smart room HS ,,
+📅 26/02/2026,,,,,,,,,,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+ANH NGỌC,,,,,,,,,,,
+,EDL_RL_018,DataWarehouse,28/01/2026,30/03/2026,,100% - Hoàn thành,Hoàn thành,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Tỉ lệ học sinh yếu, trung bình, khá, giỏi theo kết quả học tập đã làm theo tuần ",,
+,EDL_RL_019,DataWarehouse,28/01/2026,31/03/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,Đơn vị kiến thức học sinh hay mắc lỗi theo khối,,
+,EDL_RL_020,DataWarehouse,28/01/2026,30/03/2026,,50% - Đang thực hiện,Đang thực hiện,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Thống kê nhóm nguy cơ theo tháng: tần suất trả lời sai các câu hỏi cơ bản, không làm bài hoặc nộp bài tập muộn thường xuyên (tần suất trên ngưỡng nào đấy thì liệt vào nhóm nguy cơ)",,
+BE - TOẠI,,,,,,,,,,,
+,,BE Checklist,26/02/2026,26/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,test lại và debug tất cả api bên sv253 (nexta) cả backend lẫn frontend ,,,
+BE LỰC,,,,,,,,,,,
+,,LMS,26/02/2026,26/02/2026,8h,100% - Hoàn thành,Hoàn thành,- Đồng bộ media trong content lên storage (8h),,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,26/02/2026,26/02/2026,,,,,,,
+,,Social,26/02/2026,27/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+FE - HÙNG,,,,,,,,,,,
+,,app airlib,26/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,fix cấu hìn API phần đồng bộ về các server biên,"fix cấu hình API cho phần đồng bộ LessonSeries, TeachChannel về các server biên",,
+FE - KHÁNH,,,,,,,,,,,
+,,Web - School (Parent - Pupil),24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,hoàn thiện luồng bài tập,,,
+FE - MR HƯNG,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,26/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Fixbug Webtool,,,
+,,Tool tạo bài giảng - AI,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+,,Tool tạo bài giảng - AI,26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Chỉnh luồng tạo file trên các dòng sp Tool,,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Xây dựng trang chủ với danh sách tin
++ Xử lý lấy data preview cho các tin con lại
+",,,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Preview Question,,,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Camera AI Classes,,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,26/02/2026,26/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,render 5d ,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test smart room bản native,Test đồng bộ 251,,BUG Trường học thông minh
+,,Smart room,25/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Test bản 252 chuẩn bị cho VP,,,
+,,Smart room,26/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test phòng học ngoại ngữ SV 17 phục vụ demo,Test content và check AI question,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,25/02/2026,27/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test Validation + Function CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",Testcase Social Bug MXH Bug MXH
+,,Social ,26/02/2026,27/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Testcase TVCT-UI,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test và cập nhật testcase,Thực hiện test Content ,,
+,,Smartroom_tablet ,25/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test đăng nhập vào tablet,Test đăng nhập vào tablet,,
+,,Smartroom_tablet ,25/02/2026,01/03/2026,,50% - Đang thực hiện,Đang thực hiện,Test tablet chuẩn bị cho VP,Tesst các luồng chính của smart room HS ,,
+,,Smart room,26/02/2026,27/02/2026,,100% - Hoàn thành,Hoàn thành,Test phòng học ngoại ngữ SV 17 phục vụ demo,Test content và check AI question,,
+📅 24/02/2026,,,,,,,,,,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,100% - Hoàn thành,Đang thực hiện,"Consume Kafka từ EDGE server (exercise, pupuls)",,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,100% - Hoàn thành,Hoàn thành,Đóng gói image frontend (next js chạy với nhiều môi trường khác nhau),,,
+BE - TOẠI,,,,,,,,,,,
+,,Support,24/02/2026,25/02/2026,3h,50% - Đang thực hiện,Đang thực hiện,hỗ trợ phòng hành chính đặt hàng sạc và ốp 25 con tablet,,,
+,,BE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+,,FE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+📅 25/02/2026,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Test thông luồng đồng bộ làm bài tập và kết quả,"Chờ team BE (Dũng) fix lại api ở product, trên 251 đã bắn và nhận được kết quả trên school.edu (192.168.110.251)",,
+,,Tool tạo bài giảng - AI,25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+,,Tool tạo bài giảng - AI,25/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Preview Question in Doing Slide,,,
+,,Apps Giáo Viên,25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,Move function from Vue project to ReactJS,,,
+,,App airlib,25/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,bắt thông tin qua kênh mới khi đã kết nối,,,
+,,Web - School (Parent - Pupil),24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,hoàn thiện luồng bài tập,,,
+,,Social,24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Web - School (Parent - Pupil),25/02/2026,25/02/2026,,100% - Hoàn thành,Hoàn thành,"Xây dựng trang chủ với danh sách tin
++ Xử lý lấy data preview cho tin Event, 
++ Xử lý token màu sắc responsive",,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,75% - Gần hoàn thành,Đang thực hiện,Fixbug java-school native,,,
+BE - TOẠI,,,,,,,,,,,
+,,Support,24/02/2026,25/02/2026,3h,50% - Đang thực hiện,Đang thực hiện,hỗ trợ phòng hành chính đặt hàng sạc và ốp 25 con tablet,,,
+,,BE Checklist,25/02/2026,25/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,test lại và debug tất cả api bên sv253 (nexta) cả backend lẫn frontend ,,,
+BE LỰC,,,,,,,,,,,
+,,LMS,25/02/2026,25/02/2026,3h,75% - Gần hoàn thành,Đang thực hiện,- Đồng bộ slide (3h),,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test smart room bản native,Test đồng bộ 251,,BUG Trường học thông minh
+,,Smart room,25/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Test bản 252 chuẩn bị cho VP,,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,25/02/2026,28/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social ,Test Validation + Function CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",Testcase Social Bug MXH Bug MXH
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test và cập nhật testcase,Thực hiện test Content ,,
+,,Smartroom_tablet ,25/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test đăng nhập vào tablet,Test đăng nhập vào tablet,,
+,,Smartroom_tablet ,25/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test tablet chuẩn bị cho VP,Tesst các luồng chính của smart room HS ,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+📅 24/02/2026,,,,,,,,,,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp yêu cầu của đội giáo viên, mapping với JSON slide từ phía Lương.
+- Tạo luồng xử lý verify dữ liệu kế hoạch bài dạy khi không đạt yêu cầu của JSON template
+- Chỉnh sửa lại api theo yêu cầu mới
+- Test độ chính xác giữa JSON template và dữ liệu kiểm thử
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,27/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,"Chỉnh sửa lại luồng tạo slide, sử dụng JSON template của team nội dung","- Tổng hợp template json từ phía Lương
+- chỉnh sửa lại luồng lấy template
+- mapping dử liệu với json lấy từ db
+- Deploy môi trường server dev","Dữ liệu kiểm thử và dữ liệu JSON template khớp nhau, slide có thể view và sử dụng trực tiếp trên phần mềm edulive.",
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,100% - Hoàn thành,Đang thực hiện,"Consume Kafka từ EDGE server (exercise, pupuls)",,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,100% - Hoàn thành,Hoàn thành,Đóng gói image frontend (next js chạy với nhiều môi trường khác nhau),,,
+BE - TOẠI,,,,,,,,,,,
+,,Support,24/02/2026,25/02/2026,3h,50% - Đang thực hiện,Đang thực hiện,hỗ trợ phòng hành chính đặt hàng sạc và ốp 25 con tablet,,,
+,,BE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+,,FE Checklist,24/02/2026,24/02/2026,8h,50% - Đang thực hiện,Đang thực hiện,sửa lại luồng login check quyền cho school fe và backend,,,
+BE DŨNG,,,,,,,,,,,
+,,BE Checklist,24/02/2026,24/02/2026,4h,75% - Gần hoàn thành,Đang thực hiện,Dữ liệu từ server biên đẩy lên kafka rồi đồng bộ lên db online,,,
+BE LỰC,,,,,,,,,,,
+,,LMS,24/02/2026,24/02/2026,3h,75% - Gần hoàn thành,Đang thực hiện,- Đồng bộ question snapshot (3h),,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,24/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Cấu hình API phần đồng bộ về các server biên,"Ghép API cho phần đồng bộ LessonSeries, TeachChannel về các server biên",,
+,,Social,24/02/2026,,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,24/02/2026,,,50% - Đang thực hiện,Đang thực hiện,"Phân tích, làm rõ, cấu hình phê duyệt nội dung","Làm rõ luồng, cấu hình phê duyệt lesson, lesson_series",,
+,,Social,24/02/2026,24/02/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,fix cấu hìn API phần đồng bộ về các server biên,"fix cấu hình API cho phần đồng bộ LessonSeries, TeachChannel về các server biên",,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,24/02/2026,24/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fix bug còn đọng để build bản cài hoàn chỉnh,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Web - School (Parent - Pupil),24/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,xây dựng trang login,,,
+,,Web - School (Parent - Pupil),24/02/2026,27,,25% - Phân tích làm rõ,Đang thực hiện,hoàn thiện luồng bài tập,,,
+,,Web - School (Parent - Pupil),24/02/2026,27/02/2026,,50% - Đang thực hiện,Đang thực hiện,hoàn thiện luồng bài tập,,,
+FE - MR HƯNG,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,24/02/2026,24/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fixbug Tool,https://docs.google.com/spreadsheets/d/1hfy_RA2-RzfwlsZmV736kMAlv5I1v9FpK3gTVHhX8jU/edit?gid=0#gid=0,,
+,,Tool tạo bài giảng - AI,24/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,Fix luồng kết nối trình chiếu nội dung trên TV,,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),24/02/2026,25/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Xây dựng trang chủ với danh sách tin
++ Xử lý lấy data preview cho tin URL",,,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,24/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Get license infor,,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,24/02/2026,24/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Kiểm tra lại tính năng trên app smartroom (vẽ, bài tập, game)",rà soát lại các tính năng chính của app kết hợp với fixbug từ team QC,,
+,,Apps Giáo Viên,24/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Thêm flag để tắt bật tính năng sử dụng AI cho các dạng câu hỏi,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,23/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Test và cập nhật testcase,Devide group,Viết testcase + logbug (nếu có),
+,,Smart room,24/02/2026,26/02/2026,,100% - Hoàn thành,Hoàn thành,Test smart room bản native,Test đồng bộ 251,,BUG Trường học thông minh
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,23/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smart room,24/02/2026,26/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test và cập nhật testcase,Thực hiện test Content ,,
+📅 23/02/2026,,,,,,,,,,,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,23/02/2026,23/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Add Sync Data button in ""Classes"" view","Sync the latest data through the button on the BaseNav, refresh app and update data",,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,23/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Test và cập nhật testcase,Devide group,Viết testcase + logbug (nếu có),
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,23/02/2026,24/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",
+📅 21/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 22/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 20/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 19/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 18/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 17/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 16/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 15/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 14/02/2026,,,,,,,,,,,
+(Không có dữ liệu),,,,,,,,,,,
+📅 13/02/2026,,,,,,,,,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,13/02/2026,13/02/2026,,75% - Gần hoàn thành,Đang thực hiện,"Fix bug tạo, sửa bộ bài giảng",,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Web - School (Parent - Pupil),12/02/2026,13/02/2026,,50% - Đang thực hiện,Đang thực hiện,Xây dựng trang chủ với danh sách tin,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,School,10/02/2026,13/02/2026,,100% - Hoàn thành,Hoàn thành,Test bản sv edulive.lan (252) đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,School,10/02/2026,13/02/2026,,0% -Chưa thực hiện,Hủy bỏ,Test bản sv edulive2.lan đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Smartroom_tablet ,13/02/2026,13/02/2026,,100% - Hoàn thành,Hoàn thành,Test tablet 3D,"Test content 3D newer, Test Teacher, PC Learner, Tablet Learner ",Test và logbug (nếu có),
+,,Social ,13/02/2026,13/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",
+📅 12/02/2026,,,,,,,,,,,
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,,Tạo dữ liệu cho phần khởi động,Dữ liệu khớp với mô tả trong phần khởi động Doc-02,Doc-02
+FE - CHIẾN,,,,,,,,,,,
+,,Social,12/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,Cấu hình drap and drop cho create lesson_series,"Cấu hình kéo thả vị trí sắp xếp tài liệu, lesson_topic, topic",,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Web - School (Parent - Pupil),12/02/2026,13/02/2026,,50% - Đang thực hiện,Đang thực hiện,Xây dựng trang chủ với danh sách tin,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,School,10/02/2026,13/02/2026,,100% - Hoàn thành,Hoàn thành,Test bản sv edulive.lan (252) đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,School,10/02/2026,13/02/2026,,0% -Chưa thực hiện,Hủy bỏ,Test bản sv edulive2.lan đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,10/02/2026,12/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase CĐND-Validation, Function",Viết testcase ,Testcase Social Testcase Social
+,,Social ,12/02/2026,12/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+📅 11/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên (Toán 2 tập 1)","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 4 tập 1,,
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,,Tạo dữ liệu cho phần khởi động,Dữ liệu khớp với mô tả trong phần khởi động Doc-02,Doc-02
+FE - CHIẾN,,,,,,,,,,,
+,,Social,11/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Cấu hình drap and drop cho edit lesson_series,"Cấu hình kéo thả vị trí sắp xếp tài liệu, lesson_topic, topic",,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,fix bug để đi demo 251,,,
+FE - MR HƯNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình approve cho bộ bài giảng,Cấu hình UI approve trong lesson_series,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Social,11/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Custom env,update next-public-env (runtime) - build,,
+,,Web - School,11/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Custom env,update next-public-env (runtime) - build,,
+,,Web - School (Parent - Pupil),11/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Custom env,update next-public-env (runtime) - build,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,School,10/02/2026,13/02/2026,,100% - Hoàn thành,Hoàn thành,Test bản sv edulive.lan (252) đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,School,10/02/2026,13/02/2026,,0% -Chưa thực hiện,Hủy bỏ,Test bản sv edulive2.lan đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,Smartroom_react,10/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase,,,
+,,School,11/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase QLLH-UI,Viết testcase ,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,10/02/2026,12/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase CĐND-Validation, Function",Viết testcase ,Testcase Social Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smart room,10/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase: Giao bài tập,Viết testcase ,Teacher 251 
+📅 10/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên (Toán 2 tập 1)","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 4 tập 1,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Tạo ra ảnh các bài tập mẫu ,Nghiên cứu giải pháp tạo ảnh minh hoạ cho bài tập toán lớp 1 cho bài tập mẫu từ mục 16 đến mục 30,Có giải pháp để tạo ra các ảnh minh hoạ cho bài tập toán lớp 1 theo mẫu từ mục 16 đến mục 30,
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,,Tạo dữ liệu cho phần khởi động,Dữ liệu khớp với mô tả trong phần khởi động Doc-02,Doc-02
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,09/02/2026,10/02/2026,16h,75% - Gần hoàn thành,Đang thực hiện,Triển khai 2 sv Biên triển khai cho đối tác Hội Hợp B,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,09/02/2026,10/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình lại env server,,,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,fix bug để đi demo 251,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,10/02/2026,,50% - Đang thực hiện,Đang thực hiện,Build bản MVP cho app,,,
+,,Apps Phụ Huynh,09/02/2026,10/02/2026,,50% - Đang thực hiện,Đang thực hiện,Build bản MVP cho app,,,
+FE - MR HƯNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình approve cho bộ bài giảng,Cấu hình UI approve trong lesson_series,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Web - School (Parent - Pupil),09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Build Basic Component Website,,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,10/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,fixbug  thiết bị cùng 1 tài khoản vào 1 lớp nhưng không đẩy ra khỏi lớp,,,
+,,Apps Giáo Viên,10/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Xử lý bug synctab luôn về trang 1 ở học sinh,,,
+,,Apps Giáo Viên,10/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Thêm type cho phần getfile và hiển thị button assign cho content 3D,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Test ,,,
+,,School,10/02/2026,13/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test bản sv edulive.lan (252) đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,School,10/02/2026,13/02/2026,,0% -Chưa thực hiện,Đã tiếp nhận,Test bản sv edulive2.lan đi triển khai VP,"Test lại luồng sản phẩm (tài khoản, cấu hình,..)",Kiểm tra lại sản phẩm demo,
+,,Smartroom_react,10/02/2026,11/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase,,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social ,09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase CĐND - Màn hình xem chi tiết ,Viết testcase ,Testcase Social
+,,Social ,10/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,Cập nhật testcase ,Testcase CĐND-Validation ,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smartroom_tablet ,06/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase và thực hiện test,"Test và cập nhật testcase : Content, Exercise, Game ","Test và cập nhật testcase : Content, Exercise, Game ",HS- Tablet 
+,,Smartroom_tablet ,10/02/2026,10/02/2026,,25% - Phân tích làm rõ,Đã tiếp nhận,Test chuẩn bị cho demo Vĩnh Phúc,"Test lại luồng bài tập, content ",Kiểm tra lại sản phẩm demo,HS- Tablet 
+,,Smart room,10/02/2026,11/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Testcase: Giao bài tập,Viết testcase ,Teacher 251 
+📅 09/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên (Toán 2 tập 1)","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,09/02/2026,11/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 4 tập 1,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,10/02/2026,,50% - Đang thực hiện,Đang thực hiện,Tạo ra ảnh các bài tập mẫu ,Nghiên cứu giải pháp tạo ảnh minh hoạ cho bài tập toán lớp 1 cho bài tập mẫu từ mục 16 đến mục 30,Có giải pháp để tạo ra các ảnh minh hoạ cho bài tập toán lớp 1 theo mẫu từ mục 16 đến mục 30,
+AI - TUYẾN,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,09/02/2026,12/02/2026,,50% - Đang thực hiện,Đang thực hiện,,Tạo dữ liệu cho phần khởi động,Dữ liệu khớp với mô tả trong phần khởi động Doc-02,Doc-02
+BE - MR DIỆN,,,,,,,,,,,
+,,BE Checklist,09/02/2026,10/02/2026,16h,75% - Gần hoàn thành,Đang thực hiện,Triển khai 2 sv Biên triển khai cho đối tác Hội Hợp B,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,09/02/2026,,,25% - Phân tích làm rõ,Đã tiếp nhân,Cấu hình luồng approve bộ bài giảng,"thống nhất luồng, cấu hình lại, thêm, sửa, view bộ bài giảng",,
+,,Social,09/02/2026,10/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình lại env server,,,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,fix bug để đi demo 251,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Sửa lại luồng canvas để sử dụng với dynamic layout,,,
+,,Apps Học Sinh,09/02/2026,10/02/2026,,50% - Đang thực hiện,Đang thực hiện,Build bản MVP cho app,,,
+,,Apps Phụ Huynh,09/02/2026,10/02/2026,,50% - Đang thực hiện,Đang thực hiện,Build bản MVP cho app,,,
+FE - MR HƯNG,,,,,,,,,,,
+,,Apps Học Sinh,09/02/2026,11/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình approve cho bộ bài giảng,Cấu hình UI approve trong lesson_series,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School (Parent - Pupil),09/02/2026,13/02/2026,,25% - Phân tích làm rõ,Đang thực hiện,Thiết kế website cho phụ huynh - Dựng Layout - Menu - Desktop - Component,,,
+,,Web - School (Parent - Pupil),09/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Build Basic Component Website,,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,09/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Fix bug lấy danh sách học sinh ở transfer file,,,
+,,Apps Giáo Viên,09/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Thêm button dẫn vào lớp học ảo khi nhập mã,Học sinh có trong lớp học sẽ join vào lớp khi nhập mã,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Test ,,,
+,,Smart room,09/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Retest tính năng check AI của PHNN,Writing anh speaking,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Social ,06/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH Testcase Social
+,,Social ,09/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase CĐND - Màn hình xem chi tiết ,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smartroom_tablet ,06/02/2026,10/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase và thực hiện test,"Test và cập nhật testcase : Content, Exercise, Game ","Test và cập nhật testcase : Content, Exercise, Game ",HS- Tablet 
+,,Smartroom_tablet ,09/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Viết testcase Cam và Mic,Viết testcase Cam và Mic,HS- Tablet 
+📅 08/02/2026,,,,,,,,,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Sửa lại luồng canvas để sử dụng với dynamic layout,,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Social ,06/02/2026,09/02/2026,,100% - Hoàn thành,Hoàn thành,Test Social ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smartroom_tablet ,06/02/2026,10/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase và thực hiện test,"Test và cập nhật testcase : Content, Exercise, Game ","Test và cập nhật testcase : Content, Exercise, Game ",HS- Tablet 
+📅 07/02/2026,,,,,,,,,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Sửa lại luồng canvas để sử dụng với dynamic layout,,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Social ,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,,Smartroom_tablet ,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Cập nhật testcase và thực hiện test,"Test và cập nhật testcase : Content, Exercise, Game ","Test và cập nhật testcase : Content, Exercise, Game ",HS- Tablet 
+📅 06/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,04/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,05/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 3 tập 2,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,04/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Tạo ra ảnh các bài tập mẫu ,Nghiên cứu giải pháp tạo ảnh minh hoạ cho bài tập toán lớp 1 cho bài tập mẫu từ mục 11 đến mục 30,Có giải pháp để tạo ra các ảnh minh hoạ cho bài tập toán lớp 1 theo mẫu từ mục 11 đến mục 30,
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-S9I8X,Chuyển School (PHP) sang Java,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Thực hiện chuyển đổi kiến trúc hệ thống (PHP sang Java) theo kế hoạch chung,Thực hiện chuyển đổi all services. Toại sẽ support,,
+,REQ-BE-TC9CW,BE Checklist,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Phát triển bộ đóng gói (Installer) tích hợp cho giải pháp Smartroom.,Đóng gói Service điều khiển hệ thống chạy Silent trên máy Client; hỗ trợ quản lý tập trung.,,
+,REQ-BE-3XYCJ,BE Checklist,03/02/2026,06/02/2026,,0% -Chưa thực hiện,Đã tiếp nhân,Phát triển Servies On/Off từ xa theo bộ cài đặt,Phát triển Servies On/Off từ xa theo bộ cài đặt,,
+BE LỰC,,,,,,,,,,,
+,,Social,06/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Đồng bộ trạng thái của teacher chanel,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,05/02/2026,06/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình tệp đính kèm cho bộ bài giảng,"Thực hiện thêm UI và cấu hình API cho việc cấu hình tạo, sửa bộ bài giảng",,
+,,Social,06/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Gen Slide AI,"cấu hình,  kiểm tra data AI gen SLide",,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,hoàn thiện chức năng vẽ,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Sửa lại luồng canvas để sử dụng với dynamic layout,,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School,05/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Làm mịn, clean code",,,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bug,Fix bug from QC,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,04/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,"Bật tắt đồng bộ content trên react(image, video, đã xong content)",,,
+,,Apps Giáo Viên,05/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Chức năng play 3D,Load lên 3D khi bắt đầu chơi,,
+,,Apps Giáo Viên,06/02/2026,,,50% - Đang thực hiện,Đang thực hiện,Load thư viện xử lý 3D từ sv biên,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smart room,06/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase: Login với nhập domain, check bản mới update và liscent",Viết testcase + log bug,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Social,05/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Chuẩn bị dữ liệu kiểm thử cho các chức năng web,Chuẩn bị test data cho tài khoản test mxh,Có đủ dữ liệu để thực hiện kiểm thử chức năng web,
+,,Social ,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-IXIB0,Smartroom_tablet ,02/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase Draw,Cập nhật test ,HS- Tablet 
+,,Smartroom_tablet ,06/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Cập nhật testcase và thực hiện test,"Test và cập nhật testcase : Content, Exercise, Game ","Test và cập nhật testcase : Content, Exercise, Game ",HS- Tablet 
+📅 05/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,04/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,,Kho ảnh cho giáo viên,05/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh toán lớp 3 tập 2,,
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,04/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Tạo ra ảnh các bài tập mẫu ,Nghiên cứu giải pháp tạo ảnh minh hoạ cho bài tập toán lớp 1 cho bài tập mẫu từ mục 11 đến mục 30,Có giải pháp để tạo ra các ảnh minh hoạ cho bài tập toán lớp 1 theo mẫu từ mục 11 đến mục 30,
+,,Tool tạo bài giảng - AI,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,,"Tích hợp updated api của phía Tuyến, xử lý slide khởi động và luyện tập","phần khởi động hiển thị ảnh liên quan đến mô tả, bài tập 3 phần luyện tập hiển thị đúng ảnh nội dung ",
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-S9I8X,Chuyển School (PHP) sang Java,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Thực hiện chuyển đổi kiến trúc hệ thống (PHP sang Java) theo kế hoạch chung,Thực hiện chuyển đổi all services. Toại sẽ support,,
+,REQ-BE-TC9CW,BE Checklist,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Phát triển bộ đóng gói (Installer) tích hợp cho giải pháp Smartroom.,Đóng gói Service điều khiển hệ thống chạy Silent trên máy Client; hỗ trợ quản lý tập trung.,,
+,REQ-BE-3XYCJ,BE Checklist,03/02/2026,06/02/2026,,0% -Chưa thực hiện,Đã tiếp nhân,Phát triển Servies On/Off từ xa theo bộ cài đặt,Phát triển Servies On/Off từ xa theo bộ cài đặt,,
+BE LỰC,,,,,,,,,,,
+,,Social,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Đồng bộ trạng thái của lesson series,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,04/02/2026,05/02/2026,4,50% - Đang thực hiện,Đã tiếp nhân,Làm rõ luồng Đồng bộ nội dung,Liệt kê các phần cần đồng bộ của social và lms từ server online,,
+,,Social,05/02/2026,06/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình tệp đính kèm cho bộ bài giảng,"Thực hiện thêm UI và cấu hình API cho việc cấu hình tạo, sửa bộ bài giảng",,
+FE - HÙNG,,,,,,,,,,,
+,,Apps Học Sinh,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,hoàn thiện chức năng vẽ,,,
+FE - KHÁNH,,,,,,,,,,,
+,,Apps Học Sinh,03/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Buil bản cài có thể dynamic layout,Có thể on/off các module icon tính năng từ Firebase không qua build lại apps.,,
+FE - NGHĨA,,,,,,,,,,,
+,,Web - School,05/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Làm mịn, clean code",,,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,05/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bug,Fix bug from QC,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,04/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,"Bật tắt đồng bộ content trên react(image, video, đã xong content)",,,
+,,Apps Giáo Viên,04/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Switch tab 3d,,,
+,,Apps Giáo Viên,05/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Chức năng play 3D,Load lên 3D khi bắt đầu chơi,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smartroom_react,04/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase: Board,Viết testcase ,Testcase PHNN - GV
+,,School_203,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Check bản 203,Import tài khoản,Cập nhật trạng thái bug ,Bug Trang quản trị 
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng: Phần mềm Lớp học Stem cho Giáo viên (Teacher's Stem Room),Tính năng Tổ chức Lớp học,,Stem Room Ver1 - Tablet HS - Spec - Updated 29_10_2025.xlsx
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng: Phần mềm Lớp học Stem cho Giáo viên (Teacher's Stem Room),"Tính năng Quản lý & Trình chiếu Nội dung (Thí nghiệm ảo, Slide tương tác,....)",,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng: Phần mềm Lớp học Stem cho Giáo viên (Teacher's Stem Room),Tính năng bảng trắng,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng: Phần mềm Lớp học Stem cho Giáo viên (Teacher's Stem Room),"Tính năng chia sẻ file (audio, video, chia sẻ màn hình,...)",,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng:  Phần mềm Quản lý dạy học Stem cho Giáo viên (Teacher's Stem LMS),"Công cụ giao Bài tập, Dự án cho học sinh, Nhóm học sinh",,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng:  Phần mềm Quản lý dạy học Stem cho Giáo viên (Teacher's Stem LMS),Module Quản lý tài khoản,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng:  Phần mềm Quản lý dạy học Stem cho Giáo viên (Teacher's Stem LMS),Module Quản lý Lớp học,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Retest bug đã fix,Bản react,,"Bug SmartRoom - 13, 14, 16, 17"
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,,Social_203,05/02/2026,09/02/2026,,50% - Đang thực hiện,Đang thực hiện,Test Social 203 ,Test CĐND-UI,"Test và logbug, cập nhật trạng thái bug (nếu có)",Bug MXH
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Rà soát tính năng:  Phần mềm Quản lý dạy học Stem cho Giáo viên (Teacher's Stem LMS),Module Quản lý nội dung (Thư viện của tôi),,Stem Room Ver1 - Tablet HS - Spec - Updated 29_10_2025.xlsx
+,,Social,05/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Chuẩn bị dữ liệu kiểm thử cho các chức năng web,Chuẩn bị test data cho tài khoản test mxh,Có đủ dữ liệu để thực hiện kiểm thử chức năng web,
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-IXIB0,Smartroom_tablet ,02/02/2026,06/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase Draw,Cập nhật test ,HS- Tablet 
+,,Smartroom_tablet ,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Re-test bug draw : [Selection Tool], [Text tool]","Re-test các bug đang được ghi nhận trong sheet, đồng thời cập nhật trạng thái bug theo kết quả test mới nhất",Cập nhật trạng thái bug ,Bug Tablet SmartRoom
+,,Smartroom_tablet ,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase tính năng Login,Viết testcase + test + logbug (Login),HS- Tablet 
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+",Đăng nhập & Tham gia Lớp học,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+",Tiếp nhận Trình chiếu và tương tác,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+","Thực hành Bài tập, Dự án trên lớp",,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+",Công cụ Hợp tác làm Dự án nhóm,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+",Bảng trắng Tương tác (Whiteboard),,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+",Các công cụ Giao tiếp trong Lớp học,,
+,,Smart room,05/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,"Rà soát tính năng:  Phần mềm Lớp học Stem cho Học sinh (Student's Stem Room) 
+","Làm Bài kiểm tra, Bài thi",,
+📅 04/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-EP91N,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét trong tập 1 sách toán lớp 1,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+,,Kho ảnh cho giáo viên,04/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark","Tổng hợp phân ảnh chia theo cấp tiết học, đóng gói gửi cho giáo viên","- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+,,Tool tạo bài giảng - AI,04/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Phân tách dữ liệu bài tập để dễ kết hợp biểu diễn trên slide,"Tách dữ liệu bài tập 3 trang 15 thành 2 cầu hỏi nhỏ a, b để dễ kết hợp biểu diễn trên slide",,
+AI - NAM,,,,,,,,,,,
+,REQ-AI-9OXYW,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh lớp 3 tập 1,"- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - THỊNH,,,,,,,,,,,
+,,Tool tạo bài giảng - AI,04/02/2026,05/02/2026,,50% - Đang thực hiện,Đang thực hiện,Tạo ra ảnh các bài tập mẫu ,Nghiên cứu giải pháp tạo ảnh minh hoạ cho bài tập toán lớp 1 cho bài tập mẫu từ mục 11 đến mục 30,Có giải pháp để tạo ra các ảnh minh hoạ cho bài tập toán lớp 1 theo mẫu từ mục 11 đến mục 30,
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-6AQKP,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,"Mapping dữ liệu json và bài tập trong db (fill_in_plan, single_choice,..)",,
+,REQ-AI-HKO6Z,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,Tạo prompt phân tích dữ liệu bài tập từ db,,
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-S9I8X,Chuyển School (PHP) sang Java,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Thực hiện chuyển đổi kiến trúc hệ thống (PHP sang Java) theo kế hoạch chung,Thực hiện chuyển đổi all services. Toại sẽ support,,
+,REQ-BE-TC9CW,BE Checklist,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Phát triển bộ đóng gói (Installer) tích hợp cho giải pháp Smartroom.,Đóng gói Service điều khiển hệ thống chạy Silent trên máy Client; hỗ trợ quản lý tập trung.,,
+,REQ-BE-3XYCJ,BE Checklist,03/02/2026,06/02/2026,,0% -Chưa thực hiện,Đã tiếp nhân,Phát triển Servies On/Off từ xa theo bộ cài đặt,Phát triển Servies On/Off từ xa theo bộ cài đặt,,
+BE LỰC,,,,,,,,,,,
+,,Social,03/02/2026,04/02/2026,6,25% - Phân tích làm rõ,Đang thực hiện,Rà soát và lên plan APIS checklist cho Social,,,
+,,Social,04/02/2026,04/02/2026,8,0% -Chưa thực hiện,,Thực hiện master search cho lesson và lesson series,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,04/02/2026,04/02/2026,2,50% - Đang thực hiện,Đã tiếp nhân,Social,Master_search,Dữ liệu trả ra đúng với text search,
+,,Social,04/02/2026,04/02/2026,,50% - Đang thực hiện,Đã tiếp nhân,Social,"Ktra data, hiển thị dữ liệu dữ liệu của lesson_series ở các api liên qua",Dữ liệu hiển thị đồng bộ tại tất cả các api,
+,,Social,04/02/2026,04/02/2026,,100% - Hoàn thành,Đang thực hiện,Cấu hình UI filter,Cấu hình UI file phân loại file cho Thư viện của tôi,,
+,,Social,04/02/2026,05/02/2026,4,50% - Đang thực hiện,Đã tiếp nhân,Làm rõ luồng Đồng bộ nội dung,Liệt kê các phần cần đồng bộ của social và lms từ server online,,
+,,Social,04/02/2026,04/02/2026,2,50% - Đang thực hiện,Đang thực hiện,[EPIC] Cộng đồng nội dung,Master_search,Cập nhật chỉnh sửa chức năng search,
+,,Social,04/02/2026,04/02/2026,2,50% - Đang thực hiện,Đang thực hiện,[EPIC] Cộng đồng nội dung,Tích hợp với APis và hiển thị dữ liệu mới,,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-VU4J4,Apps Học Sinh,03/02/2026,04/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Sửa lại luồng challenge để sử dụng với dynamic layout,,,
+,,Apps Học Sinh,03/02/2026,04/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Sửa lại luồng challenge để sử dụng với dynamic layout,,,
+,,Apps Học Sinh,03/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Buil bản cài có thể dynamic layout,Có thể on/off các module icon tính năng từ Firebase không qua build lại apps.,,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-9OBFD,Web - School,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Quản lý lớp học - Lớp học thông minh - Câu hỏi lẻ - Thống kê,Thêm thống kê cho câu speak,Đã thống kê được speak,
+,REQ-FE-6S5P9,Web - School,03/02/2026,04/02/2026,,25% - Phân tích làm rõ,Yêu cầu tạm dừng,Quản lý lớp học - LMS - Học Liệu,"Hoàn thiện thêm học liệu, 
+Đang xử lý tìm kiếm học liệu, upload học liệu, xử lý nhiều trường hợp học liệu (View)
+Api chưa đáp ứng thêm các học liệu ngoài phạm vi content_id (Đã order BE)",,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,,25% - Phân tích làm rõ,Yêu cầu tạm dừng,Thư viện của tôi - Được tạo bởi tôi,"Tạo folder, upload file, delete file (Xử lý hiển thị kèm sắp xếp file theo loại)",,
+FE - QUANG,,,,,,,,,,,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,2,100% - Hoàn thành,Hoàn thành,Hoàn thiện chức năng phòng học 3D,Set cam lead and interaction mode auto for VR-Device when joins 3D room,,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,3,100% - Hoàn thành,Hoàn thành,"Bổ sung màn Classes AI, Ranking ",Implement code from Vue project to React and call API get AI Classes,,
+,,Apps Giáo Viên,04/02/2026,04/02/2026,2,75% - Gần hoàn thành,Đang thực hiện,Fix bug Tool Draw,,,
+FE - VĂN ,,,,,,,,,,,
+,,Apps Giáo Viên,04/02/2026,05/02/2026,,50% - Đang thực hiện,Đang thực hiện,"Bật tắt đồng bộ content trên react(image, video, content)",,,
+,,Apps Giáo Viên,04/02/2026,05/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Switch tab 3d,,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smartroom_react,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (Speaking),
+,,Smartroom_react,04/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase: Transfer file,,Testcase PHNN - GV
+,,Smartroom_react,04/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase: Board,Viết testcase ,Testcase PHNN - GV
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-5WF2W,Social,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase Blogs,Viết testcase ,Testcase Social
+,,Social,04/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase CĐND-UI tổng quát ,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-IXIB0,Smartroom_tablet ,02/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Test và cập nhật testcase Draw,Cập nhật test ,HS- Tablet 
+,REQ-QC-O1TSM,Smartroom_tablet ,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Logbug testcase Draw,"- Thực hiện Logbug phần Draw: [Text tool], Style Settings, Selection Tool","Chức năng Draw hoạt động ổn định, dữ liệu được lưu và hiển thị nhất quán trong suốt quá trình sử dụng.",Bug Tablet SmartRoom
+,,Smart room,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Test trắng màn ,Test trắng màn khi thực hiện mở nội dung,Không bị trắng màn khi mở nội dung,
+📅 03/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-EP91N,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét trong tập 1 sách toán lớp 1,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-9OXYW,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh lớp 3 tập 1,"- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+,,Tool tạo bài giảng - AI,03/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,Host api json phục vụ cho tool bài giảng,Host tool json bài giảng,Chạy host và kết nối api được,http://123.31.43.23:8503/docs#
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-QYF8X,Tool tạo bài giảng - AI,02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,,Test full luồng tạo bài giảng cho tài liệu Doc_1,"Full luồng tạo bài giảng hoạt động bình thường, đúng nội dung KHBD",
+,REQ-AI-TOLQA,Tool tạo bài giảng - AI,02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,,Fix bug sai dữ liệu cho câu hỏi phần vận dụng trong slide,Dữ liệu câu hỏi đúng cho phần vận dụng,
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-6AQKP,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,"Mapping dữ liệu json và bài tập trong db (fill_in_plan, single_choice,..)",,
+,REQ-AI-HKO6Z,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,Tạo prompt phân tích dữ liệu bài tập từ db,,
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-S9I8X,Chuyển School (PHP) sang Java,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Thực hiện chuyển đổi kiến trúc hệ thống (PHP sang Java) theo kế hoạch chung,Thực hiện chuyển đổi all services. Toại sẽ support,,
+,REQ-BE-TC9CW,BE Checklist,03/02/2026,06/02/2026,,50% - Đang thực hiện,Đang thực hiện,Phát triển bộ đóng gói (Installer) tích hợp cho giải pháp Smartroom.,Đóng gói Service điều khiển hệ thống chạy Silent trên máy Client; hỗ trợ quản lý tập trung.,,
+,REQ-BE-3XYCJ,BE Checklist,03/02/2026,06/02/2026,,0% -Chưa thực hiện,Đã tiếp nhân,Phát triển Servies On/Off từ xa theo bộ cài đặt,Phát triển Servies On/Off từ xa theo bộ cài đặt,,
+BE LỰC,,,,,,,,,,,
+,,Social,03/02/2026,04/02/2026,6,25% - Phân tích làm rõ,Đang thực hiện,Rà soát và lên plan APIS checklist cho Social,,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,03/02/2026,,,0% -Chưa thực hiện,,Đồng bộ bài giảng,"Cấu hình UI, triển khai luồng đồng bộ bài từ server online về các server biên",,
+FE - HÙNG,,,,,,,,,,,
+,REQ-FE-ZXRJJ,Apps Học Sinh,03/02/2026,03/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bugs liên quan đến apps học sinh phần chức năng vẽ,,,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-VU4J4,Apps Học Sinh,03/02/2026,04/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Sửa lại luồng challenge để sử dụng với dynamic layout,,,
+,REQ-FE-HGDJN,Apps Học Sinh,03/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,Buil bản cài có thể dynamic layout,Có thể on/off các module icon tính năng từ Firebase không qua build lại apps.,,
+,,Apps Học Sinh,03/02/2026,04/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Sửa lại luồng challenge để sử dụng với dynamic layout,,,
+,,Apps Học Sinh,03/02/2026,05/02/2026,,100% - Hoàn thành,Hoàn thành,Buil bản cài có thể dynamic layout,Có thể on/off các module icon tính năng từ Firebase không qua build lại apps.,,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-N08K1,Web - School (Parent - Pupil),02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,"Xây base - config hệ thống website cho phụ huynh, học sinh","feat(config_env, config_auth, config_exception, config docker, config i18n)",Cấu hình đẩy lên beta,
+,REQ-FE-9OBFD,Web - School,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Quản lý lớp học - Lớp học thông minh - Câu hỏi lẻ - Thống kê,Thêm thống kê cho câu speak,Đã thống kê được speak,
+,REQ-FE-6S5P9,Web - School,03/02/2026,04/02/2026,,25% - Phân tích làm rõ,Yêu cầu tạm dừng,Quản lý lớp học - LMS - Học Liệu,"Hoàn thiện thêm học liệu, 
+Đang xử lý tìm kiếm học liệu, upload học liệu, xử lý nhiều trường hợp học liệu (View)
+Api chưa đáp ứng thêm các học liệu ngoài phạm vi content_id (Đã order BE)",,
+FE - QUANG,,,,,,,,,,,
+,REQ-FE-03K5V,Apps Giáo Viên,03/02/2026,03/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Hoàn thiện smartroom,,,
+FE - VĂN ,,,,,,,,,,,
+,REQ-FE-DFW9R,Apps Giáo Viên,03/02/2026,03/02/2026,,50% - Đang thực hiện,Đang thực hiện,Hoàn thiện smartroom,"Cải thiện performance app, tránh tình trạng crash app thường xuyên, support fix bug tồn đọng","App chạy mượt không bị quá tải, không còn bị lỗi",
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smartroom_react,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (Speaking),
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-5WF2W,Social,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase Blogs,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-IXIB0,Smartroom_tablet ,02/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Test và cập nhật testcase Draw,Cập nhật test ,HS- Tablet 
+,REQ-QC-O1TSM,Smartroom_tablet ,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Logbug testcase Draw,"- Thực hiện Logbug phần Draw: [Text tool], Style Settings, Selection Tool","Chức năng Draw hoạt động ổn định, dữ liệu được lưu và hiển thị nhất quán trong suốt quá trình sử dụng.",Bug Tablet SmartRoom
+,,Smart room,03/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Test trắng màn ,Test trắng màn khi thực hiện mở nội dung,Không bị trắng màn khi mở nội dung,
+,,,,,,,,,,,
+📅 02/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-EP91N,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét trong tập 1 sách toán lớp 1,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-9OXYW,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh lớp 3 tập 1,"- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-QYF8X,Tool tạo bài giảng - AI,02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,,Test full luồng tạo bài giảng cho tài liệu Doc_1,"Full luồng tạo bài giảng hoạt động bình thường, đúng nội dung KHBD",
+,REQ-AI-TOLQA,Tool tạo bài giảng - AI,02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,,Fix bug sai dữ liệu cho câu hỏi phần vận dụng trong slide,Dữ liệu câu hỏi đúng cho phần vận dụng,
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-6AQKP,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,"Mapping dữ liệu json và bài tập trong db (fill_in_plan, single_choice,..)",,
+,REQ-AI-HKO6Z,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,Tạo prompt phân tích dữ liệu bài tập từ db,,
+FE - CHIẾN,,,,,,,,,,,
+,,Social,02/02/2026,02/02/2026,,100% - Hoàn thành,,view canvas 3d,"Cấu hình view, tương tác canvas 3d trên ""Thư viện của tôi""",,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-N08K1,Web - School (Parent - Pupil),02/02/2026,03/02/2026,,100% - Hoàn thành,Hoàn thành,"Xây base - config hệ thống website cho phụ huynh, học sinh","feat(config_env, config_auth, config_exception, config docker, config i18n)",Cấu hình đẩy lên beta,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,,Smartroom_react,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (Speaking),
+,REQ-QC-5SVVW,Smartroom_react,02/02/2026,02/02/2026,,100% - Hoàn thành,Hoàn thành,Re-test và báo cáo trạng thái hiện tại của bug,miss phần lưu kết quả câu hỏi speak ở smartroom lên server,Cập nhật trạng thái bug ,Bug SmartRoom
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-5WF2W,Social,02/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase Blogs,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-XFZ2B,Smartroom_tablet ,02/02/2026,02/02/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase Draw : Redo,  Copy, Paste, Eraser,  Delete, Close",Viết testcase  (Draw),HS- Tablet 
+,REQ-QC-IXIB0,Smartroom_tablet ,02/02/2026,06/02/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật testcase ,Test và cập nhật testcase Draw,Cập nhật test ,HS- Tablet 
+,,,,,,,,,,,
+📅 01/02/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-EP91N,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét trong tập 1 sách toán lớp 1,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-9OXYW,Kho ảnh cho giáo viên,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Tạo kho dữ liệu ảnh lớp 3 tập 1,"- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-6AQKP,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,"Mapping dữ liệu json và bài tập trong db (fill_in_plan, single_choice,..)",,
+,REQ-AI-HKO6Z,Tool tạo bài giảng - AI,01/02/2026,04/02/2026,,100% - Hoàn thành,Hoàn thành,,Tạo prompt phân tích dữ liệu bài tập từ db,,
+,,,,,,,,,,,
+📅 30/01/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-2K599,Kho ảnh cho giáo viên,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-GKGT5,Tool tạo bài giảng - AI,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài single_choice,Kiểm tra và lên hình trên phần mềm test,
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-F7TWL,Tool tạo bài giảng - AI,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Tích hợp JSON hỗ trợ dạng bài Matching cho trường hợp Nối hình với số,,
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-TMBTG,Tool tạo bài giảng - AI,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Nội dung phần bài tập có nhiều dạng bài, cần kết hợp các custom json của Nam để hiển thị lên slide ",kết hợp với Nam xử lý phần json cho phần bài tập,Kiểm tra và lên hình trên phần mềm test,
+ANH NGỌC,,,,,,,,,,,
+,EDL_RL_016,DataWarehouse,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Dữ liệu giáo viên,Tỉ lệ giáo viên tạo học liệu theo tháng,,
+,EDL_RL_017,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Đang thực hiện,Dữ liệu giáo viên,Tỉ lệ giáo viên sử dụng học liệu số để giảng dạy/ tổng thời lượng dạy học / theo môn,,
+,EDL_RL_018,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Tỉ lệ học sinh yếu, trung bình, khá, giỏi theo kết quả học tập đã làm theo tuần ",,
+,EDL_RL_019,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,Đơn vị kiến thức học sinh hay mắc lỗi theo khối,,
+,EDL_RL_020,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Thống kê nhóm nguy cơ theo tháng: tần suất trả lời sai các câu hỏi cơ bản, không làm bài hoặc nộp bài tập muộn thường xuyên (tần suất trên ngưỡng nào đấy thì liệt vào nhóm nguy cơ)",,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,REQ-QC-R9HJS,Smartroom_react,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (PHNN),
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-VM66E,Social,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase Cài đặt ,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-FZKBH,Smartroom_tablet ,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase Draw : Text Tool ,  Shape Tool, Style Settings , Selection Tool  , Undo     ",,HS- Tablet 
+QC - VŨ HỒNG ANH,,,,,,,,,,,
+,REQ-QC-QA5Q4,Social,28/01/2026,30/01/2026,,25% - Phân tích làm rõ,Hủy bỏ,Cập nhật testcase ,Test case Kênh của tôi ,,Testcase Social- KCT
+,,,,,,,,,,,
+📅 29/01/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-2K599,Kho ảnh cho giáo viên,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-GKGT5,Tool tạo bài giảng - AI,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài single_choice,Kiểm tra và lên hình trên phần mềm test,
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-ZULVU,Tool tạo bài giảng - AI,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Điều chỉnh cho phần khám phá đúng với ý tưởng trong KHBD,Tích hợp JSON hỗ trợ nội dung Khám phá trong Kế hoạch bài dạy,"Hiện thị đúng mô tả là hình minh hoạ, không phải là bài tập",Doc-01
+,REQ-AI-F7TWL,Tool tạo bài giảng - AI,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Tích hợp JSON hỗ trợ dạng bài Matching cho trường hợp Nối hình với số,,
+,REQ-AI-CTZT1,Tool tạo bài giảng - AI,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Phần vận dụng chưa đúng với trong KHBD,Điều chỉnh prompt vẽ hình ảnh đồ vật trong gia đình cho phần Vận dụng (Doc_1) trong kế hoạch bài dạy,,Doc-01
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-TMBTG,Tool tạo bài giảng - AI,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Nội dung phần bài tập có nhiều dạng bài, cần kết hợp các custom json của Nam để hiển thị lên slide ",kết hợp với Nam xử lý phần json cho phần bài tập,Kiểm tra và lên hình trên phần mềm test,
+,REQ-AI-5AS0P,Tool tạo bài giảng - AI,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Nội dung phần khởi động đáp ứng yêu cầu trong docs,chỉnh sửa phần prompt tạo ảnh cho phần khởi động,"nội dung phần khởi động phong phú ,sinh động hơn",Doc-01
+ANH NGỌC,,,,,,,,,,,
+,EDL_RL_016,DataWarehouse,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Dữ liệu giáo viên,Tỉ lệ giáo viên tạo học liệu theo tháng,,
+,EDL_RL_017,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Đang thực hiện,Dữ liệu giáo viên,Tỉ lệ giáo viên sử dụng học liệu số để giảng dạy/ tổng thời lượng dạy học / theo môn,,
+,EDL_RL_018,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Tỉ lệ học sinh yếu, trung bình, khá, giỏi theo kết quả học tập đã làm theo tuần ",,
+,EDL_RL_019,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,Đơn vị kiến thức học sinh hay mắc lỗi theo khối,,
+,EDL_RL_020,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Thống kê nhóm nguy cơ theo tháng: tần suất trả lời sai các câu hỏi cơ bản, không làm bài hoặc nộp bài tập muộn thường xuyên (tần suất trên ngưỡng nào đấy thì liệt vào nhóm nguy cơ)",,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-2VB5V,Apps Phụ Huynh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật giao diện mới theo yêu cầu,"Màn hình News "" tin tức",Cập nhật phiên bản mới theo yêu cầu mới,Figma
+,REQ-FE-SLCTE,Apps Học Sinh,29/01/2026,29/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Fix bugs liên quan về phần bài tập trên apps học sinh,Bugs liên quan UI,,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-RSRRG,Web - School,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Quản lý lớp học - Lớp học thông minh,Nội dung lớp đã diễn ra - Câu hỏi lẻ - Chi tiết lịch sử từng câu hỏi,Đang làm giao diện,
+,REQ-FE-DQJOD,Web - School,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,School - LMS,UI: LMS - Bài tập - Chi tiết bài tập- HIển thị thời gian ,chỉnh sửa giao diện hiển thị thời gian câu hỏi,EDU SCHOOL
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,REQ-QC-25RIP,SV 202 Native,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,QC kiểm tra lại bản native do BE mới đẩy lên,Test lại luồng sản phẩm trên sv 202,Kiểm tra lại sản phẩm demo,
+,REQ-QC-R9HJS,Smartroom_react,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (PHNN),
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-MUWDL,Social,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Test UI Mobile ,Test màn hình Cộng đồng nội dung - Chế độ khách ,Test + Logbug UI,Bug MXH
+,REQ-QC-VM66E,Social,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Testcase Cài đặt ,Viết testcase ,Testcase Social
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-D1DUN,Smartroom_tablet ,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Test chuẩn bị cho demo Vĩnh Phúc, Test Exercise & 3D ,"HS nhận và làm được bài tập Game và Exercise 
+3D xoáyz 360 độ và tương tác khi đc GV cấp quyền ",Testcase       
+,REQ-QC-FZKBH,Smartroom_tablet ,29/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,"Testcase Draw : Text Tool ,  Shape Tool, Style Settings , Selection Tool  , Undo     ",,HS- Tablet 
+QC - VŨ HỒNG ANH,,,,,,,,,,,
+,REQ-QC-QA5Q4,Social,28/01/2026,30/01/2026,,25% - Phân tích làm rõ,Hủy bỏ,Cập nhật testcase ,Test case Kênh của tôi ,,Testcase Social- KCT
+,REQ-QC-U5945,App Học sinh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Hủy bỏ,,Test luồng học sinh làm tập được giao từ LMS của gv ,HS nhận và làm được các bài tập mà GV đã giao trên LMS (Hiện tại nhận được bài trên LMS nhưng không làm được cái bài tập ),BUG AppHS
+,REQ-QC-C74AF,Social ,29/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật testcase ,Bài giảng| Bộ bài giảng ở trạng thái private nhưng vẫn hiển thị trên cộng đồng nội dung ,Những bài giảng | Bộ bài giảng ở trạng thái private không hiển thị trên cộng đồng nội dung ,Bug MXH - STT 109
+,,,,,,,,,,,
+📅 28/01/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-YCFVO,Quản lý dự án,28/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,PM mô tả phạm vi báo cáo và hoạt động logs task cho team ,Cập nhật và bổ sung công việc cho team ,Bổ sung dữ liệu lên Edulive Schedule,https://docs.google.com/spreadsheets/d/1jm4YZGNz4rDyqtlC8KWs141FAR5pgRGG/edit?gid=1539594239#gid=1539594239
+,REQ-AI-2K599,Kho ảnh cho giáo viên,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-PE6P2,Tool tạo bài giảng - AI,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài matching,Kiểm tra và lên hình trên phần mềm test,
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-24IFR,Tool tạo bài giảng - AI,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Gửi mô tả functions code tạo ảnh cho anh Linh,Soạn nội dung mô tả functions code tạo ảnh gửi cho anh Linh,Anh Linh nhận được mô tả và tiếp tục công việc,
+,REQ-AI-ZULVU,Tool tạo bài giảng - AI,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Điều chỉnh cho phần khám phá đúng với ý tưởng trong KHBD,Tích hợp JSON hỗ trợ nội dung Khám phá trong Kế hoạch bài dạy,"Hiện thị đúng mô tả là hình minh hoạ, không phải là bài tập",Doc-01
+,REQ-AI-CTZT1,Tool tạo bài giảng - AI,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Phần vận dụng chưa đúng với trong KHBD,Điều chỉnh prompt vẽ hình ảnh đồ vật trong gia đình cho phần Vận dụng (Doc_1) trong kế hoạch bài dạy,,Doc-01
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-TMBTG,Tool tạo bài giảng - AI,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Nội dung phần bài tập có nhiều dạng bài, cần kết hợp các custom json của Nam để hiển thị lên slide ",kết hợp với Nam xử lý phần json cho phần bài tập,Kiểm tra và lên hình trên phần mềm test,
+,REQ-AI-5AS0P,Tool tạo bài giảng - AI,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Nội dung phần khởi động đáp ứng yêu cầu trong docs,chỉnh sửa phần prompt tạo ảnh cho phần khởi động,"nội dung phần khởi động phong phú ,sinh động hơn",Doc-01
+ANH NGỌC,,,,,,,,,,,
+,EDL_RL_016,DataWarehouse,28/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,Dữ liệu giáo viên,Tỉ lệ giáo viên tạo học liệu theo tháng,,
+,EDL_RL_017,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Đang thực hiện,Dữ liệu giáo viên,Tỉ lệ giáo viên sử dụng học liệu số để giảng dạy/ tổng thời lượng dạy học / theo môn,,
+,EDL_RL_018,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Tỉ lệ học sinh yếu, trung bình, khá, giỏi theo kết quả học tập đã làm theo tuần ",,
+,EDL_RL_019,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,Đơn vị kiến thức học sinh hay mắc lỗi theo khối,,
+,EDL_RL_020,DataWarehouse,28/01/2026,30/01/2026,,50% - Đang thực hiện,Yêu cầu tạm dừng,Dữ liệu học viên trên toàn bộ dữ liệu học ở lớp,"Thống kê nhóm nguy cơ theo tháng: tần suất trả lời sai các câu hỏi cơ bản, không làm bài hoặc nộp bài tập muộn thường xuyên (tần suất trên ngưỡng nào đấy thì liệt vào nhóm nguy cơ)",,
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-C44AZ,BE Checklist,27/01/2026,28/01/2026,,50% - Đang thực hiện,Đang thực hiện,Cập nhật native BE,,,
+,REQ-BE-6DAXS,Demo - Triển khai,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Fix bugs sửa lỗi sv 202 phục vụ demo,,,
+BE - TOẠI,,,,,,,,,,,
+,REQ-BE-QUOZW,Demo - Triển khai,27/01/2026,28/01/2026,,50% - Đang thực hiện,Đang thực hiện,Chuẩn bị sever 202 cho demo,,,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-2VB5V,Apps Phụ Huynh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật giao diện mới theo yêu cầu,"Màn hình News "" tin tức",Cập nhật phiên bản mới theo yêu cầu mới,Figma
+,,Apps Học Sinh,27/01/2026,28/01/2026,,0% -Chưa thực hiện,,Guide line thông tin đẩy apps,Collect các thông tin về yêu cầu nội dung để đẩy apps,Cập nhật các thông số và kích cỡ nội dung vào file,https://docs.google.com/spreadsheets/d/12vaxzq6QmRNiXi6A5m5nANjkBCn1caJg-2xt_-HnpxM/edit?gid=0#gid=0
+FE - MR HƯNG,,,,,,,,,,,
+,REQ-FE-MN1M2,Demo - Triển khai,27/01/2026,28/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật và chuẩn bị sv 202 phụ vụ demo,Đóng gói và chuẩn bị nội dung demo,,
+FE - NGHĨA,,,,,,,,,,,
+,REQ-FE-RSRRG,Web - School,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Quản lý lớp học - Lớp học thông minh,Nội dung lớp đã diễn ra - Câu hỏi lẻ - Chi tiết lịch sử từng câu hỏi,Đang làm giao diện,
+,REQ-FE-DQJOD,Web - School,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,School - LMS,UI: LMS - Bài tập - Chi tiết bài tập- HIển thị thời gian ,chỉnh sửa giao diện hiển thị thời gian câu hỏi,EDU SCHOOL
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,REQ-QC-25RIP,SV 202 Native,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,QC kiểm tra lại bản native do BE mới đẩy lên,Test lại luồng sản phẩm trên sv 202,Kiểm tra lại sản phẩm demo,
+,REQ-QC-R9HJS,Smartroom_react,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (PHNN),
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-MUWDL,Social,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Test UI Mobile ,Test màn hình Cộng đồng nội dung - Chế độ khách ,Test + Logbug UI,Bug MXH
+QC - TRẦN THỊ ANH ĐÀO,,,,,,,,,,,
+,REQ-QC-D1DUN,Smartroom_tablet ,28/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Test chuẩn bị cho demo Vĩnh Phúc, Test Exercise & 3D ,"HS nhận và làm được bài tập Game và Exercise 
+3D xoáyz 360 độ và tương tác khi đc GV cấp quyền ",Testcase       
+,REQ-QC-M1F98,Smartroom_tablet ,28/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Test chuẩn bị cho demo Vĩnh Phúc,"- Phối hợp đảm bảo Content
+", Content chạy đúng theo kịch bản demo - Cập nhật lên file,Content 
+QC - VŨ HỒNG ANH,,,,,,,,,,,
+,REQ-QC-QA5Q4,Social,28/01/2026,30/01/2026,,25% - Phân tích làm rõ,Hủy bỏ,Cập nhật testcase ,Test case Kênh của tôi ,,Testcase Social- KCT
+,REQ-QC-U5945,App Học sinh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Hủy bỏ,,Test luồng học sinh làm tập được giao từ LMS của gv ,HS nhận và làm được các bài tập mà GV đã giao trên LMS (Hiện tại nhận được bài trên LMS nhưng không làm được cái bài tập ),BUG AppHS
+,REQ-QC-U0DL8,Social,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật link Testcase,Trạng thái phê duyệt lesson-series theo lesson (chưa đồng bộ dữ liệu)?,Cập nhật trạng thái bug ,Bug MXH - STT 108
+,,,,,,,,,,,
+📅 27/01/2026,,,,,,,,,,,
+AI - ĐẠT,,,,,,,,,,,
+,REQ-AI-2K599,Kho ảnh cho giáo viên,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,"Kho ảnh trong sách giáo khoa KNTT cần rõ nét, không có watermark",Dùng AI gen lại các ảnh mờ để cho rõ nét,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+AI - NAM,,,,,,,,,,,
+,REQ-AI-TKTQW,Tool tạo bài giảng - AI,26/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài fill in blank,Kiểm tra và lên hình trên phần mềm test,
+,REQ-AI-PE6P2,Tool tạo bài giảng - AI,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài matching,Kiểm tra và lên hình trên phần mềm test,
+AI - THỊNH,,,,,,,,,,,
+,REQ-AI-24IFR,Tool tạo bài giảng - AI,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Gửi mô tả functions code tạo ảnh cho anh Linh,Soạn nội dung mô tả functions code tạo ảnh gửi cho anh Linh,Anh Linh nhận được mô tả và tiếp tục công việc,
+AI - TUYẾN,,,,,,,,,,,
+,REQ-AI-5AS0P,Tool tạo bài giảng - AI,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,Nội dung phần khởi động đáp ứng yêu cầu trong docs,chỉnh sửa phần prompt tạo ảnh cho phần khởi động,"nội dung phần khởi động phong phú ,sinh động hơn",Doc-01
+BE - MR DIỆN,,,,,,,,,,,
+,REQ-BE-C44AZ,BE Checklist,27/01/2026,28/01/2026,,50% - Đang thực hiện,Đang thực hiện,Cập nhật native BE,,,
+,REQ-BE-6DAXS,Demo - Triển khai,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Fix bugs sửa lỗi sv 202 phục vụ demo,,,
+,REQ-BE-PZ5VN,Support,27/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Fix bugs cho khách hàng Credit,,,
+BE - TOẠI,,,,,,,,,,,
+,REQ-BE-QUOZW,Demo - Triển khai,27/01/2026,28/01/2026,,50% - Đang thực hiện,Đang thực hiện,Chuẩn bị sever 202 cho demo,,,
+FE - KHÁNH,,,,,,,,,,,
+,REQ-FE-2VB5V,Apps Phụ Huynh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật giao diện mới theo yêu cầu,"Màn hình News "" tin tức",Cập nhật phiên bản mới theo yêu cầu mới,Figma
+,,Apps Học Sinh,27/01/2026,28/01/2026,,0% -Chưa thực hiện,,Guide line thông tin đẩy apps,Collect các thông tin về yêu cầu nội dung để đẩy apps,Cập nhật các thông số và kích cỡ nội dung vào file,https://docs.google.com/spreadsheets/d/12vaxzq6QmRNiXi6A5m5nANjkBCn1caJg-2xt_-HnpxM/edit?gid=0#gid=0
+FE - MR HƯNG,,,,,,,,,,,
+,REQ-FE-MN1M2,Demo - Triển khai,27/01/2026,28/01/2026,,75% - Gần hoàn thành,Đang thực hiện,Cập nhật và chuẩn bị sv 202 phụ vụ demo,Đóng gói và chuẩn bị nội dung demo,,
+QC - NGUYỄN THỊ KHÁNH LINH,,,,,,,,,,,
+,REQ-QC-25RIP,SV 202 Native,27/01/2026,29/01/2026,,100% - Hoàn thành,Hoàn thành,QC kiểm tra lại bản native do BE mới đẩy lên,Test lại luồng sản phẩm trên sv 202,Kiểm tra lại sản phẩm demo,
+,REQ-QC-R9HJS,Smartroom_react,27/01/2026,30/01/2026,,100% - Hoàn thành,Hoàn thành,,Test và cập nhật testcase tính năng Question ,Viết testcase + test + logbug (PHNN),
+,REQ-QC-78GPM,SV 202 Native,27/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Kiểm tra bản cài và hệ thống mới trên 202,Setup tài khoản + cấu hình trường thông tin + test validate & permission,,
+QC - PHƯƠNG HOA,,,,,,,,,,,
+,REQ-QC-37BZJ,Social,27/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Re-test và báo cáo trạng thái hiện tại của bug,"Master Search vẫn trả về các kết quả đã bị xóa, dữ liệu tìm kiếm không đồng bộ với dữ liệu thực tế",Cập nhật trạng thái bug ,Bug MXH - STT 43
+,REQ-QC-PWI6K,Social,27/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Re-test và báo cáo trạng thái hiện tại của bug,"File đã chia sẻ không được xóa hoàn toàn metadata khi bị xóa thông qua thư mục cha, khiến người nhận vẫn thấy file trong mục “Được chia sẻ” nhưng không thể truy cập",Cập nhật trạng thái bug ,Bug MXH - STT 6 
+,REQ-QC-TM374,Social,27/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Re-test bug mobile ,"Re-test các bug đang được ghi nhận trong sheet, đồng thời cập nhật trạng thái bug theo kết quả test mới nhất",Cập nhật trạng thái bug ,Bug MXH- Sheet Mobile + MobileSếpTA
+QC - VŨ HỒNG ANH,,,,,,,,,,,
+,REQ-QC-U5945,App Học sinh,27/01/2026,29/01/2026,,75% - Gần hoàn thành,Hủy bỏ,,Test luồng học sinh làm tập được giao từ LMS của gv ,HS nhận và làm được các bài tập mà GV đã giao trên LMS (Hiện tại nhận được bài trên LMS nhưng không làm được cái bài tập ),BUG AppHS
+,REQ-QC-U0DL8,Social,27/01/2026,28/01/2026,,100% - Hoàn thành,Hoàn thành,Cập nhật link Testcase,Trạng thái phê duyệt lesson-series theo lesson (chưa đồng bộ dữ liệu)?,Cập nhật trạng thái bug ,Bug MXH - STT 108
+,,,,,,,,,,,
+📅 26/01/2026,,,,,,,,,,,
+AI - NAM,,,,,,,,,,,
+,REQ-AI-TKTQW,Tool tạo bài giảng - AI,26/01/2026,27/01/2026,,100% - Hoàn thành,Hoàn thành,Custom file json cho các dạng bài trên slide,custom_json cho dạng bài fill in blank,Kiểm tra và lên hình trên phần mềm test,
+,,,,,,,,,,,
+📅 23/01/2026,,,,,,,,,,,
+AI - NAM,,,,,,,,,,,
+,REQ-AI-J5UU4,Kho ảnh cho giáo viên,21/01/2026,23/01/2026,,100% - Hoàn thành,Hoàn thành,Tạo kho ảnh gồm các ảnh vật thể bên trong sách giáo khoá KNTT,Tạo kho dữ liệu ảnh toán lớp 2 tập 2 ,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+,,,,,,,,,,,
+📅 22/01/2026,,,,,,,,,,,
+AI - NAM,,,,,,,,,,,
+,REQ-AI-J5UU4,Kho ảnh cho giáo viên,21/01/2026,23/01/2026,,100% - Hoàn thành,Hoàn thành,Tạo kho ảnh gồm các ảnh vật thể bên trong sách giáo khoá KNTT,Tạo kho dữ liệu ảnh toán lớp 2 tập 2 ,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",
+,,,,,,,,,,,
+📅 21/01/2026,,,,,,,,,,,
+AI - NAM,,,,,,,,,,,
+,REQ-AI-J5UU4,Kho ảnh cho giáo viên,21/01/2026,23/01/2026,,100% - Hoàn thành,Hoàn thành,Tạo kho ảnh gồm các ảnh vật thể bên trong sách giáo khoá KNTT,Tạo kho dữ liệu ảnh toán lớp 2 tập 2 ,"- Kho ảnh chia theo cấp tiết học, lớp học
+- Ảnh phải rõ nét, không có watermark, tách nền các sự vật riêng lẻ",

@@ -1,0 +1,446 @@
+,,,0,,,,,,,,,,,,,,,,,,,,,
+,,Draw,Kết quả test trên Windows,,,Kết quả test trên Mac,,,,,,,,,,,,,,,,,,
+,,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,,,,,,,,,,,,,,,,
+,,,Chrome,Edge,Cốc Cốc,Chrome,Edge,Cốc Cốc,,,,,,,,,,,,,,,,
+,,Tổng số Test case,134,134,134,134,134,134,,,,,,,,,,,,,,,,
+,,Tổng số đã thực hiện,133,119,27,0,0,0,,,,,,,,,,,,,,,,
+,,Passed (đạt),77,68,0,0,0,0,,,,,,,,,,02/02/2026,,,,,,
+,,Failed (chưa đạt),7,0,0,0,0,0,,,,,,,,,,02/02/2026,,,,,,
+,,No Run (chưa thực hiện),6,39,27,0,0,0,,,,,,,,,,,,,,,,
+,,Pending (đang chờ xử lý),0,0,0,0,0,0,,,,,,,,,,,,,,,,
+,,N/A (không có sẵn),43,12,0,0,0,0,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+"Mã Test case
+(Test case ID)",Chức năng/ Sub Group Name,"Tiêu đề Test case
+(Test case title)",Mức độ,"Tiền điều kiện
+ (Pre-condition)","Các bước thực hiện/mô tả
+(Description steps)",Data,"Kết quả mong đợi
+(Expected result)","Kết quả thực hiện trên Windows
+ (Test result)",,,"Kết quả thực hiện trên Mac
+ (Test result)",,,"Mã Lỗi
+ (Bug ID)","Lưu ý
+  (Notes)","Người thực hiện
+  (Tester)",,,"Ngày thực hiện
+  (Executed date)",,,Phiên bản của ứng dụng,,
+,,,,,,,,Round 1,Round 2,Round 3,Round 1,Round 1,Round 1,,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3
+,,,,,,,,"Tablet
+VS 1.19.20",Tablet,Tablet,Chrome,Edge,Cốc Cốc,,,,,,,,,,,
+1.1. Check UI/UX của màn hình 1,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_1,,Check số lượng Items,,HS đã đăng nhập thành công,"1. HS vào màn hình học sinh
+2. Quan sát toàn bộ giao diện",,"- Hiển thị đầy đủ tất cả item theo thiết kế (toolbar, header, canvas, menu…)- Không thiếu / không dư item",Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_2,,Check vị trí các Items,,HS đang ở màn chính,1. Quan sát vị trí từng item,,"- Các item hiển thị đúng vị trí theo design- Không bị lệch, tràn, che nhau",Passed,Passed,No run,,,,,,,,,02/02/2026,02/02/2026,,,,
+Draw_3,,Check size chữ và icon,,HS ở màn chính,1. Quan sát kích thước chữ và icon,,"- Size chữ, icon rõ ràng- Không quá nhỏ / quá to trên tablet",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_4,,Check trạng thái các Items,,HS ở màn chính,1. Quan sát trạng thái các nút,,- Các nút hiển thị đúng trạng thái: enable / disable- Không có nút bị disable sai,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+1.2. Kiểm tra khi nhấn vào “Draw”,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_5,,Khi chưa được giáo viên cấp quyền,,,"1.Quan sát nút ""Draw"" tại màn hình hiển thị
+2. Nhấn nút ""Draw""",,"Nút Draw hiển thị ở trạng thái disable hoặc không thể thao tác.
+
+",Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_6,,Khi được cấp quyền vẽ ,,,"1. GV Enable draw 
+2. Quan sát giao diện học sinh  ",,"Hiển thị Drawing Toolbar trên màn hình học sinh.
+Drawing Toolbar hiển thị đầy đủ các công cụ theo thiết kế (Pen, Shape, Text, Undo, Redo…).
+Canvas hiển thị đúng trạng thái hiện tại (không bị reset nội dung cũ).
+Học sinh có thể thao tác vẽ.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_7,,Kiểm tra khi GV tắt quyền vẽ. ,,HS dã được enable trước đó ,"1. GV Disable  draw 
+2. Quan sát giao diện học sinh  ",,"Học sinh bị disable nút vẽ, không thực hiện vẽ được ",Passed,Passed,No run,,,,,,,,,,,,,,
+Draw_8,,Kiểm tra khi GV tắt quyền vẽ. Học sinh thoát ra vào lại  ,,HS dã được enable trước đó ,"1. GV Disable  draw 
+3. HS thoát ra vào lại
+2. Quan sát giao diện học sinh  ",,"Học sinh bị disable nút vẽ, không thực hiện vẽ được ",Passed,Passed,No run,,,,,,,,,,,,,,
+Draw_9,,Kiểm tra màn hình hiển thị mặc định,,,"1. GV Enable draw 
+2. HS nhấn draw. Quan sát giao diện học sinh  ",,"Hiển thị Drawing Toolbar trên màn hình học sinh.
+
+Drawing Toolbar hiển thị đầy đủ các công cụ theo thiết kế (Pen, Shape, Text, Undo, Redo…).
+
+Canvas hiển thị đúng trạng thái hiện tại (không bị reset nội dung cũ).
+
+Học sinh có thể thao tác vẽ.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_10,,,,,"1.  Quan sát nút ""Draw"" tại màn hình hiển thị
+2. Nhấn nút ""Draw""
+3. Hiển thị thanh Draw trên màn hình
+4. Di chuyển thanh Draw trên toàn khu vực màn hình",,"Thanh Draw Toolbar hiển thị ngay sau khi nhấn Draw.
+
+Thanh Draw Toolbar:
+
+Có thể kéo và di chuyển tự do trên màn hình.
+
+Không bị giới hạn sai vị trí.
+
+Không che khuất hoàn toàn canvas hoặc các nút quan trọng.
+
+Khi di chuyển:
+
+Toolbar di chuyển mượt.
+
+Không bị giật, lag, hoặc biến mất.
+
+Trạng thái công cụ đang chọn được giữ nguyên sau khi di chuyển toolbar.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+1.3. Kiểm tra chức năng 2. Text Tool                                                                                                                                        ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_11,UI,Kiểm tra hiển thị mặc định,,"HS đã vào lớp, mở Whiteboard",1. HS quan sát thanh công cụ Whiteboard.,,"1. Biểu tượng Text (T) hiển thị đúng vị trí.
+2. Text Tool ở trạng thái Disable / chưa được chọn.",Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_12,,Bật text,,HS đang ở Whiteboard,"1. HS click biểu tượng Text (T).
+",,"1. Text Tool chuyển sang trạng thái Active.
+",Failed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_13,,Tắt text,,Text Tool đang Active,1. HS click lại biểu tượng Text (T).,,"1. Text Tool trở về trạng thái Inactive.
+2. Con trỏ trở về trạng thái mặc định.",N/A,N/A,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_14,Tương tác với các nút ,Chuyển từ Text sang Pen Tool,,Text Tool đang Active,1. HS click Pen Tool.,,"1. Text Tool tự động tắt.
+2. Pen Tool được kích hoạt.",Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_15,,Chuyển từ Text sang Shape Tool,,Text Tool đang Active,1. HS click Shape Tool.,,"1. Text Tool tự động tắt.
+2. Shape Tool được kích hoạt.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_16,Tạo mới,Tạo vùng nhập Text,,Text Tool đang Active,1. HS click vào vùng cho phép nhập trên whiteboard.,,"1. Vùng nhập text được tạo.
+2. Con trỏ nháy trong khung text.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_17,,Khung nhập text,,Đã tạo text,1. HS quan sát khung text.,,"1. Hiển thị viền khung text rõ ràng.
+2. Có điểm resize ở các góc/cạnh.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_18,,Giới hạn vùng có thể nhập,,Text Tool đang Active,"1. HS click tại các vị trí: sát thanh công cụ, sát mép màn hình, gần nút cố định.",,"1. Không cho tạo text tại vùng bị giới hạn.
+2. Không che UI cố định.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_19,,Tạo Text gần mép màn hình,,Text Tool đang Active,"1. HS click tạo text tại mép phải / trên / dưới màn hình.
+2. Nhập nội dung dài.",,"1. Text vẫn hiển thị đầy đủ.
+2. Không bị tràn ra ngoài màn hình.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_20,Nhập và chỉnh sửa Text,Check Nhập văn bản vào Text,,Đã tạo text,1. HS nhập một đoạn văn bản.,,"1. Text hiển thị đúng nội dung đã nhập.
+2. Không bị mất ký tự.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_21,,Check Click ra ngoài vùng nhập,,Đang nhập text,"1. HS nhập text.
+2. Click ra ngoài vùng nhập.",,"1. Nội dung được lưu.
+2. Thoát chế độ nhập text.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_22,,Check Click lại Text đã tạo,,Text đã tồn tại,1. HS click vào vùng text đã tạo.,,"1. Text được focus lại.
+2. Có thể chỉnh sửa nội dung.",Passed,Passed,No run,,,,,,,,,02/02/2026,,,,,
+Draw_23,Resize textbox,Resize bằng kéo góc,,Text đã được tạo,"1. HS click chọn text.
+2. Kéo góc khung text để phóng to / thu nhỏ.",,"1. Kích thước text thay đổi theo thao tác.
+2. Nội dung không bị mất.",N/A,N/A,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_24,,Kéo cạnh ngang / dọc,,,1. HS kéo cạnh ngang hoặc dọc của khung text.,,1. Chiều dài / chiều cao thay đổi đúng.,N/A,N/A,No run,,,,,,,,,02/02/2026,,,,,
+Draw_25,,Kiểm tra giới hạn kích thước tối thiểu,,,1. HS kéo khung text nhỏ nhất có thể.,,"1. Không cho resize nhỏ hơn kích thước tối thiểu.
+2. Text vẫn đọc được.",N/A,N/A,No run,,,,,,,,,02/02/2026,,,,,
+Draw_26,Định dạng text,Kiểm tra font/text style ,,,1. HS thay đổi font / style,,1. Text hiển thị đúng định dạng đã chọn.,Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_27,Xóa,Xóa text đã nhập ,,,"1. HS chọn text.
+2. Nhấn Delete / Clear.",,1. Text bị xóa khỏi whiteboard.,Passed,Passed,No run,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_28,Thực hiện vẽ khi thoát ra vào lại ,Kiểm tra hiển thị trên nhiều thiết bị  khi HS thoát ra vào lại,,,1. Quan sát text trên các thiết bị HS khác.,,"1. Text hiển thị đồng nhất.
+2. Không lệch vị trí / font.",Failed,No run,No run,,,,,,,,,02/02/2026,,,,,
+Draw_29,,Kiểm tra hiển thị nét vẽ khi thoát ra vào lại ,,,"1. HS thực hiện vẽ 
+2. HS thoát ra vào lại ",,2. HS thoát ra vào lại vẫn còn giữ nguyên nét vẽ ,Failed,No run,No run,,,,,,,,,02/02/2026,,,,,
+1.4. Kiểm tra chức năng 2. Pen Tool                                                                                                                                        ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_30,UI – Hiển thị & trạng thái mặc định,Kiểm tra hiển thị mặc định Pen Tool,,HS đang ở Whiteboard,1. HS click Pen Tool.,,"Hiển thị Pen Tool Options Panel gồm:
+1. Mũi tên 1 chiều, 2 chiều, đoạn thẳng
+2. Rectangle, Circle (Outline / Filled / Solid Filled)
+3. Freehand Pen",Passed,Passed,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_31,Đóng Pen Tool Options Panel,Kiểm tra Tắt Options Panel khi click lại Pen Tool,,,1. Click Pen Tool lần nữa.,,Pen Tool Options Panel được đóng,Passed,Passed,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_32,,Check Tắt Options Panel khi click ra ngoài canvas,,,1. Click ra ngoài khu vực vẽ.,,Pen Tool Options Panel được đóng.,N/A,N/A,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_33,,Check Tắt Options Panel khi click công cụ khác trong Drawing Toolbar,,,1. Click Text / Shape / Eraser…,,Pen Tool Options Panel được đóng.,Passed,Passed,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_34,,Check Tắt Options Panel khi click các nút cố định,,,1. Click Board / Raise Hand / Tools / Settings / Mic / Cam / Participants / Chat,,Pen Tool Options Panel được đóng.,N/A,N/A,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_35,Vẽ bằng các công cụ Pen Tool,Check Vẽ mũi tên 1 chiều / 2 chiều,,Pen Tool đang Active,"1. Chọn Arrow 1 chiều / 2 chiều
+2. Click & kéo chuột",,"1. Nét vẽ đúng vị trí, đúng hình dạng
+2. Màu & độ dày đúng thiết lập
+3. Vẽ mượt, không trễ
+4. Các nét độc lập",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_36,,Check Vẽ đoạn thẳng,,,"1. Chọn Line
+2. Click & kéo",,"Nét vẽ đúng vị trí, không méo, không trễ",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_37,,Check Vẽ Rectangle (Outline / Filled / Solid Filled),,,"1. Chọn Rectangle
+2. Chọn kiểu hiển thị
+3. Click & kéo",,"Hình  không méo, nét đều, hiển thị đúng",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_38,,Check Vẽ Circle (Outline / Filled / Solid Filled),,,"1. Chọn Circle
+2. Click & kéo",,"Hình tròn không méo, nét đều, hiển thị đúng",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_39,,Check Vẽ Freehand Pen,,,"1. Chọn Freehand Pen
+2. Vẽ tự do",,"Nét vẽ mượt, liên tục, không đứt nét",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_40,Thay đổi màu & độ dày nét,Check Thay đổi màu nét vẽ,,,"1. Vẽ 1 nét bất kỳ
+2. Nhấn vào icon Setting, Chọn màu khác
+3. Chọn lại icon Bút vẽ , chọn nét vẽ 
+3. HS thực hiện Vẽ nét mới",,Mỗi nét hiển thị đúng màu đã chọn,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_41,,Check Thay đổi độ dày nét,,,"1. Vẽ 1 nét bất kỳ
+2. Nhấn vào icon Setting, Chọn độ dày nét
+3. Chọn lại icon Bút vẽ , chọn nét vẽ 
+3. HS thực hiện Vẽ nét mới",,Nét vẽ đúng độ dày đã chọn,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_42,,Check Kết hợp đổi màu & độ dày,,,"1. Vẽ nét mảnh màu vàng
+2. Đổi sang màu đỏ, nét dày → vẽ
+3. Đổi màu khác → vẽ",,Có thể đồng thời thay đổi màu & độ dày chính xác,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_43,Giới hạn & hiệu năng khi vẽ,Kiểm tra giới hạn kích thước hình,,,1. Vẽ hình quá nhỏ / quá lớn,,Hiển thị hình ảnh nên màn hình ,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_44,,Vẽ nhiều hình giống nhau liên tiếp,,,"1. Chọn Circle
+2. Vẽ 10 hình liên tiếp",,"Không lag, không treo, hình hiển thị đầy đủ",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_45,,Vẽ nhiều loại hình khác nhau,,,1. Lần lượt chọn Rectangle / Circle / Freehand và vẽ,,Hình hiển thị đúng theo công cụ đang chọn,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_46,Chọn & thoát chế độ chọn,Check Chọn nét / hình vẽ,,,Click vào nét hoặc hình,,"Cho phép chọn, hiển thị khung bao",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_47,,Check Thoát khung chọn,,,"1. Chọn hình
+2. Click ra ngoài canvas",,Thực hiện vẽ khi thoát ra vào lại ,N/A,N/A,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_48,,Check Thoát chế độ Pen Tool,,,"1. Click Pen Tool
+2. Click công cụ khác",,"Thoát Pen Tool, chuyển sang công cụ mới",Passed,Passed,,,,,,,,,,02/02/2026,05/02/2026,,,,
+Draw_49,Resize hình vẽ,Check Resize bằng kéo góc,,,"1. Vẽ hình
+2. Chọn hình
+3. Kéo góc",,Kích thước thay đổi đúng,Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_50,,Check Resize bằng kéo cạnh,,,"1. Chọn hình
+2. Kéo cạnh ngang/dọc",,"Hình thay đổi đúng chiều, không méo",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_51,,Check Resize về kích thước rất nhỏ,,,1. Thu nhỏ hình tối đa,,"Hình dừng ở kích thước tối thiểu, không biến mất",Passed,Passed,,,,,,,,,,02/02/2026,,,,,
+Draw_52,,Check Resize nhiều hình cùng lúc,,,"1. Vẽ nhiều hình
+2. Select all
+3. Resize",,"Tất cả hình resize đồng thời, giữ vị trí tương đối",N/A,N/A,,,,,,,,,,02/02/2026,05/02/2026,,,,
+1.5. Kiểm tra chức năng 2. Shape Tool                                                                                                                                        ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_53,UI,Kiểm tra hiển thị mặc định Shape Tool,,"Options Panel đang mở, và được GV cấp quyền cho vẽ ","1. HS chọn Shape Tool
+2. Chọn 1 shape bất kỳ (Rectangle / Circle …)
+3. Vẽ shape lên canvas",,"Hiển thị Shape Tool Options Panel đúng vị trí, không che canvas",Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_54,,Tắt Options Panel khi click lại Shape Tool,,Options Panel đang mở,"1. HS chọn Shape Tool
+2. Chọn 1 shape bất kỳ (Rectangle / Circle …)
+3. Vẽ shape lên canvas",,Shape Tool Options Panel được đóng,Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_55,,Tắt Options Panel khi click ra ngoài màn hình,,Options Panel đang mở,1. HS chạm ra ngoài canvas,,Shape Tool Options Panel được đóng,N/A,N/A,,,,,,,,,,03/02/2026,09/02/2026,,,,
+Draw_56,,Tắt Options Panel khi click công cụ khác trong Drawing Toolbar,,Options Panel đang mở,1. HS chạm Pen / Text / Eraser,,Shape Tool Options Panel được đóng,Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_57,,"Tắt Options Panel khi click nút cố định (Board, Raise hand, Tools, Settings, Mic, Cam, Participants, Chat)",,Options Panel đang mở,1. HS chạm 1 nút cố định,,Shape Tool Options Panel được đóng,N/A,N/A,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_58,,Vẽ hình bằng Shape Tool,,,"1. Chọn Shape Tool
+2. Chọn 1 shape
+3. Nhấn ra mán hình Whiteboard",,"Hình vẽ xuất hiện đúng vị trí, đúng loại",Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_59,Style,Kiểm tra thay đổi màu,,,"1. HS chọn Color Picker tại icon Setting 
+2. Chọn màu mới (VD: đỏ)
+3. Chọn lại Shape Tool
+4. Chọn shape cần vẽ
+5. Vẽ shape",,Shape hiển thị đúng màu đã chọn,Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_60,,Kiểm tra đổi nhiều màu liên tiếp,,,"1. Chọn màu A
+2. Chọn Shape Tool → vẽ shape 1
+3. Chọn màu B
+4. Chọn lại Shape Tool → vẽ shape 2",,"Mỗi shape hiển thị đúng màu tương ứng, không bị ảnh hưởng lẫn nhau",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_61,,Kiểm tra đổi màu không ảnh hưởng shape đã vẽ,,Đã có shape trên canvas,"1. Vẽ shape màu A
+2. Chọn màu B
+3. Chọn Shape Tool
+4. Vẽ shape mới",,"Shape cũ giữ nguyên màu A, shape mới hiển thị màu B",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_62,,Kiểm tra màu hiển thị đồng bộ khi vẽ liên tục,,,"1. Chọn màu bất kỳ
+2. Chọn Shape Tool
+3. Vẽ liên tiếp 5 shape",,"Tất cả shape hiển thị đúng màu đã chọn, không lệch màu",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_63,,Kiểm tra thay đổi độ dày nét,,,"1. HS chọn Line width → chọn độ dày A
+2. Chọn Shape Tool
+3. Chọn shape cần vẽ
+4. Vẽ shape lên canvas
+5. HS chọn Line width khác (độ dày B)
+6. Chọn lại Shape Tool
+7. Vẽ shape mới",,"Shape 1 hiển thị đúng độ dày A
+Shape 2 hiển thị đúng độ dày B",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_64,,Kết hợp đổi màu và độ dày,,,"1. HS chọn màu A và độ dày A
+2. Chọn Shape Tool → vẽ shape 1
+3. HS chọn màu B và độ dày B
+4. Chọn lại Shape Tool → vẽ shape 2",,Shape hiển thị đúng màu + độ dày theo từng lần chọn,Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_65,Vẽ hình,Vẽ hình bằng Shape Tool,,,"1. HS chọn Shape Tool
+2. Chọn 1 shape (Rectangle / Circle…)
+3. Chạm và kéo tay để vẽ",,"Shape xuất hiện đúng vị trí, đúng loại hình, không lag",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_66,,Vẽ liên tiếp nhiều hình khác nhau,,,"1. Chọn Rectangle → vẽ hình 1
+2. Chọn Circle → vẽ hình 2
+3. Chọn shape khác → vẽ hình 3",,"Mỗi hình hiển thị đúng shape được chọn, không ảnh hưởng lẫn nhau",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_67,Undo,Nhấn Undo,,,"1. HS vẽ 2–3 shape
+2. Nhấn Undo",,"Shape được vẽ cuối cùng bị xóa, các shape trước giữ nguyên",N/A,N/A,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_68,Resize,Check Resize bằng kéo góc,,Có 1 shape trên canvas,"1. HS chạm chọn shape
+2. Kéo góc shape để phóng to / thu nhỏ",,"Kích thước shape thay đổi đúng theo thao tác kéo, không méo, không lỗi",Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_69,,Check Resize bằng kéo cạnh,,Có 1 shape trên canvas,"1. HS chạm chọn shape
+2. Kéo cạnh ngang hoặc dọc của shape",,"Shape thay đổi chiều đúng hướng kéo, không bị méo hoặc lệch",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_70,,Check Resize về kích thước rất nhỏ,,Có 1 shape trên canvas,"1. HS chạm chọn shape
+2. Thu nhỏ shape đến mức tối đa có thể",,"Shape thu nhỏ đến giới hạn tối thiểu, không biến mất, không lỗi",Passed,Passed,,,,,,,,,,03/02/2026,02/02/2026,,,,
+Draw_71,,Check Resize nhiều hình cùng lúc,,Có ≥ 2 shape trên canvas,"1. HS kéo chọn nhiều shape
+2. Kéo góc để resize đồng thời",,"Tất cả shape được resize cùng lúc, giữ đúng vị trí tương đối",N/A,N/A,,,,,,,,,,03/02/2026,05/02/2026,,,,
+1.6. Kiểm tra chức năng 2. Style Settings                                                                                                                               ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_72,UI – Style Settings (Biểu tượng bánh răng),Kiểm tra hiển thị mặc định Style Settings,,,1. HS click Style Settings (biểu tượng bánh răng),,"Hiển thị Style Settings Options Panel gồm:
+1. Colors
+2. Line width
+3. Font style
+4. Font size",Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_73,,Mở Drawing Options,,,1. HS click biểu tượng bánh răng,,Drawing Options được mở,Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_74,,Đóng Drawing Options,,,1. HS click lại biểu tượng bánh răng,,Drawing Options được đóng,Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_75,Colors,Kiểm tra hiển thị mặc định Colors,,,"1. Mở Style Settings
+2. Quan sát mục Colors",,"Các màu hiển thị đầy đủ, rõ ràng, phân biệt, có viền nút",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_76,,Thay đổi màu vẽ,,,"1. Chọn 1 màu bất kỳ
+2. Chọn Pen / Shape Tool
+3. Vẽ lên canvas
+4. Chọn màu khác
+5. Vẽ tiếp",,"1. Nét/hình hiển thị đúng màu đã chọn
+2. Cho phép đổi qua lại giữa các màu
+3. Drawing options không tự đóng khi vẽ",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_77,Line Width,Kiểm tra hiển thị mặc định Line width,,,"1. Mở Style Settings
+2. Quan sát Line width",,"Các mức độ dày hiển thị rõ ràng, phân biệt, có viền",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_78,,Thay đổi độ dày nét,,,"1. Chọn độ dày A
+2. Chọn Pen / Shape Tool
+3. Vẽ
+4. Chọn độ dày B
+5. Vẽ tiếp",,"1. Nét/hình hiển thị đúng độ dày đã chọn
+2. Có thể đổi qua lại giữa các độ dày
+3. Drawing options không tự đóng khi vẽ",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_79,Font Style,Kiểm tra hiển thị mặc định Font style,,,"1. Mở Style Settings
+2. Quan sát Font style",,Các tùy chọn hiển thị rõ ràng (Regular / Bold / Italic…),Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+Draw_80,,Thay đổi kiểu chữ,,,"1. Chọn Bold hoặc Italic
+2. Chọn Text Tool
+3. Tạo text mới",,"1. Text hiển thị đúng kiểu chữ đã chọn
+2. Cho phép kết hợp Bold + Italic
+3. Drawing options không tự đóng",Passed,Passed,,,,,,,,,,03/02/2026,,,,,
+,,,,,"1.Tại font style, Chọn Bold hoặc Italic
+2. Chọn Text Tool
+3. Tạo text mới
+4. Nhấn lại vào Font style để tắt. Quan sát màn học sinh ",,4. Font style Bold / Italic được tắt; text mới nhập hiển thị font thường,Failed,No run,,,,,,,,,03/02/2026,03/02/2026,05/02/2026,,,,
+Draw_82,Font Size,Kiểm tra hiển thị mặc định Font size,,,"1. Mở Style Settings
+2. Quan sát Font size, dropdown, editable dropdown",,"Hiển thị đầy đủ, rõ ràng, nổi bật",No run,No run,,,,,,,,,,03/02/2026,,,,,
+Draw_83,,Check Chọn cỡ chữ từ dropdown,,,"1. Mở dropdown Font size
+2. Chọn 1 giá trị có sẵn",,"Cho phép chọn 1 giá trị, hiển thị đúng sau khi chọn",Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_84,,Check Thay đổi cỡ chữ,,,"1. Chọn cỡ chữ bất kỳ
+2. Tạo text mới",,Cỡ chữ hiển thị đúng theo lựa chọn,Passed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+1.7. Kiểm tra chức năng 2. Selection Tool                                                                                                                   ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_85,,Chọn 1 đối tượng,,,"1. HS tạo mới 1 văn bản / 1 hình / 1 nét vẽ
+2. HS chọn Selection Tool
+3. HS chạm vào đối tượng
+4. Kéo đối tượng đến vị trí khác",,"Đối tượng được chọn, hiển thị khung chọn, di chuyển đúng theo thao tác kéo",No run,No run,,,,,,,,,,02/02/2026,,,,,
+Draw_86,,Chọn nhiều đối tượng,,,"1. HS tạo nhiều đối tượng
+2. HS dùng kéo vùng chọn (lasso / drag selection)
+3. Kéo di chuyển nhóm đối tượng",,"Tất cả đối tượng trong vùng chọn đều được chọn và di chuyển đồng bộ, giữ đúng khoảng cách tương đối",N/A,No run,,,,,,,,,,03/02/2026,,,,,
+Draw_87,,Di chuyển đối tượng ra ngoài vùng canvas,,,"1. HS tạo mới 1 đối tượng
+2. Chọn Selection Tool
+3. Kéo đối tượng ra sát mép canvas",,"Đối tượng không bị kéo hoàn toàn ra ngoài canvas, vẫn còn 1 phần hiển thị để thao tác kéo lại",Failed,Passed,,,,,,,,,,03/02/2026,05/02/2026,,,,
+Draw_88,,Di chuyển đối tượng bằng thao tác kéo chính xác,,,"1. HS chọn đối tượng
+2. Kéo nhẹ đối tượng từng đoạn ngắn",,"Đối tượng di chuyển mượt, chính xác theo thao tác tay, không bị giật hoặc lệch vị trí",No run,No run,,,,,,,,,,,,,,,
+1.8. Kiểm tra chức năng 2. Undo                                                                                                    ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_89,,Kiểm tra hiển thị mặc định nút Undo,,,"1. HS mở chế độ vẽ
+2. Quan sát Drawing Toolbar",,- Undo và Redo bị disable (mờ)- Không thao tác được,N/A,No run,,,,,,,,,02/02/2026,03/02/2026,,,,,
+Draw_90,,Check Undo sau khi vẽ 1 nét hoặc 1 hình,,,"1. HS vẽ 1 nét hoặc 1 hình
+2. HS nhấn Undo",,- Hình/nét vừa vẽ bị xóa- Canvas quay về trạng thái trước đó,N/A,No run,,,,,,,,,,02/02/2026,,,,,
+Draw_91,,Check Undo với nhiều thao tác liên tiếp,,,"1. HS vẽ 4 hình liên tiếp
+2. HS nhấn Undo từng lần",,"- Hình/nét được vẽ lại đúng vị trí, màu sắc, độ dày ban đầu",N/A,No run,,,,,,,,,,,,,,,
+Draw_92,,Check Nhấn Undo khi không còn hành động,,,"1. HS vẽ 3 nét
+2. HS nhấn Undo 3 lần
+3. Quan sát nút Undo",,- Mỗi lần Undo xóa đúng hành động gần nhất- Thứ tự Undo chính xác,N/A,No run,,,,,,,,,,,,,,,
+Draw_93,,Check Tạo Text + Undo,,,"1. HS chỉnh sửa text từ (1) Hello thành (2) Hi
+2. HS nhấn Undo",,- Các hành động được phục hồi đúng thứ tự đã Undo,N/A,No run,,,,,,,,,,,,,,,
+Draw_94,,Check Sửa Text + Undo,,,"1. HS chọn 1 hình/nét/text
+2. Kéo từ vị trí (1) sang (2)
+3. HS nhấn Undo",,- Không có thay đổi trên canvas- Không phát sinh lỗi,N/A,No run,,,,,,,,,,,,,,,
+Draw_95,,Check Di chuyển đối tượng + Undo,,,"1. HS chọn 1 hình/nét/text
+2. Kéo từ vị trí (1) sang (2)
+3. HS nhấn Undo",,- Không Redo lại hành động cũ- Chỉ giữ các thao tác mới,N/A,No run,,,,,,,,,,,,,,,
+Draw_96,,Check Resize hình + Undo,,,"1. HS vẽ hình vuông (1)
+2. Resize hình sang kích thước (2)
+3. HS nhấn Undo",,- Trạng thái canvas chính xác- Không sai lệch dữ liệu,N/A,No run,,,,,,,,,,,,,,,
+Draw_97,,Check Paste + Undo,,,"1. HS copy & paste đối tượng tạo bản sao
+2. HS nhấn Undo",,- Canvas quay về đúng trạng thái trước Redo,N/A,No run,,,,,,,,,,,,,,,
+Draw_98,,Check Eraser + Undo,,,"1. HS dùng Eraser xóa 1 nét/hình
+2. HS nhấn Undo",,- Text bị xóa hoàn toàn,N/A,No run,,,,,,,,,,,,,,,
+Draw_99,,Check Delete (Xóa) + Undo,,,"1. HS dùng Eraser xóa 1 nét/hình
+2. HS nhấn Undo",,"- Text hiển thị lại đúng nội dung, vị trí",N/A,No run,,,,,,,,,,,,,,,
+1.8. Kiểm tra chức năng : Redo                                                                                             ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_100,,Kiểm tra trạng thái nút Redo khi chưa có thao tác,,,"1. HS mở lớp học trên tablet
+2. Quan sát thanh công cụ",,"- Nút Redo bị disable (mờ)
+- Không thao tác được",N/A,No run,,,,,,,,,,03/02/2026,,,,,
+Draw_101,,Kiểm tra Redo khôi phục 1 hành động vừa Undo,,,"1. HS chọn Pen Tool / Shape Tool
+2. Vẽ 1 hình hoặc 1 nét
+3. Nhấn Undo
+4. Nhấn Redo",,"- Hình/nét được khôi phục lại đúng vị trí, màu sắc, độ dày",N/A,No run,,,,,,,,,,02/02/2026,,,,,
+Draw_102,,Kiểm tra Redo hoạt động theo đúng thứ tự,,,"1. HS vẽ nhiều hình/nét khác nhau
+2. Nhấn Undo nhiều lần
+3. Nhấn Redo nhiều lần",,- Mỗi lần Redo phục hồi đúng hành động theo thứ tự,N/A,No run,,,,,,,,,,,,,,,
+Draw_103,,Kiểm tra Redo hoạt động theo đúng thứ tự,,,1. HS nhấn Redo,,"- Canvas không thay đổi
+- Không xảy ra lỗi",N/A,No run,,,,,,,,,,,,,,,
+Draw_104,,Kiểm tra Redo stack bị xóa sau khi có hành động mới,,,"1. HS vẽ 1 hình/nét
+2. Nhấn Undo
+3. Vẽ 1 hình/nét mới
+4. Nhấn Redo",,"- Không Redo lại hành động cũ
+- Redo bị disable",N/A,No run,,,,,,,,,,,,,,,
+Draw_105,,Kiểm tra Redo stack bị xóa sau khi có hành động mới,,,"1. HS vẽ 2–3 hình/nét
+2. Nhấn Undo 1 lần
+3. Nhấn Redo",,- Canvas hiển thị đúng trạng thái ban đầu,N/A,No run,,,,,,,,,,,,,,,
+Draw_106,Kết hợp Undo + Redo,Kiểm tra phối hợp Undo rồi Redo,,,"1. HS nhấn Redo
+2. HS nhấn Undo",,- Canvas quay về đúng trạng thái trước Redo,N/A,No run,,,,,,,,,,,,,,,
+Draw_107,,Kiểm tra Redo rồi Undo,,,"1. HS chọn Text Tool
+2. Nhập nội dung text
+3. Nhấn Undo
+4. Nhấn Redo",,"- Text hiển thị lại đúng nội dung
+- Giữ nguyên vị trí, font, size",N/A,No run,,,,,,,,,,,,,,,
+Draw_108,,Kiểm tra Redo hoạt động với Text,,,"1. HS chọn Text Tool
+2. Nhập nội dung text
+3. Nhấn Undo
+4. Nhấn Redo",,- Text được khôi phục đúng thứ tự Undo,N/A,No run,,,,,,,,,,,,,,,
+Draw_109,,Kiểm tra Redo stack của Text bị xóa,,,"1. HS nhập text
+2. Nhấn Undo
+3. Vẽ 1 hình/nét mới
+4. Nhấn Redo",,- Không Redo lại text đã Undo,N/A,No run,,,,,,,,,,,,,,,
+1.9. Kiểm tra chức năng : Copy                                                                             ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_110,,Kiểm tra trạng thái nút Copy khi mở Drawing,,,"1. HS bật chế độ vẽ (Drawing mode)
+2. Quan sát Drawing toolbar",,"- Nút Copy hiển thị đúng icon, đúng vị trí
+- Nút Copy bị disable khi chưa chọn đối tượng",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_111,,Kiểm tra nút Copy có phản hồi khi click,,,"1. HS chọn 1 đối tượng bất kỳ
+2. Nhấn nút Copy",,"- Hệ thống thực hiện copy đối tượng đã chọn
+- Không xảy ra lỗi hoặc treo màn",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_112,,Kiểm tra sao chép cơ bản với 1 đối tượng,,,"1. HS chọn 1 đối tượng (text / hình / nét)
+2. Nhấn Copy
+3. Nhấn Paste",,"- Tạo 1 bản sao mới của đối tượng
+- Bản sao giữ nguyên thuộc tính (màu, size, nội dung)
+- Bản sao hiển thị lệch nhẹ so với bản gốc",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_113,,Kiểm tra copy liên tiếp các đối tượng khác nhau,,,"1. HS chọn đối tượng 1
+2. Nhấn Copy → Paste
+3. HS chọn đối tượng 2
+4. Nhấn Copy → Paste",,"- Mỗi đối tượng được copy đúng theo lần thao tác
+- Không ghi đè dữ liệu copy trước đó",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_114,,Kiểm tra hành vi khi copy “trống”,,,"1. HS không chọn đối tượng nào
+2. Nhấn nút Copy`",,"- Không có đối tượng nào được copy
+- Không tạo bản sao khi nhấn Paste
+- Không xảy ra lỗi",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+2.0. Kiểm tra chức năng :Paste                                                                                            ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_115,,Kiểm tra trạng thái nút Paste khi mở chế độ vẽ,,"HS vào lớp học, mở canvas","1. HS bật chế độ vẽ (Drawing mode)
+2. Quan sát Drawing toolbar",,"- Nút Paste hiển thị rõ ràng, đúng icon
+- Ở trạng thái disable khi chưa thực hiện Copy",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_116,,Kiểm tra dán 1 đối tượng đơn,,Canvas trống hoặc có sẵn đối tượng,"1. HS vẽ 1 hình tròn
+2. Chọn hình tròn
+3. Nhấn Copy
+4. Nhấn Paste",,"- Một hình tròn mới được dán thành công
+- Hình mới giống bản gốc (màu, kích thước, style)
+- Vị trí hiển thị lệch nhẹ so với bản gốc",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_117,,Kiểm tra dán nhóm nhiều đối tượng,,Canvas có nhiều đối tượng,"1. HS chọn nhiều đối tượng bằng Selection Tool
+2. Nhấn Copy
+3. Nhấn Paste",,"- Một nhóm đối tượng mới được tạo
+- Giữ nguyên hình dạng, màu sắc
+- Khoảng cách tương đối giữa các đối tượng được giữ nguyên",N/A,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_118,,Kiểm tra dán nhóm nhiều đối tượng,,Đã thực hiện Copy,"1. HS chọn 1 đối tượng
+2. Nhấn Copy
+3. Nhấn Paste 4 lần liên tiếp",,"- Tạo thành công 4 bản sao mới
+- Mỗi bản sao hiển thị tại vị trí hợp lệ trên canvas
+",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_119,,Kiểm tra dán liên tục từ clipboard,,"HS vừa vào lớp mới, chưa Copy","1. HS không thực hiện Copy
+2. Nhấn nút Paste",,"- Không có thay đổi trên canvas
+- Không tạo đối tượng mới
+- Nút Paste vẫn ở trạng thái disable hoặc không phản hồi",Passed,No run,,,,,,,,,,04/02/2026,,,,,
+Draw_120,,Kiểm tra dữ liệu clipboard trong cùng session,,Đã Copy trước đó,"1. HS Copy 1 đối tượng
+2. Chuyển sang tab/board khác trong lớp
+3. Nhấn Paste",,"- Đối tượng được dán thành công trong cùng session
+- Không lỗi, không mất dữ liệu",Failed,No run,,,,,,,,,,04/02/2026,,,,,
+2.1. Kiểm tra chức năng : Eraser                                                                                      ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_121,,Kiểm tra hiển thị mặc định,,"HS đã vào lớp học, mở canvas","1. HS bật chế độ vẽ (Drawing mode)
+2. Quan sát Drawing toolbar",,"- Biểu tượng Eraser (cục tẩy) hiển thị rõ ràng
+- Icon đúng vị trí, không bị mờ hoặc che khuất",Passed,,,,,,,,,,,05/02/2026,,,,,
+Draw_122,,Kiểm tra xóa nét vẽ / hình,,Canvas có ít nhất 1 hình hoặc 1 nét,"1. HS vẽ 1 hình hoặc 1 nét bất kỳ
+2. Chọn công cụ Eraser
+3. Di chuyển ngón tay/bút qua phần đã vẽ và nhấn giữ để tẩy
+4. Quan sát quá trình xóa",,"- Phần được chạm bởi Eraser biến mất ngay
+- Phần không bị chạm không bị ảnh hưởng
+- Thao tác mượt, không giật, không lag
+- Đồng bộ hiển thị đúng trên các thiết bị khác (nếu có)",Passed,,,,,,,,,,,05/02/2026,,,,,
+Draw_123,,Hoàn tác thao tác Eraser,,Có nút Undo khả dụng,"1. HS vẽ 1 nét bất kỳ
+2. Dùng Eraser xóa nét đó
+3. Nhấn nút Undo",,"- Nét vẽ đã xóa được phục hồi chính xác
+- Đúng vị trí, đúng hình dạng ban đầu",No run,,,,,,,,,,,05/02/2026,,,,,
+Draw_124,,Redo thao tác Eraser,,Đã thực hiện Undo,"1. HS vẽ 1 nét bất kỳ
+2. Dùng Eraser xóa nét đó
+3. Nhấn Undo
+4. Nhấn Redo",,"- Nét vẽ bị xóa lại đúng theo thao tác Eraser ban đầu
+- Trạng thái canvas giống sau bước xóa",No run,,,,,,,,,,,05/02/2026,,,,,
+2.2. Kiểm tra chức năng : Delete / Trash                                                                     ,,,,,,,,,,,,,,,,,,,,,,,,
+Draw_125,,Kiểm tra hiển thị mặc định nút Delete,,"HS đã vào lớp, mở chế độ vẽ","1. HS mở Drawing toolbar
+2. Quan sát icon Delete",,- Icon Delete (thùng rác) hiển thị rõ ràng- Không bị disable,N/A,,,,,,,,,,,04/02/2026,,,,,
+Draw_126,,Xóa toàn bộ canvas khi có nhiều đối tượng,,"Canvas có hình, nét, text","1. HS vẽ nhiều hình, nét, text trên canvas
+2. Nhấn nút Delete",,"- Toàn bộ canvas bị xóa sạch
+- Không còn bất kỳ đối tượng nào",N/A,,,,,,,,,,,02/02/2026,,,,,
+Draw_127,,Nhấn Delete khi đã chọn 1 đối tượng,,Canvas có nhiều đối tượng,"1. HS chọn 1 đối tượng bằng Selection Tool
+2. Nhấn Delete",,"- Vẫn xóa toàn bộ canvas
+- Không chỉ xóa đối tượng đang chọn",N/A,,,,,,,,,,,,,,,,
+Draw_128,,Nhấn Delete khi chọn nhiều đối tượng,,Canvas có nhiều đối tượng,"1. HS chọn nhiều đối tượng (kéo vùng chọn)
+2. Nhấn Delete",,- Toàn bộ canvas bị xóa- Selection không ảnh hưởng đến phạm vi xóa,N/A,,,,,,,,,,,,,,,,
+Draw_129,,Nhấn Delete khi không chọn đối tượng,,Canvas có dữ liệu,"1. HS không chọn đối tượng nào
+2. Nhấn Delete",,- Toàn bộ canvas bị xóa,N/A,,,,,,,,,,,,,,,,
+Draw_130,,Undo sau khi Delete (Clear All),,Đã nhấn Delete,"1. HS nhấn Delete (canvas trống)
+2. Nhấn Undo",,- Toàn bộ nội dung trước đó được khôi phục đầy đủ,N/A,,,,,,,,,,,,,,,,
+Draw_131,,Redo thao tác Delete,,Đã Undo,1. HS nhấn Redo,,- Canvas bị xóa lại toàn bộ,N/A,,,,,,,,,,,,,,,,
+Draw_132,,Nhấn Delete khi canvas trống,,Canvas trống,1. HS nhấn Delete,,"- Không có thay đổi- Không lỗi, không treo app",N/A,,,,,,,,,,,,,,,,
+WHITEBOARD – GV NEXT & QUAY LẠI TRANG,,,,,,,,,,,,,,,,,,,,,,,,
+,,Check HS thấy trang whiteboard mới khi GV Next trang,,,,,,No run,,,,,,,,,,,04/02/2026,,,,,
+,,Check GV quay lại trang whiteboard cũ – HS vẫn nhận đủ dữ liệu đã vẽ trước đó,,,"1. GV ở trang WB 1
+2. GV vẽ nội dung (hình/chữ/nét vẽ)
+3. HS xác nhận thấy nội dung
+4. GV nhấn Next sang trang 2
+5. GV nhấn Back quay lại trang 1
+6. Quan sát màn hình HS",,"- HS được sync về đúng trang 1
+- Toàn bộ nội dung vẽ trước đó hiển thị đầy đủ
+- Không mất nét vẽ, không trắng màn",Failed,,,,,,,,,,,04/02/2026,,,,,
+,,Check HS vào lớp trễ khi GV đã quay lại trang cũ,,,"1. GV ở trang WB 1 (có dữ liệu)
+2. HS vào lớp sau
+3. Quan sát màn HS",,"- HS load đúng trang hiện tại của GV
+- Nội dung vẽ trước đó hiển thị đầy đủ",,,,,,,,,,,04/02/2026,,,,,,

@@ -1,0 +1,112 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,Validation,Kết quả test trên Windown,,,Kết quả test trên Mac,,,,,,,,,,,,,,,,,,,,
+,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,,,,,,,,,,,,,,,,,,
+,,Chrome,Edge,Cốc Cốc,Chrome,Edge,Cốc Cốc,,,,,,,,,,,,,,,,,,
+,Tổng số Test case,29,29,29,29,29,29,,,,,,,,,,,,,,,,,,
+,Tổng số đã thực hiện,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,Passed (Đạt),0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,Failed (chưa đạt),0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,No Run (chưa thực hiện),0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,Pending(đang chờ xử lý),0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,N/A( không có sẵn),0,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+Testcase ID,Module / Feature,Test case title,Priority,"Tiền điều kiện
+ (Pre-condition)",Description steps,Data,Expected result,"Kết quả thực hiện trên Windows
+ (Actual result)",,,,"Kết quả thực hiện trên Mac
+ (Test result)",,,"Bug ID 
+Link",Notes,Tester,,,Executed date,,,Version,,
+,,,,,,,,Round 1,Round 2,Round 1,Round 1,Round 1,Round 1,Round 1,,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3
+,,,,,,,,Chrome,Chrome,Edge,Cốc Cốc,Chrome,Edge,Cốc Cốc,,,,,,,,,,,
+1. Primary tabs,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_1,,Kiểm tra logic chọn tab duy nhất,,,"1. Click lần lượt vào nhiều tab khác nhau (Lớp 1, Lớp 2, Mầm non...)
+2. Quan sát màn hình hiển thị",,Tại mọi thời điểm chỉ có duy nhất 1 tab ở trạng thái Active,,,,,,,,,,,,,,,,,,
+Validation_2,,Lọc dữ liệu theo Tab,,,"1. Chọn một tab cụ thể 
+2. Quan sát màn hình hiển thị",Tab 'Lớp 3',"Danh sách bài giảng hiển thị phải thuộc đúng khối 'Lớp 3', không lẫn dữ liệu các lớp khác",,,,,,,,,,,,,,,,,,
+Validation_3,,"Kiểm tra khi không có dữ liệu tương ứng
+Check empty-state when filter has no data",M,,"1. Chọn một tab hiện chưa có nội dung được phê duyệt
+2. Quan sát khu vực hiển thị danh sách 
+3. Chuyển sang tab khác có dữ liệu, sau đó quay lại tab rỗng để kiểm tra tính nhất quán 
+4. Reload trang và quan sát trạng thái hiển thị ",,"- Hiển thị thông báo 'Không tìm thấy kết quả' hoặc trạng thái Empty State tương ứng
+- Không hiển thị dữ liệu từ filter cũ 
+- Bộ lọc rỗng vẫn giữ trạng thái active, highlight đúng style
+- Thao tác quay lại filter rỗng vẫn hiển thị đúng empty-state và không load dữ liệu dư thừa",,,,,,,,,,,,,,,,,,
+2. Filter,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_4,,Multiple select (Hình thức),,,Click chọn đồng thời 'Khoá học' và 'Bài lẻ',,Cả hai checkbox đều hiển thị trạng thái đã chọn (Checked),,,,,,,,,,,,,,,,,,
+Validation_5,,"Single select (Môn học, Xếp hạng)",,,"Click chọn thay đổi giữa các option trong filter 'Môn học', 'Xếp hạng'",,"Đây là Radiobox nên khi chọn bộ lọc mới, bộ lọc cũ phải tự động bỏ chọn",,,,,,,,,,,,,,,,,,
+Validation_6,,Validation dữ liệu theo bộ lọc được chọn ,,,"Chọn filter lọc theo môn, theo hình thức hoặc theo xếp hạng ",,Danh sách chỉ hiển thị các bài giảng tương ứng chọn lọc ,,,,,,,,,,,,,,,,,,
+Validation_7,,Kết hợp nhiều filter trong sidebar,,,Chọn 'Khoá học' + Môn 'Toán' + '5 sao',,Dữ liệu trả về phải thỏa mãn đồng thời tất cả các điều kiện lọc đã chọn,,,,,,,,,,,,,,,,,,
+Validation_8,,"Kiểm tra khi không có dữ liệu tương ứng
+Check empty-state when filter has no data",M,,"1. Truy cập màn hình Cộng đòng nội dung 
+2. Chọn một filter không có dữ liệu 
+3. Quan sát khu vực hiển thị danh sách 
+4. Chuyển sang filter khác có dữ liệu, sau đó quay lại filter rỗng để kiểm tra tính nhất quán 
+5. Reload trang và quan sát trạng thái hiển thị ",,"- Hệ thống hiển thị đúng empty-state: label thông báo “Không có dữ liệu”
+- Không hiển thị dữ liệu từ filter cũ 
+- Bộ lọc rỗng vẫn giữ trạng thái active, highlight đúng style
+- Thao tác quay lại filter rỗng vẫn hiển thị đúng empty-state và không load dữ liệu dư thừa",,,,,,,,,,,,,,,,,,
+3. Expand / Collapse filter,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_9,Expand ,Kiểm tra logic Mở rộng,,,Click vào nhãn 'Mở rộng' tại các group bộ lọc và quan sát màn hình hiển thị ,,"Danh sách các option ẩn được hiển thị đầy đủ, icon mũi tên đổi chiều",,,,,,,,,,,,,,,,,,
+Validation_10,Collapse ,Kiểm tra logic Thu gọn,,,"1. Filter đang ở trạng thái mở rộng
+2. Click 'Thu gọn' và quan sát màn hình ",,"Các option phía dưới / option thêm bị ẩn đi, layout sidebar co lại đúng thiết kế",,,,,,,,,,,,,,,,,,
+4. Reset filter,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_11,,Kiểm tra nút 'Đặt lại',,,"1. Thực hiện chọn các bộ lọc bất kỳ
+2. Click nút 'Đặt lại' ở cuối sidebar",,"Tất cả các checkbox, radiobox trở về trạng thái mặc định, danh sách bài giảng load lại từ đầu",,,,,,,,,,,,,,,,,,
+5. Kết hợp ,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_12,Filter - Tab ,Validation giao thoa dữ liệu Tab và Sidebar,,,"1. Chọn Tab 'THCS'
+2. Chọn Sidebar Môn 'Vật lý'.",,Hiển thị bài giảng thỏa mãn điều kiện lọc ,,,,,,,,,,,,,,,,,,
+Validation_13,Giữa các Filter (Hình thức - Môn học - Xếp hạng),Validation kết hợp dữ liệu giữa các bộ lọc ,,,"1. Chọn Tab 'Lớp 1'
+2. Chọn Sidebar Môn 'Toán'
+Hình thức 'Bài lẻ'
+Xếp hạng '5 sao'
+3. Quan sát màn hình hiển thị ",,Hiển thị các bài giảng tương ứng thỏa mãn điều kiện lọc ,,,,,,,,,,,,,,,,,,
+6. Nút Like / Đăng ký kênh / Đánh giá,,,,,,,,,,,,,,,,,,,,,,,,,
+6.1. Guest mode,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_14,,Validation chặn tương tác khi chưa đăng nhập,,Chưa đăng nhập (Guest),"Click icon 'Đăng ký', 'Yêu thích' hoặc nút 'Đánh giá'",,Hệ thống không thực hiện action và hiển thị modal yêu cầu Đăng nhập/Đăng ký,,,,,,,,,,,,,,,,,,
+6.2. Logged-in mode,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_15,,Validation gửi đánh giá (Rating),,"Đã đăng nhập, chưa đánh giá bài ",Thực hiện click chọn số sao và nhấn 'Đánh giá',,"Gửi thành công, hiển thị thông báo 'Cảm ơn bạn đã đánh giá!'",,,,,,,,,,,,,,,,,,
+Validation_16,,Validation Đăng ký kênh,,"Đã đăng nhập, chưa đăng ký kênh ",Click nút 'Đăng ký' tại màn hình xem chi tiết bài ,,"Nút chuyển sang trạng thái 'Đã đăng ký', số lượng người đăng ký tăng lên tương ứng.",,,,,,,,,,,,,,,,,,
+Validation_17,,Validation Yêu thích ,,"Đã đăng nhập, chưa yêu thích bài ",Click nút 'Yêu thích' tại màn hình xem chi tiết bài ,,"Nút chuyển sang trạng thái 'Đã yêu thích', số lượng lượt thích tăng lên tương ứng.",,,,,,,,,,,,,,,,,,
+7. Top app bar,,,,,,,,,,,,,,,,,,,,,,,,,
+Master search ,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_18,,Kiểm tra placeholder hiển thị ,L,,Truy cập màn hình và quan sát tại ô search ,,Placeholder hiển thị đúng nội dung 'Tìm kiếm' và căn trái ,,,,,,,,,,,,,,,,,,
+Validation_19,,Kiểm tra bắt buộc nhập / Để trống ô nhập ,M,,"1. Truy cập màn hình Cộng đồng nội dung 
+2. Tại ô tìm kiếm chỉ click vào và không nhập thêm bất kỳ ký tự nào 
+3. Nhấn Enter và quan sát màn hình hiển thị ",,"- Hệ thống không thực hiện tìm kiếm
+- Màn hình hiển thị không có thay đổi nào ",,,,,,,,,,,,,,,,,,
+Validation_20,,Nhập ký tự đặc biệt,M,,Nhập '@#$%^&*()' → nhấn Enter ,@#$%^&*(),Hiển thị thông báo 'Không tìm thấy dữ liệu' tại khu vực hiển thị danh sách ,,,,,,,,,,,,,,,,,,
+Validation_21,,Nhập ký tự tiếng Việt có dấu / không dấu,H,,Nhập 'toán' với 'toan' → nhấn Enter ,,"Nếu hỗ trợ tìm kiếm
+- Hiển thị kết quả phù hợp; không lỗi mã hóa ký tự
+- Kết quả tìm kiếm giống nhau",,,,,,,,,,,,,,,,,,
+Validation_22,,Giới hạn ký tự nhập,M,,Nhập chuỗi >255 ký tự,,"- Không cho nhập vượt quá 255 ký tự / chặn nhập 
+- Tự cắt chuỗi nếu copy paste vào ô nhập ",,,,,,,,,,,,,,,,,,
+Validation_23,,Nhập chữ hoa và thường,M,,Nhập 'TOÁN' với 'toán' → nhấn Enter ,,"- Hiển thị kết quả phù hợp; không lỗi mã hóa ký tự
+- Kết quả tìm kiếm giống nhau",,,,,,,,,,,,,,,,,,
+Validation_24,,Khoảng trắng đầu/cuối,M,,"1. Mở màn hình chứa ô tìm kiếm
+2. Nhập từ khóa có khoảng trắng ở đầu và cuối, ví dụ: '      Toán      '
+3. Nhấn Enter để thực hiện tìm kiếm",,"- Hệ thống tự động loại bỏ khoảng trắng đầu/cuối (trim)
+- Tìm kiếm hoạt động giống như nhập 'Toán' không có khoảng trắng, Hiển thị kết quả tương ứng với từ khóa “Toán”
+- Không gửi request với ký tự khoảng trắng thừa",,,,,,,,,,,,,,,,,,
+Validation_25,,"Nhập từ khóa hợp lệ 
+Search box - Valid keyword search",H,,"1. Truy cập Cộng đồng nội dung 
+2. Quan sát danh sách dữ liệu ban đầu
+3. Xác định các item trong danh sách ban đầu có chứa từ khóa hợp lệ
+4. Nhập từ khóa hợp lệ vào Search box
+5. Nhấn Enter 
+6. Quan sát danh sách item sau khi tìm kiếm
+7. So sánh danh sách kết quả hiển thị với danh sách item đã xác định ở bước 3",,"Hiển thị danh danh sách kết quả đầy đủ bài giảng có chứa từ khóa nhập ////
+- Danh sách kết quả hiển thị chỉ gồm các item chứa từ khóa theo dữ liệu gốc
+- Không xuất hiện item không liên quan
+- Không thiếu item nào phù hợp trong dữ liệu gốc
+- Số lượng kết quả hiển thị khớp với số lượng item match trước khi tìm kiếm",,,,,,,,,,,,,,,,,,
+Validation_26,,"Nhập từ khóa KHÔNG hợp lệ: không tồn tại 
+Search box - Invalid keyword (Không tồn tại dữ liệu)",M,,"1. Truy cập Cộng đồng nội dung 
+2. Nhập một từ khóa không tồn tại trong bất kỳ tên item nào
+3. Nhấn Enter 
+4. Quan sát khu vực danh sách kết quả",,"- Hệ thống không trả về item nào
+- Hiển thị label 'Không tìm thấy dữ liệu'
+- Search box giữ nguyên từ khóa đã nhập ",,,,,,,,,,,,,,,,,,
+Validation_27,,Kiểm tra auto-suggestion,M,,Nhập 'Toá' → chờ 1–2 giây,,Hiển thị danh sách gợi ý liên quan,,,,,,,,,,,,,,,,,,
+Validation_28,,Xóa nội dung bằng nút 'x',M,,Nhập 'Toán' → click nút 'x',,"Trường nhập được xóa trắng, con trỏ vẫn focus trong ô Search",,,,,,,,,,,,,,,,,,
+Button Đăng ký + Đăng nhập ,,,,,,,,,,,,,,,,,,,,,,,,,
+Validation_30,Điều hướng ,Kiểm tra điều hướng màn hình ,,Chưa đăng nhập ,Click button 'Đăng nhập' hoặc 'Đăng ký',,Điều hướng đúng tới màn hình Đăng nhập / Đăng ký tương ứng ,,,,,,,,,,,,,,,,,,

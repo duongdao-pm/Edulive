@@ -1,0 +1,284 @@
+TEST CASES_ ,,,,,,,,,,,,,,,,,,,,,,,
+,Devide group,Kết quả test trên Windown,,,Kết quả test trên Mac,,,,,,,,,,,,,,,,,,
+,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,,,,,,,,,,,,,,,,
+,,Desktop,Desktop,Desktop,Chrome,Edge,Cốc Cốc,,,,,,,,,,,,,,,,
+,Tổng số Test case,34,34,34,34,34,34,,,,,,,,,,,,,,,,
+,Tổng số đã thực hiện,41,28,0,0,0,0,,,,,,,,,,,,,,,,
+,Passed (Đạt),17,22,0,0,0,0,,,,,,,,,,,,,,,,
+,Failed (chưa đạt),0,0,0,0,0,0,,,,,,,,,,,,,,,,
+,No Run (chưa thực hiện),24,6,0,0,0,0,,,,,,,,,,,,,,,,
+,Pending(đang chờ xử lý),0,0,0,0,0,0,,,,,,,,,,,,,,,,
+,N/A( không có sẵn),0,0,0,0,0,0,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+"Mã Test case
+ (Test case ID)","Tiêu đề Test case
+ (Test case title)",Mức độ,"Tiền điều kiện
+ (Pre-condition)","Các bước thực hiện/mô tả
+(Description steps)",Data,"Kết quả mong đợi
+(Expected result)","Kết quả thực hiện trên Windown
+ (Test result)",,,"Kết quả thực hiện trên Mac
+ (Test result)",,,"Mã Lỗi
+ (Bug ID)","Lưu ý
+  (Notes)","Người thực hiện
+  (Tester)",,,"Ngày thực thiện
+  (Executed date)",,,Phiên bản của ứng dụng,,
+,,,,,,,Round 1,Round 2,Round 3,Round 1,Round 1,Round 1,,,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3,Round 1,Round 2,Round 3
+,,,,,,,Desktop,Desktop,Desktop,Chrome,Edge,Cốc Cốc,,,,,,Desktop,Desktop,Desktop,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+"A - 1. Màn hình 1: Màn hình tab ""Device group""",,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+Devide group_1,Nhập số nhóm là 2 và danh sách đủ người,M,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click nhập Number of groups ( các trường hợp khác hợp lệ )
+4. Select Confirm ",,4. Phân nhóm thành công,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_2,Nhập số nhóm lớn hơn số thành viên,M,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click nhập Number of groups > số thành viên ( các trường hợp khác hợp lệ )
+4. Select Confirm ",,4.Hiển thị lỗi hoặc không cho chia,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_3,Nhập số nhóm bằng 0 hoặc số âm,M,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click nhập Number of groups ( các trường hợp khác hợp lệ )
+4. Select Confirm ",,4.Không cho nhập/ký tự không hợp lệ,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_4,Nhập số nhóm là ký tự (vd: 'abc'),,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click Nhập số nhóm là ký tự (vd: 'abc') 
+4. Select Confirm ",,4.Không cho nhập/ký tự không hợp lệ,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_5,Hiển thị placeholder ở ô number of groups,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Quan sát hiển thị placeholder ở ô number of groups",,"3. Hiển thị ""Enter number of groups"" / Số nhóm cần chia",Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_6,Nhập topic hợp lệ,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click Nhập topic hợp lệ
+4. Select Confirm ",,4. Lưu topic thành công,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_7,Để trống topic và nhấn Confirm,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Không nhâp topic hợp lệ
+4. Select Confirm ",,4. Vẫn confirm được và chuyển đến màn hình View group,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+,Nhập topic dài hơn 255 ký tự,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Nhập topic dài hơn 255 ký tự
+4. Select Confirm ","Mỗi người trong chúng ta đều có một hành trình riêng để khám phá và chinh phục. Đôi khi con đường không bằng phẳng, nhưng chính những khó khăn lại giúp ta trưởng thành hơn. Hãy kiên trì theo đuổi ước mơ, sống trọn vẹn từng khoảnh khắc và luôn tin rằng nỗ lực hôm nay sẽ mang lại thành công ngày mai.",,No run,No run,,,,,,,,,,13/1/2026,,,,,
+Devide group_8,Nhập topic có ký tự đặc biệt,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3.Nhập topic có ký tự đặc biệt
+4. Select Confirm ",,4. Cho nhập kí tự đặc biệt ,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_9,"Check nhập thanh ""Search""",,,"""1. Người dùng click icon """" Class map"""" /Tool
+2. Select Devide groups / or Click participant -> List -> Chọn """"Devide groups.""""  
+3. Chọn một học sinh trong Group 1
+4. GV nhấn mũi tên Move to 
+5. Quan sát giao diện """,,4. Dropdown hiển thị rõ ràng ,Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_10,,,,"""1. Người dùng click icon """" Class map"""" /Tool
+2. Select Devide groups  
+3. Chọn một học sinh trong Group 1
+4. GV nhấn mũi tên Move to . Tại input Search click nhập tìm kiếm 
+5. Quan sát giao diện ",,5. Click vào ô search để tìm kiếm được ,Failed,No run,,,,,,,,,,13/1/2026,,,,,
+Devide group_11,Check dropdown Move to HS group A sang Group B ,,,"1. Người dùng click icon "" Class map"" / Tool
+2. Select Devide groups.  GV chia Mumber of group SL: 2
+3. Chọn một học sinh trong Group 1.
+4. Click dropdown Move to.
+5.Quan sát danh sách group hiển thị trong dropdown.",,"5.Dropdown Move to phải:
+
+ Không hiển thị Group hiện tại (Group 1)
+hoặc
+
+Hiển thị nhưng disable (không chọn được)
+
+Chỉ cho phép chọn Group khác (Group 2, Group 3…).",Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_12,Check icon Edit Đổi tên,,"GV đã vào lớp, có ít nhất 2 group","1. GV click icon Class Map/ Tool
+2. Chọn Divide Groups
+3. GV click icon Edit và đổi tên Group (VD: Group 1 → Group A)
+4. Chọn 1 HS bất kỳ trong group
+5. Click dropdown Move to
+6. Quan sát danh sách group",,6.Dropdown Move to phải hiển thị đúng tên group mới,Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_13,,,,"1. GV click icon Class Map/ Tool
+2. Chọn Divide Groups
+3. GV click icon Edit và đổi tên Group (VD: Group 1 → Group A)
+4. GV nhấn Add group
+5. Quan sát danh sách group",,"5.Tên Group đã đổi phải được lưu
+Chỉ Group mới thêm sử dụng tên mặc định
+Các Group trước đó giữ nguyên tên đã chỉnh sửa",Failed,No run,,,,,,,,,,13/1/2026,,,,,
+Devide group_14,Check button Add group,,,"1. GV click icon Class Map/ Tool
+2. Chọn Divide Groups
+3. Click Add Group → Group mới được tạo
+4. Click Add Group lần 2
+5. Quan sát giao diện",,5.Mỗi lần click Add Group phải tạo thêm 1 group mới,Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_15,Check thanh Scroll,,,"1. GV click icon Class Map/ Tool
+2. Chọn Divide Groups
+3. GV scroll xem các danh sách group
+4. Quan sát giao diện",,"4. Khi scroll, các nút và thanh chức năng không ảnh hưởng lẫn nhau, layout cố định và hiển thị đúng",Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_16,Check khi nhấn Delete,,,"1. GV click icon Class Map / Tool
+2. Chọn Divide Groups
+3. GV chọn Group
+4. GV click nút Delete 
+5. Quan sát giao diện",,"5.Khi GV click Delete:
+• group phải được xóa thành công",Failed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_17,"Click vào ""Random split"" khi đã có danh sách người",,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click vào ""Random split"" khi đã có danh sách người
+",,3.Phân nhóm ngẫu nhiên,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_18,"Click ""Random split"" khi chưa có người nào",,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click ""Random split"" khi chưa có người nào
+",,3. Không thực hiện chia nhóm,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_19,Thêm quá nhiều nhóm,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3. Click ""Add group"" .Thêm quá nhiều nhóm",,3. Hiển thị giới hạn hoặc lỗi,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_20,Kéo thành viên từ Group 1 sang Group 2,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 .Kéo thành viên từ Group 1 sang Group 2",,3. Thành viên chuyển nhóm thành công,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_21,Kéo thành viên nhưng không thả vào nhóm nào,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 .Kéo thành viên nhưng không thả vào nhóm nào",,Không thay đổi dữ liệu,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_22,Chia nhóm xong và nhấn Confirm,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 Chia nhóm xong và nhấn Confirm",,Lưu dữ liệu phân nhóm thành công,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_23,Click Cancel,,,"1. Người dùng click icon "" Class map"" 
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 Click Cancel",,Quay về màn hình trước hoặc huỷ thao tác,Passed,Passed,,,,,,,,,,13/1/2026,,,,,
+Devide group_24,Check hiển thị giao diện devide groups khi chuyển về màn hình tối ,,,"1,Người dùng chọn màn hình tối Dark mode
+2. Người dùng click icon "" Class map"" 
+3. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+",,3. Màn hình hiển thị rõ thông tin  tên học sinh ,No run,No run,,,,,,,,,,13/1/2026,,,,,
+"2. Màn hình 1.1: Màn hình tab ""History""",,,,,,,,,,,,,,,,,,,,,,,
+Devide group_25,"Check khi click tab "" History""",,,"1. GV click icon Tool
+2. Chọn Divide Groups
+3. GV clcik History
+4. Quan sát giao diện",,4. Lưu History khi GV tạo các Topic,Failed,No run,,,,,,,,,,14/01/2026,,,,,
+,Check khi nhập use now,,,"1. GV click icon Tool
+2. Chọn Divide Groups
+3. GV click History. Tại màn History click ""Use now""
+4. Quan sát giao diện",,,No run,,,,,,,,,,,14/01/2026,,,,,
+"3 Màn hình 1.2: Màn hình tab ""View group""                                                                                                                                                                                        ",,,,,,,,,,,,,,,,,,,,,,,
+,Check Mở màn View Groups thành công,,,,,,Passed,Passed,,,,,,,,,,14/01/2026,,,,,
+,Check Hiển thị danh sách group ,,,,,,No run,,,,,,,,,,,,,,,,
+"3.1. Icon ""..."" khi hover vào group ",,,,,,,,,,,,,,,,,,,,,,,
+Devide group_26,"Check  khi click ""..."" tại danh sách group ",,,"1. Người dùng click icon Class Map / Tool
+2. Chọn Divide Groups (hoặc Participant → List → Divide Groups)
+3. Click Confirm
+4. Hover vào group hiển thị icon ""...""
+5. Click ""..."" → Join room
+6. Quan sát giao diện",,6. Hiển thị dropdown Join room and Give points to group ,Passed,No run,,,,,,,,,,14/01/2026,14/01/2026,,,,
+Devide group_27,Check Join room khi GV click Join room,,,"1. Người dùng click icon "" Class map"" / Tool
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 Click Confirm 
+4. Hover vào group hiển thị ""..."" 
+5. Click ""..."". Chọn Join room
+6. Quan sát giao diện",,"6. - Text ""Join room"" chuyển thành ""Exit""
+- GV join vào đúng room của group đã chọn
+- Hiển thị danh sách học sinh",No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group_28,Check Exit khi GV đã Join room,,,"1. Người dùng click icon Class map / Tool
+2. Chọn Divide groups (hoặc Participant → List → Divide groups)
+3. Click Confirm
+4. Hover vào group hiển thị ""...""
+5. Click ""..."" → Join room
+6. Click ""..."" → Exit
+7. Quan sát giao diện",,"6. - Sau khi Exit: text Exit đổi lại thành Join room
+- GV thoát khỏi group thành công
+- Không còn trạng thái GV đang ở trong group nào",No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group_29,"Check  khi click "" Give points of groups""",,"- GV đã vào lớp học
+- Đã tạo group
+- Đã Confirm chia group","1. Người dùng click icon "" Class map"" / Tool
+2. Select Devide groups / or Click participant -> List -> Chọn ""Devide groups.""  
+3 Click Confirm 
+4. Hover vào group hiển thị ""..."" 
+5. Click ""..."".Click "" Give points of groups""
+6. Quan sát giao diện",,6. Hiển thị bảng điểm ,No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group_30,,,,"1. Người dùng click icon Class Map / Tool
+2. Chọn Divide Groups (hoặc Participant → List → Divide Groups)
+3. Click Confirm
+4. Hover vào group hiển thị ""...""
+5. Click ""..."" → Give points to group
+6. GV chọn số điểm và nhấn Confirm",,"6. - Điểm được cộng cho tất cả thành viên trong group
+- Điểm hiển thị đúng trên giao diện HS
+- Không cộng nhầm sang group khác",No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group_31,,,,"1. Người dùng click icon Class Map / Tool
+2. Chọn Divide Groups (hoặc Participant → List → Divide Groups)
+3. Click Confirm
+4. Hover vào group hiển thị ""...""
+5. Click ""..."" → Give points to group
+6. GV chọn số điểm và nhấn Cancle",,"6. - Popup Give points được đóng
+- Không có điểm nào được cộng cho các thành viên trong group
+- Không thay đổi điểm hiện tại của HS
+- Giao diện trở về trạng thái trước đó",No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group 3D,,,,,,,,,,,,,,,,,,,,,,,
+Devide group_32,Check GV mở bài 3D và nhấn Button Smart Grouping,,,"1. GV chọn Content → Library
+2. GV chọn bài học 3D
+3. GV click icon Tool → Divide group
+4. GV nhấn Button Smart grouping
+5. Quan sát giao diện GV và HS",,"5. - Group được chia tự động thành công
+- HS được phân vào các group hợp lệ
+- HS nhận và hiển thị bài học 3D đúng group",No run,,,,,,,,,,,14/01/2026,,,,,
+Devide group_33,GV Join room xem bài 3D HS đang học,,"- Đã thực hiện Smart grouping thành công
+- HS đang học bài 3D trong group","1. GV hover vào group hiển thị ""...""
+2. Click Join room
+3. Quan sát màn hình GV",,"3. - Đã thực hiện Smart grouping thành công
+- HS đang học bài 3D trong group",Failed,,,,,,,,,,,14/01/2026,,,,,
+Devide group_34,GV Stop groups,,,"1. GV chọn Content → Library
+2. GV mở bài học 3D
+3. GV click Tool → Divide group
+4. GV nhấn Smart grouping
+5. GV nhấn Stop Groups
+6. Quan sát màn hình GV",,"- Groups được dừng thành công
+- Giao diện Divide Groups đóng
+- Màn hình GV quay về hiển thị bài 3D trước khi chia group",Failed,,,,,,,,,,,14/01/2026,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
+,,,,,,,No run,,,,,,,,,,,,,,,,
