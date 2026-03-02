@@ -23,30 +23,26 @@ Ap dung cho TAT CA agent: HEAD, PM, Router, BA, QC, Dev BE, Dev FE, AI, Sync.
 | Debrief xong | OFFLINE | OFFLINE @ROLE |
 | Escalation | — | ESCALATION |
 
-## Cach notify (theo platform)
+## Cach notify
 
-### Claude Code (workspace root)
-Hook PostToolUse tu dong fire khi Edit/Write file AGENT_STATUS.md hoac INBOX.md.
-Script: `.claude/hooks/router-auto-notify.sh`
-Agent KHONG can lam gi them — hook tu dong.
-
-### Claude Code (project folder) hoac Antigravity
-Agent tu spawn sub-agent (Haiku/Flash) de chay notify:
+Agent truc tiep chay curl Telegram sau moi thay doi STATUS/INBOX:
 ```bash
-bash .claude/hooks/router-auto-notify.sh <<< '{"tool_input":{"file_path":"[path]","new_string":"[content]"}}'
+curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+  -H "Content-Type: application/json" \
+  -d '{"chat_id":"${CHAT_ID}","text":"[ICON] [Scope] @ROLE — STATUS\nTask: [task]\n[timestamp]"}'
 ```
-Hoac agent truc tiep chay curl Telegram voi format:
+
+Format message:
 ```
 [ICON] [Project/Workspace] @ROLE — STATUS
-Model: [model]
-Task: [task]
-[timestamp]
+Task: [mo ta]
+[YYYY-MM-DD HH:MM]
 ```
 
 ### Telegram Config
 - Bot Token: `8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E`
-- Chat ID: `EDULIVE_CHAT_ID` (TBD — thay the khi co Telegram group)
-- Script: `.claude/hooks/router-auto-notify.sh`
+- Chat ID: `-5216365460`
+- Group: Edulive Agent
 
 ## Quy tac
 1. **BAT BUOC**: Moi thay doi STATUS -> notify. Khong co ngoai le.
