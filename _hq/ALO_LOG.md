@@ -83,3 +83,4 @@
 - **Trang thai**: REVIEW
 - **Update 05/03**: Dang di trien khai. Doan: Toai + Hung + Quang + co Thao (content demo). Du phong 1 bo demo sv17. Khong con WAITING_INFO — da co du thong tin va bat dau trien khai.
 - **Update 06/03**: DA TRIEN KHAI. Ket qua: chua dao tao phan tao content cho GV. Can len lich them 1 buoi tuan sau (tuan 09-13/03) de huong dan lai.
+- **Update 06/03 (2)**: Tao task EDU000-PM-006 — 1 buoi dao tao GV tao noi dung bai giang + HDSD. Noi dung: huong dan tao content, su dung ViziStudio/Tool soan giang, import thu vien. Can bo tri co Thao hoac nguoi dao tao.

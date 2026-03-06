@@ -141,6 +141,33 @@
 
 ---
 
+## GHI CHU RIENG CHO VINH PHUC — PHONG 2 (09/03/2026)
+
+> **CRITICAL**: Dot nay la lap dat NOT 1 phong con lai. Phong 1 da xong truoc do.
+
+### Truoc khi di (06-08/03)
+- [ ] **sv 254 (server product)**: QC da check xong list issue? Bug da fix het?
+- [ ] Confirm voi QC: ket qua test sv 254 — bao nhieu bug, con open bao nhieu?
+- [ ] Dev fix xong ALL critical/major bugs tren sv 254
+- [ ] QC re-test sau fix — PASS het moi duoc di
+- [ ] Kiem tra bo cai co dung version sv 254 (KHONG mang sv dev)
+- [ ] Checklist ha tang phong 2: day mang, dien, may GV/HS — hoi Mr Hieu confirm
+- [ ] License phong 2: so luong GV + HS phu hop
+- [ ] Mang theo HDSD ban in cho GV (bai hoc tu Ung Hoa: GV can duoc dao tao ky)
+
+### Bai hoc tu Ung Hoa (07/03)
+- ⚠️ **Ung Hoa chua dao tao phan tao content** → KHONG duoc bo qua buoc C1 (Dao tao GV)
+- ⚠️ Can them buoc: **Huong dan GV TAO NOI DUNG bai giang** (khong chi su dung)
+- ⚠️ Nen bo tri 2 buoi: Buoi 1 = Cai dat + Test, Buoi 2 = Dao tao GV + Tao content
+- ⚠️ Neu chi co 1 ngay → uu tien dao tao GV truoc, cai dat co the remote sau
+
+### Nhan su di VP
+- [ ] Xac nhan ai di: [ten] — ky thuat vien
+- [ ] Xac nhan ai di: [ten] — dao tao GV (co the la co Thao)
+- [ ] Xac nhan phuong tien di lai + gio xuat phat
+
+---
+
 ## GHI CHU RIENG CHO THAI NGUYEN (06/03/2026)
 
 - Diem: Thai Nguyen (khach hang cua Nexta)

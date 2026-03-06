@@ -29,7 +29,8 @@
 | — | EDU-001 | Bao ETA cho 3 task BE (Kafka sync, Offline tiet/bai, API dong bo) | be | — | MEDIUM | PENDING | — |
 | — | EDU-001 | Bao ETA cho 3 task FE (ghep API, Search Filter, bai tap moi luong cu) | fe | — | MEDIUM | PENDING | — |
 | — | EDU-001 | ALERT — Confirm voi Hung: Hoi Hop B = luong CU, KHONG Native | fe | — | HIGH | PENDING | — |
-| EDU000-PM-005 | Cross-project | [ALO Ngoc] Trien khai Ung Hoa — DA TRIEN KHAI. Chua dao tao phan tao content → can len lich them 1 buoi tuan sau (tuan 09-13/03) | pm, be, fe | — | HIGH | REVIEW | ung-hoa-deploy |
+| EDU000-PM-005 | Cross-project | [ALO Ngoc] Trien khai Ung Hoa — DA TRIEN KHAI. Chua dao tao content → 1 buoi tuan 09-13/03 | pm, be, fe | — | HIGH | REVIEW | ung-hoa-deploy |
+| EDU000-PM-006 | Cross-project | Ung Hoa: Dao tao GV tao noi dung bai giang + HDSD — 1 buoi trong tuan 09-13/03 | pm, content | — | HIGH | PENDING | ung-hoa-deploy |
 | EDU001-QC-006 | EDU-001 | [ALO Ngoc] KHAN: Check sv 254 — test, list issue, bao cao loi de team fix TRUOC thu 2 (09/03) VP | qc | — | CRITICAL | IN_PROGRESS | vinh-phuc-deploy |
 | EDU000-DEV-001 | Cross-project | Dev product: Chuyen doi server tu sv dev sang product. Can test lai toan bo truoc khi di VP thu 2 | be, fe, qc | — | CRITICAL | IN_PROGRESS | vinh-phuc-deploy |
 | EDU000-BA-001 | Cross-project | CHIEN LUOC: Thu gom thong tin san pham, lap Feature Map + User Flows + Gap Analysis → cho PM xay HLD + Roadmap | ba | — | CRITICAL | IN_PROGRESS | hld-roadmap |
