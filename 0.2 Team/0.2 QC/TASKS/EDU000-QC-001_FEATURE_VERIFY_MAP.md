@@ -4,6 +4,21 @@
 
 ---
 
+## 0. SUB-TASKS (lam theo thu tu nay)
+
+| # | Sub-task | File | Priority | Do kho | Mo ta |
+|---|---------|------|----------|--------|-------|
+| a | **SmartRoom** | `QC-001a_SMARTROOM_VERIFY.md` | HIGH | TB | Bug CSV + testcase → tong hop verified list |
+| b | **STEM Room** | `QC-001b_STEM_DEPLOY_VERIFY.md` | HIGH | TB | 60+ features spec + checklist trien khai |
+| c | **Social/MXH** | `QC-001c_SOCIAL_MXH_VERIFY.md` | MEDIUM | TB | Bug MXH + testcase → coverage map |
+| d | **Tool + Server** | `QC-001d_TOOL_SERVER_VERIFY.md` | MEDIUM | TB | ViziStudio + Server Bien services |
+| e | **Unknown** | `QC-001e_UNKNOWN_PRODUCTS.md` | LOW | CAO | 8 SP chua test → access check |
+
+> **Thu tu de xuat**: a → b → c → d → e
+> Lam a+b truoc (nhieu data nhat, dang trien khai), roi c+d, cuoi cung e
+
+---
+
 ## 1. Muc tieu
 
 Ho tro BA xay dung Feature Map bang cach:
