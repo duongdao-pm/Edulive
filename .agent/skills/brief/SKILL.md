@@ -49,7 +49,11 @@ Doc `.agent/rules/global/` → biet minh KHONG duoc lam gi (role-boundaries, no-
 1. Doc `product/COMPANY_CONTEXT.md`
 2. Scan **TAT CA** `0.1 projects/*/warroom/PROJECT_BOARD.md`
 3. Doc `_hq/MASTER_BOARD.md` — tat ca tags
-4. Bao cao cross-project: moi du an co gi, task pending, uu tien
+4. **Scan BA/QC updates**: Doc `0.2 Team/0.1 BA/TASKS/` va `0.2 Team/0.2 QC/TASKS/`
+   - Tim sub-task files co `Trang thai` != `CHUA_BAT_DAU`
+   - Liet ke thay doi cho user: "[task] — [trang thai] [tien do]"
+   - Hoi user: "Xac nhan dong bo vao MASTER_BOARD?" — user chon xac nhan hoac bo qua
+5. Bao cao cross-project: moi du an co gi, task pending, uu tien
 
 **HEAD / ROUTER:**
 - Doc `_hq/MASTER_BOARD.md` + `_hq/HEALTH_DASHBOARD.md`

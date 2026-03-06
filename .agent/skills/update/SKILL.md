@@ -199,7 +199,7 @@ Ghi chu: [neu co]
 - BA/QC KHONG sua MASTER_BOARD
 - BA/QC KHONG sua PROJECT_BOARD
 - BA/QC KHONG sua INBOX
-- PM se doc va dong bo khi /brief hoac check Telegram
+- PM nhan Telegram → review → xac nhan hoac bo qua
 
 ### Step 6: Report
 ```
@@ -209,7 +209,66 @@ Update Complete (@[BA|QC]):
 Files updated:
   ✅ 0.2 Team/[role]/TASKS/[sub-task file]
   ✅ 0.2 Team/[role]/TASKS/[parent task file]
-✅ Telegram notified → PM se dong bo
+✅ Telegram notified → CHO PM xac nhan
+```
+
+---
+
+## PM REVIEW BA/QC UPDATES
+
+> Khi PM /brief hoac nhan Telegram tu BA/QC, PM se thay updates.
+> PM **CHU DONG quyet dinh**: xac nhan va dong bo, hoac bo qua.
+
+### Khi nao PM review?
+- Khi chay `/brief` → Agent tu scan `0.2 Team/*/TASKS/` tim thay doi
+- Khi nhan Telegram notify tu BA/QC
+- Khi user noi "check update BA/QC"
+
+### Flow review:
+1. **Scan** — Doc sub-task files trong `0.2 Team/0.1 BA/TASKS/` va `0.2 Team/0.2 QC/TASKS/`
+2. **Liet ke** — Trinh bay danh sach thay doi cho user:
+   ```
+   Updates tu BA/QC:
+   🔄 BA-001a: CHUA → DANG_LAM 30%
+   ✅ QC-001a: DANG_LAM → XONG (output ready)
+   🚫 QC-001e: BLOCKED — khong co moi truong
+
+   Xac nhan dong bo? (yes/no/chon tung cai)
+   ```
+3. **User quyet dinh**:
+   - **Xac nhan** → PM dong bo vao MASTER_BOARD (cap nhat status task tuong ung)
+   - **Bo qua** → Khong lam gi, PM tu quyet dinh sau
+   - **Chon tung cai** → PM xac nhan tung update mot
+4. **Dong bo** (chi khi user xac nhan):
+   - Cap nhat MASTER_BOARD: status task EDU000-BA-001 / EDU000-QC-001
+   - Ghi chu thay doi vao ALO_LOG neu can
+   - Telegram notify: "✅ PM da xac nhan updates tu BA/QC"
+
+### Vi du PM review:
+```
+User (PM): check update BA/QC
+
+Agent PM:
+  → Scan 0.2 Team/0.1 BA/TASKS/ — tim files co Trang thai != CHUA_BAT_DAU
+  → Scan 0.2 Team/0.2 QC/TASKS/ — tuong tu
+  → Trinh bay:
+    "Updates tu BA/QC:
+     🔄 BA-001a: DANG_LAM 50%
+     ✅ QC-001a: XONG — co output
+     Xac nhan dong bo?"
+  → User: "ok dong bo het"
+  → Sua MASTER_BOARD: cap nhat status
+  → Notify Telegram
+```
+
+```
+User (PM): /brief
+Agent PM:
+  → ... (brief binh thuong) ...
+  → Phat hien BA/QC co updates
+  → Bao cao: "BA/QC co 2 updates. Xac nhan dong bo?"
+  → User: "bo qua, lam sau"
+  → Khong dong bo, tiep tuc brief
 ```
 
 ---
