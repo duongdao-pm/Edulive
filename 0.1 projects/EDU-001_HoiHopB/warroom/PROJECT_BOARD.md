@@ -36,6 +36,7 @@
 | EDU001-QC-003 | Test JSON format lệch UI | — | 0% | New | Trung bình | — |
 | EDU001-QC-004 | Check license thiết bị + bộ cài trước triển khai VP | Đào | 100% | Done | Cao | — |
 | EDU001-QC-005 | Test lại toàn bộ sau chuyển server dev → product | QC team | 0% | Pending | Critical | EDU000-DEV-001 |
+| EDU001-QC-006 | **[ALO Ngoc] KHAN: Check sv 254 — test all features, list issue, báo cáo lỗi để team fix TRƯỚC thứ 2 (09/03)** | QC team | 0% | **IN_PROGRESS** | **Critical** | — |
 
 ### PM / Deployment
 

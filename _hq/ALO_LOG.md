@@ -25,6 +25,15 @@
 
 <!-- PM ghi theo thoi gian, moi nhat o tren -->
 
+### [2026-03-06 15:00] ALO-006
+- **Nguoi gui**: Anh Ngoc Vu (Architect / Tech Lead)
+- **Noi dung goc**: Cuoi gio chieu nay gui anh danh sach cong viec tuan sau luon nhe, de report sep. Bam sat team fix cac loi cua sv 254 de thu 2 lap dat not tren Vinh Phuc. Cap nhat list issue de team fix.
+- **Flags**: [STAKEHOLDER PRESSURE] [HIGH PRIORITY] [VERSION RISK] [STEM DEPLOYMENT]
+- **Phan tich**: 3 yeu cau: (1) Gui work list tuan 09-13/03 de report CEO — deadline chieu nay, (2) Bam sat team fix bug sv 254 truoc thu 2 09/03 VP, (3) Cap nhat issue list. sv 254 = server product dang chuyen tu dev sang. Lien quan EDU000-DEV-001 + EDU001-PM-001.
+- **Action**: Assign QC team check sv 254 — tao task EDU001-QC-006. PM tong hop work list tuan sau.
+- **Task IDs**: EDU001-QC-006
+- **Trang thai**: PENDING_ACTION
+
 ### [2026-03-05 14:00] ALO-005
 - **Nguoi gui**: Dien BE (tai hien truong Thai Nguyen)
 - **Noi dung goc**: Phia Nexta thi anh thay ben minh da request sv rieng, nhung ho bao minh cai chung. Bay h phia nha truong noi do la may GV. Em lien he lai ben kia de co huong xu ly.
