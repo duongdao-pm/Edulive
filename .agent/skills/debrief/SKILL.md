@@ -25,10 +25,16 @@ List ra nhung gi da lam trong session nay.
 - Ghi ro: task nao de lai cho agent tiep theo
 
 ### Step 2: Update Board
-- Update `projects/[Project]/warroom/PROJECT_BOARD.md` (task status → DONE/IN_PROGRESS)
+- Update `0.1 projects/[Project]/warroom/PROJECT_BOARD.md` (task status → DONE/IN_PROGRESS)
 - Neu la PM: update BACKLOG + sprint detail
 - Task dang IN_PROGRESS ma chua xong → giu IN_PROGRESS, ghi note tien do
 - Task da xong trong phien → set DONE + ghi Result
+
+### Step 2b: BA/QC — Update Team Files
+- **BA**: cap nhat task status trong `0.2 Team/0.1 BA/TASKS/[task].md`
+  + Ghi output vao `0.2 Team/0.1 BA/OUTPUT/`
+- **QC**: cap nhat task status trong `0.2 Team/0.2 QC/TASKS/[task].md`
+  + Ghi output vao `0.2 Team/0.2 QC/OUTPUT/`
 
 ### Step 3: Update Sprint Detail (append-only)
 - Task xong → danh dau `Done`
@@ -36,7 +42,7 @@ List ra nhung gi da lam trong session nay.
 - Ghi 1 dong log cuoi file: `- [DATE]: [ROLE] — [tom tat viec da lam]`
 
 ### Step 4: Update Backlog
-Update `projects/[Project]/warroom/PRODUCT_BACKLOG.md`:
+Update `0.1 projects/[Project]/warroom/PRODUCT_BACKLOG.md`:
 - Sprint status neu thay doi
 - Them 1 dong vao LOGS (giu 5 dong gan nhat)
 
@@ -87,13 +93,13 @@ git commit -m "[role]([project]): [summary of changes]"
 # 2. Push session branch
 git push origin session/{role}-{date}-{time}
 
-# 3. Merge to main
-git checkout main
-git pull origin main
+# 3. Merge to master
+git checkout master
+git pull origin master
 git merge session/{role}-{date}-{time}
 
-# 4. If no conflict → push main
-git push origin main
+# 4. If no conflict → push master
+git push origin master
 
 # 5. Cleanup session branch
 git branch -d session/{role}-{date}-{time}

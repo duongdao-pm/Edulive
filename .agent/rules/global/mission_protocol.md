@@ -26,15 +26,19 @@ Brief -> (biet task) -> Execute -> Debrief
 
 ## Brief (bat dau session)
 ```
-1. git fetch && git checkout -b session/{role}-{date} origin/main
-2. Doc brief: _context/BRIEF_[ROLE].md
+1. git fetch && git checkout -b session/{role}-{date} origin/master
+2. Doc brief theo role:
+   - PM/HEAD/ROUTER/DEV: _context/BRIEF_[ROLE].md
+   - BA: 0.2 Team/0.1 BA/BRIEF_BA.md
+   - QC: 0.2 Team/0.2 QC/BRIEF_QC.md
 3. Doc company context: product/COMPANY_CONTEXT.md
-4. Doc project board: projects/[PROJECT]/warroom/PROJECT_BOARD.md
-5. Doc backlog: projects/[PROJECT]/warroom/PRODUCT_BACKLOG.md
-6. Doc INBOX: projects/[PROJECT]/comms/INBOX.md
-7. Update AGENT_STATUS.md: Status = ONLINE
-8. Notify Telegram: ONLINE
-9. Confirm voi user
+4. Doc project board: 0.1 projects/[PROJECT]/warroom/PROJECT_BOARD.md
+5. Doc backlog: 0.1 projects/[PROJECT]/warroom/PRODUCT_BACKLOG.md
+6. Doc INBOX: 0.1 projects/[PROJECT]/comms/INBOX.md
+7. BA/QC: doc TASKS folder (0.2 Team/[team]/TASKS/)
+8. Update AGENT_STATUS.md: Status = ONLINE
+9. Notify Telegram: ONLINE
+10. Confirm voi user
 ```
 
 ## Dispatch (xu ly pending)
@@ -66,12 +70,13 @@ Brief -> (biet task) -> Execute -> Debrief
 
 ## Debrief (dong session)
 ```
-1. Update PROJECT_BOARD (task status)
+1. Update PROJECT_BOARD (task status) — path: 0.1 projects/[PROJECT]/warroom/
 2. Update PRODUCT_BACKLOG
-3. Write INBOX message (TASK_DONE / REVIEW_REQUEST / INFO)
-4. Update AGENT_STATUS.md: Status = OFFLINE
-5. Notify Telegram: OFFLINE
-6. Git: commit -> push branch -> merge to main -> push -> cleanup branch
+3. BA/QC: cap nhat TASKS status + ghi OUTPUT vao 0.2 Team/[team]/OUTPUT/
+4. Write INBOX message (TASK_DONE / REVIEW_REQUEST / INFO)
+5. Update AGENT_STATUS.md: Status = OFFLINE
+6. Notify Telegram: OFFLINE
+7. Git: commit -> push branch -> merge to master -> push -> cleanup branch
 ```
 
 ## Alo (PM-only — stakeholder message)
