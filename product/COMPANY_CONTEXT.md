@@ -28,7 +28,7 @@ BỘ ĐÓNG GÓI (Server Biên — Offline)
 ├── STEM Room                   = EDL750s (GV) + EDL760s (HS) + Stem LMS ← CONFIRMED
 ├── ClassNova, AiTalkStudio, SynXR, Airlib, ViziStudio, Tool 2d, I3DPRO
 
-TRIỂN KHAI: Bắc Ninh (STEM, Mr Hiếu CS) | Vĩnh Phúc (HHB, Legacy)
+TRIỂN KHAI: Bắc Ninh (STEM, Mr Hiếu CS) | Vĩnh Phúc (HHB, Legacy) | Thái Nguyên (Nexta) | Ứng Hòa
 ```
 
 > Chi tiết 18 sản phẩm: `product/PRODUCT_REGISTRY.md`
@@ -41,11 +41,12 @@ TRIỂN KHAI: Bắc Ninh (STEM, Mr Hiếu CS) | Vĩnh Phúc (HHB, Legacy)
 | Team | Key person | Risk |
 |------|-----------|------|
 | **BE** (5) | Mr Diện (Kafka, Edge), Anh Ngọc (Architect), Toại (cài máy chủ) | 🔴 Cả 2 overloaded |
-| **FE** (7) | Chiến (Social, Sync), Hưng (Tool 2d, Demo) | 🔴 Chiến = key person |
+| **FE** (7) | Hưng (Lead FE, lâu năm, institutional knowledge), Chiến (Social, Sync), Văn (FE), Quang (FE) | 🔴 Chiến = key person |
 | **AI** (4) | Thịnh, Tuyến (Tool bài giảng) | 🟢 |
 | **QC** (4) | Khánh Linh, Phương Hoa, Anh Đào, Hồng Anh | 🟢 |
 | **CS** | Mr Hiếu (triển khai STEM, Bắc Ninh + Vĩnh Phúc) | — |
 | **Triển khai** | Đắc (cài Edulive Control lên tablet — MDM quản lý HS/PH) | — |
+| **Content** | Cô Thảo (GV content, tham gia demo triển khai) | — |
 
 > Chi tiết từng người + task: `COMPANY_CONTEXT_EXTENDED.md` §2
 

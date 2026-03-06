@@ -22,6 +22,10 @@ Ap dung cho TAT CA agent: HEAD, PM, Router, BA, QC, Dev BE, Dev FE, AI, Sync.
 | Deploy xong | DONE | DEPLOY_READY |
 | Debrief xong | OFFLINE | OFFLINE @ROLE |
 | Escalation | — | ESCALATION |
+| ALO tiep nhan | — | ALO_RECEIVED |
+| ALO xu ly xong | — | ALO_DONE |
+| Subagent hoan thanh | DONE | SUBAGENT_DONE |
+| Update boards | — | UPDATE |
 
 ## Cach notify
 
@@ -36,6 +40,43 @@ Format message:
 ```
 [ICON] [Project/Workspace] @ROLE — STATUS
 Task: [mo ta]
+[YYYY-MM-DD HH:MM]
+```
+
+### Format ALO
+```
+📞 ALO_RECEIVED — @PM
+From: [Nguoi gui] ([Vai tro])
+Flags: [AUTO-FLAGS]
+Noi dung: [tom tat 1 dong]
+[YYYY-MM-DD HH:MM]
+```
+```
+✅ ALO_DONE — ALO-[STT]
+From: [Nguoi gui]
+Action: [Tao task / Msg @ROLE / Tra loi]
+Tasks: [Task IDs da tao]
+Status: DONE | PENDING_ACTION | WAITING_INFO
+[YYYY-MM-DD HH:MM]
+```
+
+### Format UPDATE
+```
+📝 UPDATE — @[ROLE]
+Changes:
+- [task_id]: [thay doi]
+Files: [so file da sua]
+[YYYY-MM-DD HH:MM]
+```
+
+### Format Subagent DONE
+Khi 1 agent hoan thanh task duoc dispatch (Router/PM nhan TASK_DONE tu INBOX):
+```
+🏁 SUBAGENT_DONE — @[ROLE]
+Project: [EDU-XXX]
+Task: [Task ID] — [mo ta ngan]
+Result: [DONE / BLOCKED — ly do]
+Output: [duong dan file ket qua]
 [YYYY-MM-DD HH:MM]
 ```
 

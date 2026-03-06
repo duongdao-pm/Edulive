@@ -41,7 +41,31 @@ Agent cung co the tu xu ly INBOX cua minh.
   - Neu **nhieu hon 1 tag** → **HOI USER** chon tag nao truoc (liet ke tag + tom tat 1 dong)
   - Neu chi 1 tag → xu ly luon
 
-### Step 3: Process Each Item
+### Step 3: Task Selection (Agent self-service — KHONG ap dung cho Router)
+
+Khi Agent co nhieu task PENDING cung tag:
+
+1. **List tat ca tasks PENDING** cho role hien tai:
+   ```
+   #  | Task ID         | Mo ta                          | Priority | Blocked by
+   1  | EDU001-BE-001   | Kafka sync ket qua bai tap     | HIGH     | —
+   2  | EDU001-BE-002   | Tao tiet/bai tap Offline       | HIGH     | EDU001-BE-001
+   3  | EDU001-BE-004   | Ha tang test dong bo           | HIGH     | —
+   ```
+2. **Danh dau task bi BLOCKED** (co "Blocked by" chua DONE) → hien thi nhung KHONG cho chon
+3. **Sap xep**: CRITICAL → HIGH → MEDIUM → LOW
+4. **HOI USER chon task** — user co the chon 1 hoac nhieu task:
+   - Chon 1 task → nhan task do
+   - Chon nhieu task → chi khi cac task lien quan hoac cung convoy
+   - Khong chon → de xuat task priority cao nhat KHONG bi blocked
+5. **Chi chuyen IN_PROGRESS task duoc chon** — con lai giu PENDING cho session sau
+
+**Ngoai le** — khong can hoi, xu ly tat ca:
+- **Router**: chi phan phoi, khong lam → dispatch het
+- **PM**: review/approve nhanh → xu ly het
+- **Chi co 1 task PENDING** → nhan luon
+
+### Step 4: Process
 
 **Router dispatch:**
 1. Identify: project? team? model? priority?
@@ -52,25 +76,25 @@ Agent cung co the tu xu ly INBOX cua minh.
 6. Log to `_hq/DISPATCH_LOG.md` (BAT BUOC — moi dispatch phai log)
 
 **Agent self-service:**
-1. Update `Status: PENDING` → `Status: IN_PROGRESS`
+1. Update `Status: PENDING` → `Status: IN_PROGRESS` (chi task da chon)
 2. Doc `Task/Request` va `Context`
 3. Thuc thi task (research, tao file, phan tich...)
 4. Dien ket qua vao `Result:`
 5. Update `Status: IN_PROGRESS` → `Status: DONE`
 
-### Step 4: Archive (cho messages DONE)
+### Step 5: Archive (cho messages DONE)
 1. Append message DONE vao `comms/archive/YYYY-MM.md`
    - Tao file moi neu chua co (theo thang hien tai)
    - Group messages theo ngay (`## YYYY-MM-DD`)
 2. Xoa message DONE khoi INBOX (archive da luu)
 3. Giu lai **20 messages gan nhat** trong INBOX
 
-### Step 5: Notify
+### Step 6: Notify
 → **Telegram Notify BAT BUOC** (xem `.agent/rules/global/telegram-notify.md`)
 - Update AGENT_STATUS.md (WORKING khi xu ly, DONE khi xong)
 - Moi TASK_ASSIGNED, TASK_DONE, ESCALATION → notify Telegram
 
-### Step 6: Route Back (Router only)
+### Step 7: Route Back (Router only)
 For TASK_DONE messages:
 1. Update MASTER_BOARD (status → DONE)
 2. Update progress tracking
@@ -78,7 +102,7 @@ For TASK_DONE messages:
 4. If needs QC → create new TASK_ASSIGNED for QC
 5. If needs review → route REVIEW_REQUEST to PM
 
-### Step 7: Report
+### Step 8: Report
 ```
 Dispatch Complete:
 - [X] tasks dispatched / processed
@@ -99,5 +123,6 @@ PENDING ──nhan task──► IN_PROGRESS ──xong──► DONE
 ## EDGE CASES
 - Inbox trong: "Inbox trong, khong co task nao cho [ROLE]."
 - Task bi blocked: Ghi `Result: BLOCKED — [ly do]`, giu status `IN_PROGRESS`
-- Nhieu messages: Xu ly lan luot theo thoi gian (cu truoc)
+- Nhieu tasks PENDING: Hoi user chon (tru Router/PM → xu ly het)
+- Task bi blocked: Hien thi nhung KHONG cho chon, ghi note dependency
 - DISPATCH_LOG day: giu 100 entries gan nhat, archive cu

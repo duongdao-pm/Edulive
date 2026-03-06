@@ -1,5 +1,5 @@
 # MASTER BOARD — Edulive
-**Owner**: Router | **Last Synced**: 2026-03-02
+**Owner**: Router | **Last Synced**: 2026-03-06
 
 > Bang tong cross-project. CHI Router duoc sua file nay.
 > Agents doc PROJECT_BOARD trong project minh, KHONG doc file nay truc tiep.
@@ -10,12 +10,15 @@
 
 | Task ID | Project | Task | Team | Model | Priority | Status | Convoy |
 |:--------|:--------|:-----|:-----|:------|:---------|:-------|:-------|
-| EDU001-PM-001 | EDU-001 | KHAN [ALO Sep TA] — Cai dat 1 phong hoc cho Vinh Phuc chieu thu 3 (04/03) | pm, be, qc, fe | — | CRITICAL | IN_PROGRESS | vinh-phuc-deploy |
-| EDU001-QC-004 | EDU-001 | Check va kiem tra lai phan license cho cac thiet bi va bo cai | qc | — | HIGH | PENDING | vinh-phuc-deploy |
+| EDU002-PM-003 | EDU-002 | [ALO Nexta] Trien khai STEM Thai Nguyen — DA TRIEN KHAI. Sang tuan can lam viec lai voi Nexta ve trang thai server + follow-up | pm, be, fe, qc | — | HIGH | REVIEW | nexta-deploy-tn |
+| EDU002-PM-004 | EDU-002 | [ALO Sep TA] Dong goi ban cai USB cho Nexta tu deploy cac diem con lai + guide Doc | pm, be | — | HIGH | PENDING | nexta-deploy-tn |
+| EDU002-PM-005 | EDU-002 | [ALO Sep TA] Tao Video huong dan trien khai cho Nexta (remote support) | pm | — | HIGH | PENDING | nexta-deploy-tn |
+| EDU001-PM-001 | EDU-001 | KHAN — Trien khai not 1 phong Vinh Phuc thu 2 (09/03). Can chuan bi checklist trien khai | pm, be, qc, fe | — | CRITICAL | IN_PROGRESS | vinh-phuc-deploy |
+| EDU001-QC-004 | EDU-001 | Check va kiem tra lai phan license cho cac thiet bi va bo cai | qc | — | HIGH | DONE | vinh-phuc-deploy |
 | EDU001-BE-004 | EDU-001 | Dong bo Server Bien (Luc) — chua co ha tang test, de xuat dung sv17 + backup truoc | be | — | HIGH | PENDING | — |
 | EDU002-BE-002 | EDU-002 | Build bo cai sv253 cho Nexta + phoi hop lam viec cung Nexta trong tuan | be | — | HIGH | PENDING | nexta-build |
 | EDU002-AI-004 | EDU-002 | [ALO anh Ngoc] AI bai giang chua hieu qua — Phong tham gia sau + tao bieu mau danh gia | ai, ba | — | HIGH | PENDING | ai-lesson |
-| EDU002-AI-003 | EDU-002 | [ALO anh Ngoc] Team AI chieu nay bo sung mo ta, planning, milestones cho toan bo task AI | ai | — | HIGH | PENDING | ai-lesson |
+| EDU002-AI-003 | EDU-002 | Chon model cham ngu phap TA bang LLM — Plan 2 tuan 03-18/03 (Thinh, Tuyen, Nam) | ai | — | HIGH | IN_PROGRESS | ai-lesson |
 | — | EDU-002 | [ALO anh Ngoc] Yeu cau ha tang GPU 16GB cho cham diem bai tap Tieng Anh bang LLM | be | — | MEDIUM | PENDING | — |
 | EDU002-BUG-002 | EDU-002 | Thong ke exercise tren web: HS vao sau assign → chua hien. Khong co thong ke bai lam tren tablet | be, fe | — | HIGH | IN_PROGRESS | — |
 | — | EDU-001 | NHAC — Hoi anh Ngoc/Chien ve API thong ke bao cao assignment/exercises | pm | — | MEDIUM | PENDING | — |
@@ -26,6 +29,10 @@
 | — | EDU-001 | Bao ETA cho 3 task BE (Kafka sync, Offline tiet/bai, API dong bo) | be | — | MEDIUM | PENDING | — |
 | — | EDU-001 | Bao ETA cho 3 task FE (ghep API, Search Filter, bai tap moi luong cu) | fe | — | MEDIUM | PENDING | — |
 | — | EDU-001 | ALERT — Confirm voi Hung: Hoi Hop B = luong CU, KHONG Native | fe | — | HIGH | PENDING | — |
+| EDU000-PM-005 | Cross-project | [ALO Ngoc] Trien khai Ung Hoa — DA TRIEN KHAI. Chua dao tao phan tao content → can len lich them 1 buoi tuan sau (tuan 09-13/03) | pm, be, fe | — | HIGH | REVIEW | ung-hoa-deploy |
+| EDU000-DEV-001 | Cross-project | Dev product: Chuyen doi server tu sv dev sang product. Can test lai toan bo truoc khi di VP thu 2 | be, fe, qc | — | CRITICAL | IN_PROGRESS | vinh-phuc-deploy |
+| EDU000-BA-001 | Cross-project | CHIEN LUOC: Thu gom thong tin san pham, lap Feature Map + User Flows + Gap Analysis → cho PM xay HLD + Roadmap | ba | — | CRITICAL | IN_PROGRESS | hld-roadmap |
+| EDU000-QC-001 | Cross-project | CHIEN LUOC: Kiem chung tinh nang that te, lap Test Coverage Map + Verified Features → cho PM xay HLD + Roadmap | qc | — | CRITICAL | IN_PROGRESS | hld-roadmap |
 
 ---
 

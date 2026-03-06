@@ -58,6 +58,29 @@
 
 ---
 
+## Nguon data tu BA + QC Team (MOI — 06/03/2026)
+
+> **BA va QC dang collect thong tin de PM xay Product Roadmap + Backlogs + HLD.**
+> Khi ho nop output, PM PHAI doc va tong hop vao quy trinh phan tich.
+
+| # | Nguon | Duong dan | Noi dung | Trang thai |
+|---|-------|----------|---------|-----------|
+| BA-1 | Feature Map | `0.2 Team/0.1 BA/OUTPUT/EDU000-BA-001_FEATURE_MAP.md` | Ban do tinh nang theo san pham | Cho output |
+| BA-2 | User Flows | `0.2 Team/0.1 BA/OUTPUT/EDU000-BA-001_USER_FLOWS.md` | Cac luong nghiep vu end-to-end | Cho output |
+| BA-3 | HLD Draft | `0.2 Team/0.1 BA/OUTPUT/EDU000-BA-001_HLD.md` | Mo ta kien truc tong the (text) | Cho output |
+| BA-4 | Gap Analysis | `0.2 Team/0.1 BA/OUTPUT/EDU000-BA-001_GAP_ANALYSIS.md` | CEO view vs Dev view, cau hoi can clarify | Cho output |
+| QC-1 | Verified Features | `0.2 Team/0.2 QC/OUTPUT/EDU000-QC-001_VERIFIED_FEATURES.md` | Tinh nang da kiem chung tren thuc te | Cho output |
+| QC-2 | Test Coverage | `0.2 Team/0.2 QC/OUTPUT/EDU000-QC-001_TEST_COVERAGE.md` | San pham nao da test, chua test | Cho output |
+| QC-3 | Known Issues | `0.2 Team/0.2 QC/OUTPUT/EDU000-QC-001_KNOWN_ISSUES.md` | Van de da biet + recommendations | Cho output |
+
+**PM workflow khi co output:**
+1. Doc BA output → cap nhat PRODUCT_REGISTRY + KNOWLEDGE_BASE
+2. Doc QC output → cross-check: cai nao THAT SU CHAY vs chi tren giay
+3. Merge BA + QC → xay HLD tong the
+4. Tu HLD → tao Product Roadmap + Backlogs
+
+---
+
 ## Nguồn data chưa có
 
 | # | Nguồn | Cần từ ai | Ưu tiên | Ghi chú |

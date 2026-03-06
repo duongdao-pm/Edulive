@@ -26,6 +26,17 @@ Extract:
 2. **Nội dung** — nguyên văn tin nhắn
 3. **Dự án liên quan** — detect từ keywords
 
+### Step 1.5: Telegram Notify — ALO_RECEIVED (BAT BUOC)
+Ngay sau khi parse xong, TRUOC khi phan tich → notify Telegram:
+```
+📞 ALO_RECEIVED — @PM
+From: [Nguoi gui] ([Vai tro])
+Flags: [AUTO-FLAGS neu co]
+Noi dung: [tom tat 1 dong]
+[YYYY-MM-DD HH:MM]
+```
+Muc dich: team biet ngay co yeu cau moi tu stakeholder, KHONG doi den khi xu ly xong.
+
 ### Step 2: Cross-check COMPANY_CONTEXT.md
 - Đọc `product/COMPANY_CONTEXT.md`
 - Map người gửi → vai trò, quyền hạn
@@ -60,20 +71,33 @@ PM Agent đề xuất:
 - Nếu cần lưu → ghi vào `_hq/incoming/QUEUE.md`
 - Nếu cần trả lời → draft cho user gửi
 
-### Step 7: Telegram Notify (BAT BUOC)
+### Step 7: Telegram Notify — ALO_DONE (BAT BUOC)
 → **Telegram Notify BAT BUOC** (xem `.agent/rules/global/telegram-notify.md`)
-- Notify: ALO processed — [flag] — action: [mo ta]
-
-### Step 8: Archive (tuỳ chọn)
-Lưu vào `comms/archive/alo/YYYY-MM.md`:
-```markdown
-## [YYYY-MM-DD HH:MM] [ALO] @sender_name
-
-Nội dung: [nguyên văn]
-Flags: [auto-flagged keywords]
-Phân tích: [PM Agent ghi]
-Action: [Đã trả lời / Msg @[ROLE] / Chờ thêm info]
+Notify khi da xu ly xong (sau user duyet):
 ```
+✅ ALO_DONE — ALO-[STT]
+From: [Nguoi gui]
+Action: [Tao task / Msg @ROLE / Tra loi]
+Tasks: [Task IDs da tao]
+Status: DONE | PENDING_ACTION | WAITING_INFO
+[YYYY-MM-DD HH:MM]
+```
+
+### Step 8: Ghi ALO LOG (BAT BUOC)
+Ghi vao `_hq/ALO_LOG.md` — **BAT BUOC moi ALO deu phai log**:
+```markdown
+### [YYYY-MM-DD HH:MM] ALO-[STT]
+- **Nguoi gui**: [Ten] ([Vai tro])
+- **Noi dung goc**: [Nguyen van tin nhan]
+- **Flags**: [AUTO-FLAG keywords]
+- **Phan tich**: [PM tom tat: loai yeu cau, muc do, du an]
+- **Action**: [Da lam gi — VD: Tao task, Msg @BE, Tra loi]
+- **Task IDs**: [Task da tao tu ALO nay]
+- **Trang thai**: DONE | PENDING_ACTION | WAITING_INFO | REJECTED
+```
+- Moi nhat ghi o tren (reverse chronological)
+- STT tang dan: ALO-001, ALO-002...
+- Day la single source of truth cho yeu cau stakeholder
 
 ## VÍ DỤ
 

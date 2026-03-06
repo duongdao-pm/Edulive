@@ -87,6 +87,12 @@ Send message to Router queue for dispatch to target agent.
 Skill: /msg @[ROLE] [message]
 ```
 
+### Update (cap nhat trang thai task/du an)
+Cap nhat task status, tien do, priority. Dong bo TAT CA files: PROJECT_BOARD + MASTER_BOARD + INBOX + ALO_LOG.
+```
+Skill: /update [noi dung thay doi]
+```
+
 ### Alo (CHI PM — parse tin stakeholder)
 Parse tin nhan tu stakeholder, cross-check COMPANY_CONTEXT, auto-flag keywords.
 ```

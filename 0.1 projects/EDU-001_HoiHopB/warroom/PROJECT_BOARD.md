@@ -1,9 +1,10 @@
 # PROJECT BOARD — EDU-001 Triển khai Hội Hợp B
-**Status**: Đang triển khai | **Priority**: HIGH | **Last updated**: 02/03/2026
+**Status**: Đang triển khai | **Priority**: CRITICAL | **Last updated**: 06/03/2026
 
 ## Current Priorities
 
-- **Cài VP chiều T3 04/03**: Sếp TA chỉ đạo. sv252 bug 3D đã fix, QC retest
+- **CRITICAL — Triển khai nốt 1 phòng Vĩnh Phúc thứ 2 (09/03)**: Cần chuẩn bị checklist triển khai
+- **CRITICAL — Chuyển server dev → product**: Dev team cần chuyển đổi, QC cần test lại toàn bộ trước T2
 - **Kafka sync (BE-1)**: Diện đang xử lý — đầu chuỗi dependency
 - **Hạ tầng test đồng bộ Server Biên**: Lực cần sv17 + backup
 
@@ -33,7 +34,15 @@
 | EDU001-QC-001 | Test Smartroom bổ sung | — | 100% | PM Confirmed | Cao | — |
 | EDU001-QC-002 | Test Offline tạo lớp/giao bài | — | 0% | Pending | Cao | EDU001-BE-001 |
 | EDU001-QC-003 | Test JSON format lệch UI | — | 0% | New | Trung bình | — |
-| EDU001-QC-004 | Check license thiết bị + bộ cài trước triển khai VP | — | 0% | Pending | Cao | — |
+| EDU001-QC-004 | Check license thiết bị + bộ cài trước triển khai VP | Đào | 100% | Done | Cao | — |
+| EDU001-QC-005 | Test lại toàn bộ sau chuyển server dev → product | QC team | 0% | Pending | Critical | EDU000-DEV-001 |
+
+### PM / Deployment
+
+| Task ID | Mô tả | Người | Tiến độ | Trạng thái | Ưu tiên | Blocked by |
+|---------|-------|-------|---------|------------|---------|------------|
+| EDU001-PM-001 | Triển khai nốt 1 phòng Vĩnh Phúc thứ 2 (09/03) | PM | 0% | Chuẩn bị | Critical | EDU000-DEV-001 |
+| EDU000-DEV-001 | Chuyển đổi server từ sv dev sang product — cần test lại | Dev team | 0% | Đang xử lý | Critical | — |
 
 ### BA Team
 
@@ -45,11 +54,12 @@
 
 ## Risk Highlights
 
-- HIGH **Cài VP chiều T3 04/03** (EDU001-PM-001): Sếp TA chỉ đạo
+- CRITICAL **Triển khai VP thứ 2 (09/03)** (EDU001-PM-001): Cần hoàn thành chuyển server + test trước T2
+- CRITICAL **Chuyển server dev → product** (EDU000-DEV-001): Toàn bộ product cần re-test sau migration
 - HIGH **Lực chưa có hạ tầng test** (EDU001-BE-004): Đồng bộ Server Biên cần sv17 + backup
 - HIGH **Bottleneck**: Diện (BE) giữ nhiều task (Kafka + Offline)
 - HIGH **Bottleneck**: Chiến (FE) key person — Social + Sync + Search + Approve
-- MEDIUM **License thiết bị** (EDU001-QC-004): QC cần check trước triển khai VP
+- ~~DONE **License thiết bị** (EDU001-QC-004): Đào đã test xong~~
 - MEDIUM **Alignment**: Luồng Assignment (EDU001-BA-001) — FE và Lead hiểu lệch
 - MEDIUM **Versioning**: Nguy cơ code đè Legacy <-> Native
 
@@ -59,6 +69,7 @@
 |------|-------|------|-------------|---------|-----|
 | BE | 4 | 0 | 1 | 3 | 0 |
 | FE | 3 | 1 | 1 | 1 | 0 |
-| QC | 4 | 1 | 0 | 2 | 1 |
+| QC | 5 | 2 | 0 | 2 | 1 |
+| PM/Deploy | 2 | 0 | 1 | 1 | 0 |
 | BA | 3 | 0 | 0 | 0 | 3 |
-| **Tổng** | **14** | **2** | **2** | **6** | **4** |
+| **Tổng** | **17** | **3** | **3** | **7** | **4** |
