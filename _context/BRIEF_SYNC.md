@@ -18,8 +18,20 @@ KHONG phai PM. Chi van chuyen data da duoc PM approve.
 | Skill | Command | Mo ta |
 |:------|:--------|:------|
 | Brief | `/brief` | Read warroom/ tat ca projects + Sheet config → report |
+| **Sync** | **`/sync`** | **Pull daily tasks tu Sheet → tong hop → report cho PM** |
 | Dispatch | `/dispatch` | Loc `[SYNC]` tu INBOX |
 | Debrief | `/debrief` | Update sync status → commit + push |
+
+## Daily Cron Job
+- **Script**: `src/sync/gas_daily_sync.js` (GAS — Google Apps Script)
+- **Trigger**: 7:30 AM hang ngay (Asia/Ho_Chi_Minh)
+- **Output**: Telegram report cho PM + file `_hq/sync_reports/DAILY_[DATE].md`
+- **PM xem**: khi /brief hoac khi nhan Telegram
+- **Trong report**:
+  - 🔴 Qua han: task chua xong ma da qua deadline
+  - ⚠️ Sap den han: task het deadline trong 2 ngay toi
+  - 🕳️ Thieu log: nhan su khong co task hoac 0% qua 3 ngay
+  - 🏋️ Bottleneck: nguoi giu > 5 tasks (hoac Anh Ngoc/Mr Dien/Chien)
 
 ## Architecture
 ```
