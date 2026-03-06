@@ -6,14 +6,14 @@
 
 ## 0. SUB-TASKS (lam theo thu tu nay)
 
-| # | Sub-task | File | Priority | Do kho | Mo ta |
-|---|---------|------|----------|--------|-------|
-| a | **Nhom CORE** | `BA-001a_NHOM1_CORE.md` | HIGH | TB | SmartRoom, STEM, Apps — DA CO data, can tong hop |
-| b | **Social + Web** | `BA-001b_SOCIAL_WEBSCHOOL.md` | HIGH | TB | AI Teacher, LMS — gan du, can bo sung |
-| c | **ViziStudio** | `BA-001c_VIZISTUDIO_TOOL2D.md` | **CRITICAL** | CAO | 3 ten 1 app? MU MOI NHAT |
-| d | **Apps PH + DW** | `BA-001d_APPS_PH_DW.md` | MEDIUM | TB | Co BRD/FRD, can doc |
-| e | **ZERO products** | `BA-001e_ZERO_PRODUCTS.md` | MEDIUM | RAT CAO | 6 SP chua co gi — tim manh ghep |
-| f | **CEO-Dev Map** | `BA-001f_CEO_DEV_MAPPING.md` | **CRITICAL** | CAO | Mapping ten thuong mai ↔ ky thuat |
+| # | Sub-task | File | Priority | Do kho | Trang thai | Mo ta |
+|---|---------|------|----------|--------|------------|-------|
+| a | **Nhom CORE** | `BA-001a_NHOM1_CORE.md` | HIGH | TB | ⬜ CHUA | SmartRoom, STEM, Apps — DA CO data, can tong hop |
+| b | **Social + Web** | `BA-001b_SOCIAL_WEBSCHOOL.md` | HIGH | TB | ⬜ CHUA | AI Teacher, LMS — gan du, can bo sung |
+| c | **ViziStudio** | `BA-001c_VIZISTUDIO_TOOL2D.md` | **CRITICAL** | CAO | ⬜ CHUA | 3 ten 1 app? MU MOI NHAT |
+| d | **Apps PH + DW** | `BA-001d_APPS_PH_DW.md` | MEDIUM | TB | ⬜ CHUA | Co BRD/FRD, can doc |
+| e | **ZERO products** | `BA-001e_ZERO_PRODUCTS.md` | MEDIUM | RAT CAO | ⬜ CHUA | 6 SP chua co gi — tim manh ghep |
+| f | **CEO-Dev Map** | `BA-001f_CEO_DEV_MAPPING.md` | **CRITICAL** | CAO | ⬜ CHUA | Mapping ten thuong mai ↔ ky thuat |
 
 > **Thu tu de xuat**: a → b → c → f → d → e
 > Lam a+b truoc (co data san), roi c+f (kho nhat nhung quan trong nhat), cuoi cung d+e

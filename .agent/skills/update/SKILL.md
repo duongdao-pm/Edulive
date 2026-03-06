@@ -1,25 +1,32 @@
 ---
-description: "Cap nhat trang thai task, tien do, thong tin du an. Dong bo TAT CA files lien quan: PROJECT_BOARD, MASTER_BOARD, INBOX, ALO_LOG. Dung khi user noi 'Update', 'Cap nhat', 'Sua status'."
+description: "Cap nhat trang thai task, tien do, thong tin du an. PM/HEAD: dong bo TAT CA files (PROJECT_BOARD, MASTER_BOARD, INBOX, ALO_LOG). BA/QC: cap nhat task files rieng + notify PM. Dung khi user noi 'Update', 'Cap nhat', 'Sua status'."
 globs:
 alwaysApply: false
 ---
 # SKILL: UPDATE
 
 ## PURPOSE
-Cap nhat trang thai, tien do, thong tin task/du an. Tu dong dong bo TAT CA files lien quan trong 1 lan — khong can sua tung file.
+Cap nhat trang thai, tien do, thong tin task/du an. Tu dong dong bo files lien quan.
+
+**3 role duoc dung**: PM/HEAD, BA, QC — moi role co flow khac nhau.
 
 ## WHEN TO USE
 - User noi "Update", "Cap nhat", "Sua status"
-- User bao tien do: "BE-001 len 70%", "FE-002 xong roi"
+- User bao tien do: "BA-001a xong", "QC-001b 50%"
 - User them task moi: "Them task QC test sv252"
 - User doi priority: "BE-004 len CRITICAL"
 - User danh dau DONE/BLOCKED
 - Batch update nhieu thay doi 1 luc
 
-## AI DUOC SU DUNG
-- HEAD, PM, Router
+## AI PHAN BIET ROLE NHU THE NAO
+- Neu dang o session PM (hoac HEAD/Router) → **PM flow** (day du: dong bo tat ca boards)
+- Neu dang o session BA → **BA flow** (nhe: chi sua task files rieng + notify)
+- Neu dang o session QC → **QC flow** (nhe: chi sua task files rieng + notify)
+- Role khac (Dev, AI) → dung /update nhung CHI bao PM, KHONG tu sua board
 
-## LOGIC
+---
+
+## PM / HEAD FLOW (DAY DU)
 
 ### Step 1: Parse Input
 Tu cau user noi, extract danh sach thay doi:
@@ -44,20 +51,20 @@ Moi thay doi se anh huong den NHIEU files. Agent PHAI sua DONG THOI tat ca:
 ```
 1 thay doi task = cap nhat TAT CA files sau:
 ┌──────────────────────────────────────────────────────┐
-│ projects/[EDU-XXX]/warroom/PROJECT_BOARD.md          │ ← Task board du an
+│ 0.1 projects/[EDU-XXX]/warroom/PROJECT_BOARD.md      │ ← Task board du an
 │ _hq/MASTER_BOARD.md                                  │ ← Bang tong cross-project
-│ projects/[EDU-XXX]/comms/INBOX.md (neu can)          │ ← Thong bao cho agent
+│ 0.1 projects/[EDU-XXX]/comms/INBOX.md (neu can)      │ ← Thong bao cho agent
 │ _hq/ALO_LOG.md (neu tu ALO)                          │ ← Log stakeholder
-│ projects/[EDU-XXX]/warroom/PRODUCT_BACKLOG.md (neu   │
-│   thay doi anh huong sprint/backlog)                 │ ← Backlog
+│ 0.1 projects/[EDU-XXX]/warroom/PRODUCT_BACKLOG.md    │
+│   (neu thay doi anh huong sprint/backlog)            │ ← Backlog
 └──────────────────────────────────────────────────────┘
 ```
 
 ### Step 3: Doc files hien tai
 Doc tat ca files lien quan TRUOC khi sua:
-1. Doc `projects/[Project]/warroom/PROJECT_BOARD.md`
+1. Doc `0.1 projects/[Project]/warroom/PROJECT_BOARD.md`
 2. Doc `_hq/MASTER_BOARD.md`
-3. Doc `projects/[Project]/comms/INBOX.md` (neu can ghi message)
+3. Doc `0.1 projects/[Project]/comms/INBOX.md` (neu can ghi message)
 4. Doc `_hq/ALO_LOG.md` (neu update lien quan ALO)
 
 ### Step 4: Thuc hien Update
@@ -124,11 +131,94 @@ Files synced:
 ✅ Telegram notified
 ```
 
-## VI DU
+---
+
+## BA / QC FLOW (NHE — cap nhat task files rieng)
+
+> BA va QC KHONG sua MASTER_BOARD, PROJECT_BOARD, INBOX.
+> Chi cap nhat task files cua minh → Telegram notify PM → PM se dong bo boards.
+
+### Step 1: Parse Input
+Tu cau user noi, extract:
+- **Task ID**: BA-001a, QC-001b, etc.
+- **Thay doi**: trang thai (DANG_LAM / XONG / BLOCKED), tien do (%), ghi chu
+
+| Loai thay doi | Vi du |
+|:---|:---|
+| Bat dau lam | "Bat dau BA-001a", "Dang lam QC-001b" |
+| Tien do | "BA-001a 50%", "QC-001c gan xong" |
+| Hoan thanh | "BA-001a xong", "QC-001b done" |
+| Blocked | "QC-001d chua co moi truong test" |
+| Ghi chu | "BA-001c: ViziStudio va Tool 2d la 2 app khac nhau" |
+
+### Step 2: Cap nhat Sub-task File
+Doc file sub-task → them/sua header `**Trang thai**`:
+
+```markdown
+# SUB-TASK [ID]: [Ten]
+**Parent**: [parent] | **Priority**: [priority] | **Do kho**: [do kho]
+**Trang thai**: DANG_LAM | **Tien do**: 50% | **Cap nhat**: [YYYY-MM-DD HH:MM]
+```
+
+Cac trang thai hop le:
+- `CHUA_BAT_DAU` — chua lam gi
+- `DANG_LAM` — dang thuc hien
+- `XONG` — da hoan thanh, output da tao
+- `BLOCKED` — bi chan (ghi ly do)
+- `REVIEW` — da nop output, cho PM review
+
+### Step 3: Cap nhat Parent Task Sub-task Table
+Doc file parent task → cap nhat cot `Trang thai` trong bang sub-task:
+
+```markdown
+| # | Sub-task | File | Priority | Do kho | Trang thai | Mo ta |
+|---|---------|------|----------|--------|------------|-------|
+| a | **Nhom CORE** | `BA-001a...` | HIGH | TB | ✅ XONG | ... |
+| b | **Social** | `BA-001b...` | HIGH | TB | 🔄 DANG_LAM 50% | ... |
+| c | **ViziStudio** | `BA-001c...` | CRITICAL | CAO | ⬜ CHUA | ... |
+```
+
+Icon quy uoc:
+- ⬜ CHUA_BAT_DAU
+- 🔄 DANG_LAM [%]
+- ✅ XONG
+- 🚫 BLOCKED [ly do]
+- 👀 REVIEW
+
+### Step 4: Telegram Notify (BAT BUOC)
+```
+📝 UPDATE — @[BA|QC]
+Sub-task: [task_id] → [trang thai moi]
+Tien do: [%]
+Ghi chu: [neu co]
+→ PM xem xet
+[YYYY-MM-DD HH:MM]
+```
+
+### Step 5: DUNG O DAY
+- BA/QC KHONG sua MASTER_BOARD
+- BA/QC KHONG sua PROJECT_BOARD
+- BA/QC KHONG sua INBOX
+- PM se doc va dong bo khi /brief hoac check Telegram
+
+### Step 6: Report
+```
+Update Complete (@[BA|QC]):
+- Sub-task [ID]: [trang thai cu] → [trang thai moi]
+- Tien do: [%]
+Files updated:
+  ✅ 0.2 Team/[role]/TASKS/[sub-task file]
+  ✅ 0.2 Team/[role]/TASKS/[parent task file]
+✅ Telegram notified → PM se dong bo
+```
+
+---
+
+## VI DU PM
 
 ### Vi du 1 — Cap nhat tien do
 ```
-User: BE-001 len 70%, Dien bao sap xong
+User (PM): BE-001 len 70%, Dien bao sap xong
 
 Agent:
   → Parse: EDU001-BE-001, tien do 40% → 70%
@@ -139,7 +229,7 @@ Agent:
 
 ### Vi du 2 — Danh dau DONE
 ```
-User: FE-002 xong roi, Chien va Luc da fix
+User (PM): FE-002 xong roi, Chien va Luc da fix
 
 Agent:
   → Parse: EDU001-FE-002, status → DONE
@@ -150,47 +240,86 @@ Agent:
   → Notify Telegram
 ```
 
-### Vi du 3 — Them task moi
+### Vi du 3 — Batch update
 ```
-User: Them task QC test lai sv252 sau fix bug 3D, priority HIGH, project EDU-001
-
-Agent:
-  → Parse: task moi, QC, EDU-001, HIGH
-  → Tao Task ID: EDU001-QC-005
-  → Them vao PROJECT_BOARD EDU-001 section QC
-  → Them vao MASTER_BOARD Active Tasks
-  → Cap nhat bang "Tien do tong"
-  → Notify Telegram
-```
-
-### Vi du 4 — Batch update
-```
-User: Update:
+User (PM): Update:
   - BE-001: 70%
   - FE-002: DONE
   - Them task QC test sv252, HIGH
-  - BE-004: chuyen CRITICAL
 
 Agent:
-  → Parse 4 thay doi
-  → Sua PROJECT_BOARD EDU-001 (4 changes)
-  → Sua MASTER_BOARD (4 changes)
-  → Ghi INBOX (FE-002 DONE)
+  → Parse 3 thay doi
+  → Sua PROJECT_BOARD + MASTER_BOARD (3 changes)
   → Notify Telegram (1 message gom tat ca)
 ```
 
+## VI DU BA / QC
+
+### Vi du 4 — BA bat dau task
+```
+User (BA): Bat dau lam BA-001a
+
+Agent BA:
+  → Parse: BA-001a, trang thai → DANG_LAM
+  → Sua BA-001a file header: Trang thai = DANG_LAM, Tien do = 0%
+  → Sua parent BA-001 bang: a = 🔄 DANG_LAM
+  → Notify Telegram: "📝 @BA: BA-001a DANG_LAM"
+  → DUNG.
+```
+
+### Vi du 5 — QC hoan thanh sub-task
+```
+User (QC): QC-001a xong, da tao output
+
+Agent QC:
+  → Parse: QC-001a, trang thai → XONG
+  → Sua QC-001a file header: Trang thai = XONG, Tien do = 100%
+  → Sua parent QC-001 bang: a = ✅ XONG
+  → Notify Telegram: "📝 @QC: QC-001a XONG — output ready"
+  → DUNG. PM se review output.
+```
+
+### Vi du 6 — BA update tien do
+```
+User (BA): BA-001c dang 40%, ViziStudio phuc tap lam
+
+Agent BA:
+  → Parse: BA-001c, tien do = 40%, ghi chu
+  → Sua BA-001c file header: Tien do = 40%
+  → Sua parent BA-001 bang: c = 🔄 DANG_LAM 40%
+  → Notify Telegram: "📝 @BA: BA-001c 40% — ViziStudio phuc tap"
+  → DUNG.
+```
+
+### Vi du 7 — QC bi blocked
+```
+User (QC): QC-001e khong lam duoc, khong co moi truong test
+
+Agent QC:
+  → Parse: QC-001e, trang thai → BLOCKED
+  → Sua QC-001e file header: Trang thai = BLOCKED, ly do = Khong co moi truong
+  → Sua parent QC-001 bang: e = 🚫 BLOCKED
+  → Notify Telegram: "📝 @QC: QC-001e BLOCKED — khong co moi truong"
+  → DUNG. PM se xu ly.
+```
+
+---
+
 ## RULES
-- **DONG BO TAT CA FILES** — KHONG duoc chi sua 1 file ma bo file khac
+- **PM/HEAD**: Full flow — dong bo tat ca boards, INBOX, ALO_LOG
+- **BA/QC**: Light flow — chi sua task files rieng, notify PM
 - **Doc truoc, sua sau** — luon doc file hien tai truoc khi edit
-- **Verify sau khi sua** — PROJECT_BOARD phai khop MASTER_BOARD
+- **PM: Verify** — PROJECT_BOARD phai khop MASTER_BOARD
+- **BA/QC: KHONG sua boards** — chi sua files trong `0.2 Team/[role]/TASKS/`
 - **Khong ro → HOI** — neu input mo ho, hoi user xac nhan
-- **Task ID tu dong** — khi them task moi, tu tao ID theo format: EDU[XXX]-[TEAM]-[STT]
-- **Timestamp** — luon cap nhat "Last updated" khi sua board
-- HEAD/PM co the update bat ky project nao
-- Agent chi update project minh duoc assign
+- **Task ID tu dong** — PM: EDU[XXX]-[TEAM]-[STT]. BA/QC: dung sub-task ID co san
+- **Timestamp** — luon cap nhat "Last updated" / "Cap nhat" khi sua
+- **Telegram BAT BUOC** — moi update deu notify
 
 ## EDGE CASES
 - **Task khong ton tai**: Hoi user — co phai task moi khong?
 - **Conflict**: 2 nguon thong tin khac nhau → hoi user chon
-- **Cross-project**: Neu update anh huong nhieu project → sua tat ca PROJECT_BOARDs lien quan
+- **Cross-project**: Neu update anh huong nhieu project → PM sua tat ca PROJECT_BOARDs
 - **Input la ALO**: Redirect sang /alo truoc, sau do /update tu dong chay theo
+- **BA/QC muon them task moi**: KHONG duoc. Ghi vao /alo, PM se tao task.
+- **BA/QC update task khong phai cua minh**: TU CHOI. Chi update task trong folder TASKS/ cua role minh.

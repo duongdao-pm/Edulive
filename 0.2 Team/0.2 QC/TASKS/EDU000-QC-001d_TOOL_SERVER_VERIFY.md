@@ -1,6 +1,7 @@
 # SUB-TASK QC-001d: Tool Soan giang + Server Bien — Kiem chung
 **Parent**: EDU000-QC-001 | **Priority**: MEDIUM | **Do kho**: TRUNG BINH
 **Moi truong**: ViziStudio (Windows Desktop) + Server Bien (Ubuntu Server)
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

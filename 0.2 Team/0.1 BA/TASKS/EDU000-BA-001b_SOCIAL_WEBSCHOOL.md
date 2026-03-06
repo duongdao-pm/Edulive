@@ -2,6 +2,7 @@
 **Parent**: EDU000-BA-001 | **Priority**: HIGH | **Do kho**: TRUNG BINH
 **San pham**: AI Teacher/Social, Web-School/Stem LMS, Schoolaris.vn
 **Trang thai data**: XANH/VANG — 5-5.5/6
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

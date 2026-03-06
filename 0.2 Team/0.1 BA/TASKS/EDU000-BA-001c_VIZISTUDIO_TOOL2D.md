@@ -2,6 +2,7 @@
 **Parent**: EDU000-BA-001 | **Priority**: CRITICAL | **Do kho**: CAO
 **San pham**: ViziStudio, Tool 2d, AI Tool / Kho anh GV
 **Trang thai data**: VANG — 3-4/6
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

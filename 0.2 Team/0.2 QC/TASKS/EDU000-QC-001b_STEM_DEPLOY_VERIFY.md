@@ -1,6 +1,7 @@
 # SUB-TASK QC-001b: STEM Room — Kiem chung trien khai
 **Parent**: EDU000-QC-001 | **Priority**: HIGH | **Do kho**: TRUNG BINH
 **Moi truong**: STEM Room (EDL750s + EDL760s + Server Bien)
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

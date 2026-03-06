@@ -1,6 +1,7 @@
 # SUB-TASK QC-001e: San pham chua biet — QC co the access gi?
 **Parent**: EDU000-QC-001 | **Priority**: LOW | **Do kho**: CAO
 **San pham**: ClassNova, AiTalkStudio, SynXR, Airlib, I3Dpro, Cam AI, Apps PH, DataWarehouse
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

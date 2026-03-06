@@ -1,6 +1,7 @@
 # SUB-TASK QC-001c: Social / MXH — Kiem chung tinh nang
 **Parent**: EDU000-QC-001 | **Priority**: MEDIUM | **Do kho**: TRUNG BINH
 **Moi truong**: Social / MXH (Web — PC/Mobile)
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

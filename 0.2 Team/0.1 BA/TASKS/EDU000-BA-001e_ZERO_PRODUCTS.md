@@ -2,6 +2,7 @@
 **Parent**: EDU000-BA-001 | **Priority**: MEDIUM | **Do kho**: RAT CAO
 **San pham**: ClassNova, AiTalkStudio, SynXR, Airlib, I3Dpro, Cam AI
 **Trang thai data**: DO — 0-1/6
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

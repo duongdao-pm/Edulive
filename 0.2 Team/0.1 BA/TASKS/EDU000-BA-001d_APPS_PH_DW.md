@@ -2,6 +2,7 @@
 **Parent**: EDU000-BA-001 | **Priority**: MEDIUM | **Do kho**: TRUNG BINH
 **San pham**: Apps Phu huynh, DataWarehouse
 **Trang thai data**: VANG — 3-4/6
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

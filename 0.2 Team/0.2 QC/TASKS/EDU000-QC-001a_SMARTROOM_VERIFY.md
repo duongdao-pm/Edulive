@@ -1,6 +1,7 @@
 # SUB-TASK QC-001a: SmartRoom — Kiem chung tinh nang
 **Parent**: EDU000-QC-001 | **Priority**: HIGH | **Do kho**: TRUNG BINH
 **Moi truong**: SmartRoom Web (PC/Laptop) + Tablet GV (EDL750s) + Tablet HS (EDL760s)
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

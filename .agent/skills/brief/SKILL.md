@@ -35,7 +35,7 @@ Doc `.agent/rules/global/` → biet minh KHONG duoc lam gi (role-boundaries, no-
 ### Step 3: Read Brief
 **Theo role:**
 - PM/HEAD/ROUTER/DEV/AI: doc `_context/BRIEF_[ROLE].md` (workspace level)
-  + Neu co project brief → doc them `0.1 0.1 projects/[Project]/_context/BRIEF_[ROLE].md`
+  + Neu co project brief → doc them `0.1 projects/[Project]/_context/BRIEF_[ROLE].md`
 - **BA**: doc `0.2 Team/0.1 BA/BRIEF_BA.md`
   + Doc tasks: `0.2 Team/0.1 BA/TASKS/` (cac file .md)
   + Doc shared data: `0.2 Team/TRANG_THAI_DU_LIEU.md`
@@ -76,7 +76,7 @@ Doc `.agent/rules/global/` → biet minh KHONG duoc lam gi (role-boundaries, no-
 
 **Member (1 du an):**
 1. Doc `product/COMPANY_CONTEXT.md`
-2. Doc `0.1 0.1 projects/[Project]/warroom/PROJECT_BOARD.md`
+2. Doc `0.1 projects/[Project]/warroom/PROJECT_BOARD.md`
 3. Doc INBOX — loc tag minh + `Project: [Project]`
 4. Bao cao: du an nay dang o dau, task pending
 

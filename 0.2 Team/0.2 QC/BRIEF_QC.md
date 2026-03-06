@@ -20,6 +20,10 @@
 > **Ghi nhan thong tin**: QC DUOC dung `/alo` de log thong tin nhan duoc.
 > Khi test, noi chuyen voi dev, hoac phat hien bug/tinh nang moi → dung `/alo` ghi lai.
 > PM se doc va xu ly. QC KHONG tu tao task — chi ghi nhan.
+>
+> **Cap nhat tien do**: QC DUOC dung `/update` de cap nhat trang thai sub-task.
+> VD: `/update QC-001a dang lam 50%` hoac `/update QC-001b xong`.
+> Agent se tu cap nhat file task + bao PM qua Telegram. QC KHONG sua MASTER_BOARD hay PROJECT_BOARD.
 
 ---
 

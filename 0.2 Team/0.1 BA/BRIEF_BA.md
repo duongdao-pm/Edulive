@@ -18,6 +18,10 @@
 > **Ghi nhan thong tin**: BA DUOC dung `/alo` de log thong tin nhan duoc.
 > Khi doc tai lieu hoac noi chuyen voi ai ma PHAT HIEN thong tin moi → dung `/alo` ghi lai.
 > PM se doc va xu ly. BA KHONG tu tao task — chi ghi nhan.
+>
+> **Cap nhat tien do**: BA DUOC dung `/update` de cap nhat trang thai sub-task.
+> VD: `/update BA-001a dang lam 30%` hoac `/update BA-001c xong`.
+> Agent se tu cap nhat file task + bao PM qua Telegram. BA KHONG sua MASTER_BOARD hay PROJECT_BOARD.
 
 ---
 

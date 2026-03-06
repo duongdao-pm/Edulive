@@ -1,6 +1,7 @@
 # SUB-TASK BA-001f: Mapping ten CEO vs ten Dev
 **Parent**: EDU000-BA-001 | **Priority**: CRITICAL | **Do kho**: CAO
 **Muc tieu**: Lam ro: moi ten thuong mai tuong ung voi san pham ky thuat nao
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 

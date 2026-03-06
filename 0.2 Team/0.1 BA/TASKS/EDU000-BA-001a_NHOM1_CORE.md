@@ -2,6 +2,7 @@
 **Parent**: EDU000-BA-001 | **Priority**: HIGH | **Do kho**: TRUNG BINH
 **San pham**: SmartRoom, STEM Room, Apps GV (EDL750s), Apps HS (EDL760s)
 **Trang thai data**: XANH — 6/6 day du
+**Trang thai**: CHUA_BAT_DAU | **Tien do**: 0%
 
 ---
 
