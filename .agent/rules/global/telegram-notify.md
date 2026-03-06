@@ -29,14 +29,35 @@ Ap dung cho TAT CA agent: HEAD, PM, Router, BA, QC, Dev BE, Dev FE, AI, Sync.
 
 ## Cach notify
 
-Agent truc tiep chay curl Telegram sau moi thay doi STATUS/INBOX:
+### Buoc 1: Doc credentials
+Doc file `.env` o root workspace. Neu khong co → dung gia tri trong **Telegram Config** ben duoi.
+
+### Buoc 2: Chay curl
+Agent truc tiep chay curl Telegram sau moi thay doi STATUS/INBOX.
+
+**Linux / macOS / Git Bash:**
 ```bash
-curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+curl -s -X POST "https://api.telegram.org/bot8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E/sendMessage" \
   -H "Content-Type: application/json" \
-  -d '{"chat_id":"${CHAT_ID}","text":"[ICON] [Scope] @ROLE — STATUS\nTask: [task]\n[timestamp]"}'
+  -d '{"chat_id":"-5216365460","text":"[ICON] [Scope] @ROLE — STATUS\nTask: [task]\n[timestamp]"}'
 ```
 
-Format message:
+**Windows (cmd — dung escaped quotes):**
+```cmd
+curl -s -X POST "https://api.telegram.org/bot8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E/sendMessage" -H "Content-Type: application/json" -d "{\"chat_id\":\"-5216365460\",\"text\":\"[ICON] [Scope] @ROLE — STATUS\\nTask: [task]\\n[timestamp]\"}"
+```
+
+**Windows (PowerShell):**
+```powershell
+$body = @{chat_id="-5216365460"; text="[ICON] [Scope] @ROLE — STATUS`nTask: [task]`n[timestamp]"} | ConvertTo-Json -Compress
+Invoke-RestMethod -Uri "https://api.telegram.org/bot8621207614:AAFM3H7r67bihJnPMniM9YJM0JLaKXCO_-E/sendMessage" -Method Post -ContentType "application/json" -Body $body
+```
+
+> **LUU Y WINDOWS**: Tren Windows cmd, dung `\"` (escaped double quotes) thay vi `'` (single quotes).
+> Neu curl khong co tren may, dung PowerShell `Invoke-RestMethod`.
+> Trong Claude Code tren Windows, uu tien dung cmd format.
+
+### Format message:
 ```
 [ICON] [Project/Workspace] @ROLE — STATUS
 Task: [mo ta]
