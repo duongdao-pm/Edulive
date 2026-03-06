@@ -1,18 +1,18 @@
 # BRIEF — SYNC Agent
-**Version**: 1.0 | **Last Updated**: 2026-03-02
+**Version**: 1.1 | **Last Updated**: 2026-03-06
 
 ## Identity
-Sync Agent (Tier 3) — Cau noi tu dong giua workspace (noi PM + AI agents lam viec) va Google Sheet `Edulive_Schedule_v1` (noi human team lam viec).
-KHONG phai PM. Chi van chuyen data da duoc PM approve.
+Sync Agent (Tier 3) — Lay du lieu tu Google Sheet `Edulive_Schedule_v1` (noi human team cap nhat task) ve workspace cho PM su dung.
+**CHI DOC du lieu. KHONG ghi/push bat ky du lieu nao vao Sheet.**
 
 ## Platform & Model
-- **Primary**: GAS (Google Apps Script) hoac n8n
-- Automated sync, co the trigger tu PM hoac scheduled
+- **Primary**: GAS (Google Apps Script)
+- Automated sync, trigger tu cron hoac PM yeu cau
 
 ## Scope
-- **Cross-project** — dong bo data tat ca projects
+- **Cross-project** — doc data tat ca projects tu Sheet
 - **Tag loc inbox**: `[SYNC]`
-- Bi-directional sync: Workspace ↔ Google Sheet
+- **1 chieu**: Sheet → Workspace (chi PULL, khong PUSH)
 
 ## Skills
 | Skill | Command | Mo ta |
@@ -25,7 +25,7 @@ KHONG phai PM. Chi van chuyen data da duoc PM approve.
 ## Daily Cron Job
 - **Script**: `src/sync/gas_daily_sync.js` (GAS — Google Apps Script)
 - **Trigger**: 7:30 AM hang ngay (Asia/Ho_Chi_Minh)
-- **Output**: Telegram report cho PM + file `_hq/sync_reports/DAILY_[DATE].md`
+- **Output**: Telegram report cho PM
 - **PM xem**: khi /brief hoac khi nhan Telegram
 - **Trong report**:
   - 🔴 Qua han: task chua xong ma da qua deadline
@@ -35,20 +35,21 @@ KHONG phai PM. Chi van chuyen data da duoc PM approve.
 
 ## Architecture
 ```
-WORKSPACE (PM + AI agents)              GOOGLE SHEET (Human team)
-─────────────────────────               ──────────────────────────
-Phan tich, to chuc, ra quyet dinh       Nhan vien xem task, cap nhat status
-Agent doc data, tao report              Daily task auto-refresh 5 phut
-PM duyet truoc khi push                 Source of truth cho team
+GOOGLE SHEET (Human team)              WORKSPACE (PM + AI agents)
+──────────────────────────             ─────────────────────────
+Nhan vien cap nhat task                PM doc report, ra quyet dinh
+Daily task auto-refresh 5 phut         Agent tong hop, phan tich
+Source of truth cho tien do team       Source of truth cho priority
 
               ┌────────────┐
               │ SYNC AGENT │
               └──────┬─────┘
                      │
-         ┌───────────┴───────────┐
-         ▼                       ▼
-    Workspace → Sheet        Sheet → Workspace
-    (PUSH: task da xu ly)    (PULL: status updates)
+                     ▼
+            Sheet ──→ Workspace
+            (PULL: doc task data)
+
+CHI 1 CHIEU — KHONG ghi nguoc vao Sheet
 ```
 
 ## Key Files to Read
@@ -61,75 +62,56 @@ PM duyet truoc khi push                 Source of truth cho team
 | Config | Sheet name: `Edulive_Schedule_v1` |
 
 ## Google Sheet Tabs
-| Workspace folder | Sheet tab | Quyen |
-|:-----------------|:----------|:------|
-| BA specs/ | BA Team | read/write |
-| QC qa/ | QC Team | read/write |
-| Dev BE src/be/ | BE Team | read/write |
-| Dev FE src/fe/ | FE Team | read/write |
-| AI src/ | AI Team | read/write |
-| — | Daily task | read only (auto-generated) |
-| — | Bao cao nhom | read only (dashboard) |
-| — | Project list | read only (dropdown values) |
+| Sheet tab | Quyen Sync | Mo ta |
+|:----------|:-----------|:------|
+| BE Team | read only | Task nhan su BE |
+| FE Team | read only | Task nhan su FE |
+| QC Team | read only | Task nhan su QC |
+| AI Team | read only | Task nhan su AI |
+| BA Team | read only | Task nhan su BA |
+| Daily task | read only | Auto-generated (tong hop tat ca teams) |
+| Bao cao nhom | read only | Dashboard |
+| Project list | read only | Dropdown values |
 
-## Luong 1: PUSH (Workspace → Sheet)
+## Column Mapping (12 cot)
+| Index | Ten cot | Mo ta |
+|-------|---------|-------|
+| 0 | Nhan su | Ten nhan su |
+| 1 | Req ID | Ma yeu cau |
+| 2 | Project | Ten du an |
+| 3 | Start date | dd/mm/yyyy |
+| 4 | End date | dd/mm/yyyy |
+| 5 | Estimate | Gio uoc luong |
+| 6 | Tien do | Format: "50% - Dang thuc hien" |
+| 7 | Trang thai xu ly | Dang thuc hien / Yeu cau tam dung / Da tiep nhan |
+| 8 | Mo ta yeu cau | Mo ta ngan gon |
+| 9 | Noi dung | Chi tiet cong viec |
+| 10 | Ket qua mong muon | Expected outcomes |
+| 11 | REF | Reference links |
 
-### Khi nao push?
-- Khi PM approve task moi hoac task da cap nhat
-- Task phai co day du: Req ID, Project, Nhan su, Start date, End date, Mo ta
-
-### Format khi push
-```
-Columns (thu tu):
-1. Nhan su          — Ten nguoi duoc giao
-2. Req ID           — Ma yeu cau (EDL_RL_XXX hoac REQ-[TEAM]-XXXXX)
-3. Project          — Ten du an (phai match dropdown trong Sheet)
-4. Start date       — dd/mm/yyyy
-5. End date         — dd/mm/yyyy
-6. Estimate         — So gio uoc luong
-7. Tien do          — 0-100%
-8. Trang thai       — New / Dang xu ly / Done / Pending / Cancel
-9. Do uu tien       — Cao / Trung binh / Thap
-10. Mo ta           — Noi dung task
-```
-
-## Luong 2: PULL (Sheet → Workspace)
+## PULL Flow (Sheet → Workspace)
 
 ### Khi nao pull?
-- Moi dau ngay (morning sync) hoac khi PM yeu cau
+- Moi dau ngay (morning sync via GAS cron) hoac khi PM yeu cau
 
 ### Pull cai gi?
-1. **Status updates** — task nao da Done, task nao doi tien do
+1. **Task data** — tat ca task dang active tu 5 team tabs
 2. **Overdue detection** — task nao End date < hom nay ma chua Done
-3. **New tasks** — task nao team tu them tren Sheet (can PM review)
+3. **Bottleneck** — ai giu nhieu task, ai 0% qua lau
+4. **Missing log** — nhan su khong co task hoac khong cap nhat
 
 ### Output sau khi pull
-```markdown
-# Sync Report — [DATE]
+Telegram report gui cho PM + file `_hq/sync_reports/DAILY_[DATE].md`
 
-## Status Changes
-- [REQ-ID] [Nhan su]: Tien do 30% → 70%
-
-## Overdue Tasks (can PM xem)
-- [REQ-ID] [Nhan su]: qua han [X] ngay, tien do [Y]%
-
-## New Tasks on Sheet (can PM review)
-- [REQ-ID] [Nhan su]: [Mo ta ngan]
-
-## Team Summary
-| Team | Tong task | Done | Dang lam | Overdue |
-|------|----------|------|----------|---------|
-```
-
-## Luong 3: ALERT (Canh bao tu dong)
+## ALERT (Canh bao tu dong)
 
 | Dieu kien | Muc do | Hanh dong |
 |-----------|--------|-----------|
 | Task qua han > 2 ngay | CRITICAL | Alert PM ngay |
 | Task qua han 1 ngay | WARNING | Ghi vao Sync Report |
 | 1 nguoi giu > 5 task dang lam | WARNING | Ghi vao Sync Report (resource risk) |
-| Task khong co End date | FLAG | Flag trong report, de xuat PM set deadline |
-| Anh Ngoc / Mr Dien / Chien co task moi | WARNING | Flag [BOTTLENECK RISK] — ho da overloaded |
+| Task khong co End date | FLAG | Flag trong report |
+| Anh Ngoc / Mr Dien / Chien co task moi | WARNING | Flag [BOTTLENECK RISK] |
 
 ### Auto-flag keywords (tu COMPANY_CONTEXT)
 ```
@@ -141,33 +123,23 @@ Assignment, bai giang, Approve, camelCase    → [ALIGNMENT NEEDED]
 ## Rules
 
 ### PHAI LAM
-- Doc COMPANY_CONTEXT.md truoc moi lan sync (biet ai overloaded, nut that nao)
-- Validate Req ID format truoc khi push
-- Check Project name match voi dropdown values trong Sheet
-- Chi push task da duoc PM approve
+- Doc COMPANY_CONTEXT.md truoc moi lan sync
 - Tao Sync Report sau moi lan pull
+- Gui report qua Telegram cho PM
 
 ### KHONG DUOC LAM
-- KHONG tu tao task moi ma chua qua PM
-- KHONG sua task dang co tren Sheet ma khong co lenh tu PM
-- KHONG xoa bat ky row nao tren Sheet
+- **KHONG ghi/push du lieu vao Sheet** — Sheet la so huu cua team
+- KHONG sua, them, xoa bat ky row nao tren Sheet
 - KHONG tu giai quyet conflict — flag cho PM
-
-## Conflict Resolution
-Khi data tren Sheet khac workspace:
-1. **Sheet wins** cho: status, tien do (human team cap nhat realtime)
-2. **Workspace wins** cho: priority, assignment (PM quyet dinh)
-3. **Conflict** → flag cho PM, KHONG tu giai quyet
 
 ## Checklist moi lan sync
 ```
 □ Doc COMPANY_CONTEXT.md
-□ Pull data moi nhat tu Sheet
-□ So sanh voi data trong workspace
+□ Pull data moi nhat tu Sheet (chi doc)
 □ Tao Sync Report
 □ Flag overdue tasks
 □ Flag bottleneck persons
 □ Auto-flag keywords theo COMPANY_CONTEXT
+□ Gui Telegram cho PM
 □ Cho PM review report
-□ Push chi nhung gi PM approve
 ```

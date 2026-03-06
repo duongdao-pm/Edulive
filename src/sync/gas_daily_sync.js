@@ -36,7 +36,9 @@ const CONFIG = {
     { tab: 'BA Team', code: 'BA', members: [] } // BA members can be added later
   ],
 
-  // Column mapping (0-indexed) — dieu chinh neu cot thay doi
+  // Column mapping (0-indexed) — theo cau truc Sheet thuc te (12 cot)
+  // Nhan su | Req ID | Project | Start date | End date | Estimate |
+  // Tien do | Trang thai xu ly | Mo ta yeu cau | Noi dung | Ket qua mong muon | REF
   COLS: {
     NHAN_SU: 0,
     REQ_ID: 1,
@@ -46,8 +48,10 @@ const CONFIG = {
     ESTIMATE: 5,
     TIEN_DO: 6,
     TRANG_THAI: 7,
-    UU_TIEN: 8,
-    MO_TA: 9
+    MO_TA: 8,         // "Mo ta yeu cau" — mo ta ngan gon
+    NOI_DUNG: 9,      // "Noi dung" — chi tiet cong viec
+    KET_QUA: 10,      // "Ket qua mong muon"
+    REF: 11            // Reference links (Figma, etc.)
   },
 
   // Nguong canh bao
@@ -126,13 +130,24 @@ function pullTeamData(tabName, teamCode) {
     const tasks = [];
     let currentPerson = '';
 
+    // Trang thai can bo qua (tieng Viet + tieng Anh)
+    const DONE_STATUSES = ['Done', 'Hoàn thành', 'Đã hoàn thành'];
+    const CANCEL_STATUSES = ['Cancel', 'Hủy bỏ', 'Đã hủy', 'Đã huỷ'];
+
     // Skip header rows (thuong 1-2 dong dau)
     for (let i = 1; i < data.length; i++) {
       const row = data[i];
+      const firstCol = String(row[0] || '').trim();
 
-      // Detect person name (cot dau tien co gia tri)
-      if (row[CONFIG.COLS.NHAN_SU] && String(row[CONFIG.COLS.NHAN_SU]).trim() !== '') {
-        currentPerson = String(row[CONFIG.COLS.NHAN_SU]).trim();
+      // Skip date separator rows (VD: "📅 27/02/2026 (Hôm nay)")
+      if (firstCol.includes('📅')) continue;
+
+      // Skip description/note rows (dong dau tien thuong la ghi chu)
+      if (firstCol.startsWith('Dữ liệu') || firstCol.startsWith('Điều kiện')) continue;
+
+      // Detect person name (cot dau tien co gia tri, khong phai header)
+      if (firstCol !== '' && !firstCol.includes('Nhân sự')) {
+        currentPerson = firstCol;
       }
 
       // Skip empty rows or rows without project
@@ -143,12 +158,15 @@ function pullTeamData(tabName, teamCode) {
       const trangThai = String(row[CONFIG.COLS.TRANG_THAI] || '').trim();
 
       // Skip Done va Cancel
-      if (trangThai === 'Done' || trangThai === 'Hoàn thành' ||
-          trangThai === 'Cancel' || trangThai === 'Hủy bỏ') continue;
+      if (DONE_STATUSES.some(s => trangThai.includes(s)) ||
+          CANCEL_STATUSES.some(s => trangThai.includes(s))) continue;
 
-      // Parse tien do
-      let tienDo = String(row[CONFIG.COLS.TIEN_DO] || '0').trim();
-      tienDo = parseInt(tienDo.replace(/[^0-9]/g, '')) || 0;
+      // Parse tien do (format: "50% - Đang thực hiện")
+      let tienDoRaw = String(row[CONFIG.COLS.TIEN_DO] || '0').trim();
+      let tienDo = parseInt(tienDoRaw.replace(/[^0-9]/g, '')) || 0;
+
+      // Skip task da hoan thanh (100%)
+      if (tienDo >= 100) continue;
 
       // Parse dates
       const startDate = parseDate(row[CONFIG.COLS.START_DATE]);
@@ -163,8 +181,8 @@ function pullTeamData(tabName, teamCode) {
         endDate: endDate,
         tienDo: tienDo,
         trangThai: trangThai,
-        uuTien: String(row[CONFIG.COLS.UU_TIEN] || '').trim(),
-        moTa: String(row[CONFIG.COLS.MO_TA] || '').trim().substring(0, 80) // Gioi han 80 ky tu
+        moTa: String(row[CONFIG.COLS.MO_TA] || '').trim().substring(0, 100),
+        noiDung: String(row[CONFIG.COLS.NOI_DUNG] || '').trim().substring(0, 150)
       });
     }
 
@@ -394,46 +412,6 @@ function sendTelegram(message) {
       Logger.log('Telegram error: ' + e.message);
     }
   });
-}
-
-// ====== PUSH (Workspace → Sheet) ======
-
-/**
- * Day 1 task len Sheet
- * @param {string} tabName - Tab dich (VD: "BE Team")
- * @param {Object} taskData - { nhanSu, reqId, project, startDate, endDate, moTa, uuTien }
- */
-function pushTask(tabName, taskData) {
-  try {
-    const ss = SpreadsheetApp.openById(CONFIG.SHEET_ID);
-    const sheet = ss.getSheetByName(tabName);
-
-    if (!sheet) {
-      Logger.log('Tab not found: ' + tabName);
-      return false;
-    }
-
-    const row = [
-      taskData.nhanSu || '',
-      taskData.reqId || '',
-      taskData.project || '',
-      taskData.startDate || '',
-      taskData.endDate || '',
-      taskData.estimate || '',
-      '0%',                    // Tien do bat dau = 0
-      'New',                   // Trang thai = New
-      taskData.uuTien || 'Trung binh',
-      taskData.moTa || ''
-    ];
-
-    sheet.appendRow(row);
-    Logger.log('Pushed to ' + tabName + ': ' + taskData.reqId);
-    return true;
-
-  } catch (e) {
-    Logger.log('Push error: ' + e.message);
-    return false;
-  }
 }
 
 // ====== TRIGGER SETUP ======

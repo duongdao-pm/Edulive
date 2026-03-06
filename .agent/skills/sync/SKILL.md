@@ -1,5 +1,5 @@
 ---
-description: "Dong bo task tu Google Sheet ve workspace. Cron daily hoac manual trigger. Pull data tu sheet, tao bao cao tong hop, luu vao _hq/sync_reports/. Dung khi user noi 'Sync', 'Dong bo', 'Pull sheet', 'Bao cao ngay'."
+description: "Dong bo task tu Google Sheet ve workspace (CHI DOC — khong ghi vao Sheet). Cron daily hoac manual trigger. Pull data tu sheet, tao bao cao tong hop, luu vao _hq/sync_reports/. Dung khi user noi 'Sync', 'Dong bo', 'Pull sheet', 'Bao cao ngay'."
 globs:
 alwaysApply: false
 ---
@@ -7,6 +7,9 @@ alwaysApply: false
 
 ## PURPOSE
 Pull data tu Google Sheet `Edulive_Schedule_v1` → tong hop task hang ngay cua cac thanh vien → luu report vao workspace → PM review.
+
+**CHI DOC du lieu tu Sheet. KHONG ghi/push bat ky du lieu nao vao Sheet.**
+Sheet la so huu cua team — workspace chi lay ve de PM su dung.
 
 ## WHEN TO USE
 - User noi "Sync", "Dong bo", "Pull sheet"
@@ -22,8 +25,25 @@ Pull data tu Google Sheet `Edulive_Schedule_v1` → tong hop task hang ngay cua 
 ```
 Sheet ID:   1U0S28FUhiXgGiZDUcDEg08GohpVS1srf-xVkKqWRaJU
 Sheet name: Edulive_Schedule_v1
-Tabs:       BE Team, FE Team, QC Team, AI Team, BA Team, Daily task
+Tabs doc:   BE Team, FE Team, QC Team, AI Team, BA Team
+Tab ref:    Daily task (auto-generated, read-only)
 ```
+
+## COLUMN MAPPING (12 cot)
+| Index | Ten cot | Ma | Mo ta |
+|-------|---------|-----|-------|
+| 0 | Nhan su | NHAN_SU | Ten nhan su |
+| 1 | Req ID | REQ_ID | Ma yeu cau (EDL_RL_XXX, REQ-BE-XXXXX) |
+| 2 | Project | PROJECT | Ten du an |
+| 3 | Start date | START_DATE | Ngay bat dau (dd/mm/yyyy) |
+| 4 | End date | END_DATE | Ngay ket thuc (dd/mm/yyyy) |
+| 5 | Estimate | ESTIMATE | Uoc luong (gio) |
+| 6 | Tien do | TIEN_DO | Format: "50% - Dang thuc hien" |
+| 7 | Trang thai xu ly | TRANG_THAI | Dang thuc hien / Yeu cau tam dung / Da tiep nhan |
+| 8 | Mo ta yeu cau | MO_TA | Mo ta ngan gon |
+| 9 | Noi dung | NOI_DUNG | Chi tiet cong viec |
+| 10 | Ket qua mong muon | KET_QUA | Expected outcomes |
+| 11 | REF | REF | Reference links (Figma, etc.) |
 
 ## TEAM MEMBERS (mapping tab → nguoi)
 | Tab | Thanh vien |
@@ -44,21 +64,20 @@ GAS script chay moi ngay luc **7:30 AM**:
 
 ```
 1. Doc tat ca team tabs (BE, FE, QC, AI, BA)
-2. Voi moi tab, lay cac cot:
-   - Nhan su, Req ID, Project, Start date, End date
-   - Tien do (%), Trang thai, Do uu tien, Mo ta
-3. Loc: chi lay task co Trang thai != "Done" va != "Cancel"
-4. Tong hop thanh Daily Report (markdown)
-5. Luu report:
-   - GAS: post len Telegram (PM channel)
-   - GAS: ghi vao Sheet tab "Sync_Log" (optional)
-   - Workspace: PM pull report khi /brief
+2. Voi moi tab, lay 12 cot:
+   - Nhan su, Req ID, Project, Start date, End date, Estimate
+   - Tien do (%), Trang thai, Mo ta yeu cau, Noi dung, Ket qua, REF
+3. Loc:
+   - Bo task co Trang thai = "Hoan thanh" / "Huy bo"
+   - Bo task co Tien do = 100%
+   - Bo dong separator (📅) va dong ghi chu
+4. Tong hop thanh Daily Report
+5. Gui report qua Telegram cho PM
 6. Auto-flag:
    - 🔴 QUA HAN: End date < hom nay, chua Done
    - ⚠️ SAP DEN HAN: End date trong 2 ngay toi, chua Done
    - 🕳️ THIEU LOG: nhan su khong co task HOAC task 0% qua 3 ngay
    - 🏋️ BOTTLENECK: 1 nguoi > 5 task dang lam
-   - ⚡ HIGH PRIORITY keywords: Kafka, Server Bien, offline, Edge
    - 🔥 RISK PERSON: Anh Ngoc / Mr Dien / Chien co nhieu task
 ```
 
@@ -68,10 +87,9 @@ PM noi "sync" hoac "dong bo" hoac "bao cao ngay":
 
 #### Step 1: Doc CSV moi nhat
 - Doc file `_resources/Edulive_Schedule_v1 - Daily task.csv`
-- Hoac: doc truc tiep tu Sheet qua GAS API (neu da deploy)
 
 #### Step 2: Parse data
-Voi moi row:
+Voi moi row (12 cot):
 ```
 {
   nhan_su: "AI - NAM",
@@ -81,53 +99,15 @@ Voi moi row:
   end_date: "11/02/2026",
   tien_do: "50%",
   trang_thai: "Dang thuc hien",
-  mo_ta: "Kho anh trong sach giao khoa..."
+  mo_ta: "Kho anh trong sach giao khoa...",
+  noi_dung: "Tao kho du lieu anh toan lop 4 tap 1"
 }
 ```
 
 #### Step 3: Tao Daily Report
 Tao file: `_hq/sync_reports/DAILY_[YYYY-MM-DD].md`
 
-Format:
-```markdown
-# Daily Report — [YYYY-MM-DD]
-> Auto-generated tu Google Sheet Edulive_Schedule_v1
-> PM review va xac nhan
-
-## Tong quan
-| Team | Tong task | Done | Dang lam | Overdue | Pending |
-|------|----------|------|----------|---------|---------|
-| BE | X | X | X | X | X |
-| FE | X | X | X | X | X |
-| QC | X | X | X | X | X |
-| AI | X | X | X | X | X |
-
-## 🔴 Overdue (can PM xu ly)
-| Nhan su | Req ID | Project | End date | Qua han | Tien do |
-|---------|--------|---------|----------|---------|---------|
-
-## ⚠️ Bottleneck (nguoi giu nhieu task)
-| Nhan su | So task | Projects |
-|---------|---------|----------|
-
-## Chi tiet theo team
-
-### BE Team
-| Nhan su | Req ID | Project | Tien do | Trang thai | End date | Mo ta |
-|---------|--------|---------|---------|------------|----------|-------|
-
-### FE Team
-(tuong tu)
-
-### QC Team
-(tuong tu)
-
-### AI Team
-(tuong tu)
-
-## Ghi chu PM
-(PM ghi o day sau khi review)
-```
+Format: xem `_hq/sync_reports/TEMPLATE_DAILY_REPORT.md`
 
 #### Step 4: Trinh bay cho PM
 ```
@@ -135,7 +115,6 @@ Sync Report [DATE]:
 - Tong: [X] tasks active ([Y] teams)
 - Overdue: [N] tasks 🔴
 - Bottleneck: [nguoi] ([so task])
-- New: [N] tasks moi
 
 PM xac nhan? (xem report / bo qua)
 ```
@@ -147,63 +126,32 @@ PM xac nhan? (xem report / bo qua)
 
 ---
 
-## PUSH FLOW (Workspace → Sheet)
-
-Khi PM muon day task tu workspace len Sheet:
-
-#### Step 1: PM cung cap thong tin task
-```
-/sync push [nhan_su] [project] [mo_ta]
-VD: /sync push "Luc" "Smartroom apps" "Fix bug WebRTC sv254"
-```
-
-#### Step 2: Validate
-- Nhan su co trong team list?
-- Project co trong dropdown 25 projects?
-- Co du: Start date, End date, Priority?
-
-#### Step 3: Ghi vao Sheet (qua GAS API)
-- Append row vao dung team tab
-- Tao Req ID theo format: REQ-[TEAM]-[XXXXX]
-
-#### Step 4: Confirm
-```
-Pushed to Sheet:
-- Tab: BE Team
-- Nhan su: Luc
-- Project: Smartroom apps
-- Req ID: REQ-BE-00123
-- Mo ta: Fix bug WebRTC sv254
-✅ Telegram notified
-```
-
----
-
 ## GAS SCRIPT DEPLOYMENT
 
-Script template: `src/sync/gas_daily_sync.js`
+Script: `src/sync/gas_daily_sync.js`
 
 ### Setup:
 1. Mo Google Apps Script: https://script.google.com
-2. Tao project moi (hoac dung project ID tu .env)
+2. Tao project moi
 3. Copy code tu `src/sync/gas_daily_sync.js`
-4. Cau hinh:
-   - `SHEET_ID` = `1U0S28FUhiXgGiZDUcDEg08GohpVS1srf-xVkKqWRaJU`
+4. Dien credentials vao CONFIG:
    - `TELEGRAM_BOT_TOKEN` = tu .env
    - `TELEGRAM_CHAT_ID` = tu .env
-5. Tao Time Trigger: 7:00-8:00 AM hang ngay
-6. Test: chay `dailySync()` thu cong
+5. Chay `setupTrigger()` 1 lan → tao cron 7:30 AM
+6. Chay `testSync()` de test (khong gui Telegram)
+7. Chay `dailySync()` de test that (gui Telegram)
 
 ### Functions:
 | Function | Mo ta | Trigger |
 |----------|-------|---------|
 | `dailySync()` | Pull all tabs → tong hop → Telegram | Time trigger 7:30 AM |
 | `pullTeamData(tabName)` | Doc data 1 team tab | Called by dailySync |
-| `generateReport(data)` | Tao markdown report | Called by dailySync |
+| `generateReport(data)` | Tao telegram report | Called by dailySync |
 | `sendTelegram(message)` | Gui bao cao qua Telegram | Called by dailySync |
-| `pushTask(tab, rowData)` | Day 1 task len sheet | Manual trigger tu PM |
 | `getOverdueTasks()` | Loc task qua han | Called by dailySync |
 | `getBottlenecks()` | Loc nguoi overloaded | Called by dailySync |
+| `setupTrigger()` | Tao cron 7:30 AM | Chay 1 lan |
+| `testSync()` | Test khong gui Telegram | Manual |
 
 ---
 
@@ -218,14 +166,13 @@ Daily Report se duoc PM su dung de:
 ---
 
 ## RULES
-- **Chi PULL data** — KHONG tu dong thay doi tren Sheet
-- **PUSH chi khi PM approve** — khong tu y day task
-- **KHONG xoa row tren Sheet** — chi append hoac update status
+- **CHI DOC du lieu tu Sheet** — KHONG ghi/push bat ky du lieu nao
+- **Sheet la so huu cua team** — workspace chi lay ve de PM dung
+- **KHONG can thiep vao Sheet** — khong sua, khong them, khong xoa
 - **Report luu local** — `_hq/sync_reports/DAILY_[DATE].md`
 - **Telegram BAT BUOC** — moi report gui qua Telegram cho PM
 - **Sheet la source of truth** cho tien do team (ho cap nhat realtime)
 - **Workspace la source of truth** cho priority va assignment (PM quyet dinh)
-- **Conflict** → flag cho PM, KHONG tu giai quyet
 
 ## EDGE CASES
 - **Sheet khong truy cap duoc**: bao PM, dung CSV backup trong `_resources/`
