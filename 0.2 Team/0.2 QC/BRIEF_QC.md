@@ -16,6 +16,10 @@
 > **Phoi hop**: Lam song song voi BA team. BA collect tu tai lieu, QC collect tu thuc te test.
 >
 > **Tham khao**: Doc file `../TRANG_THAI_DU_LIEU.md` de biet thong tin nao DA CO, thong tin nao CON THIEU, san pham nao can kiem chung.
+>
+> **Ghi nhan thong tin**: QC DUOC dung `/alo` de log thong tin nhan duoc.
+> Khi test, noi chuyen voi dev, hoac phat hien bug/tinh nang moi → dung `/alo` ghi lai.
+> PM se doc va xu ly. QC KHONG tu tao task — chi ghi nhan.
 
 ---
 

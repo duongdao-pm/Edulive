@@ -14,6 +14,10 @@
 > Output can nop: Feature Map, User Flows, HLD (text), Gap Analysis.
 >
 > **Tham khao**: Doc file `../TRANG_THAI_DU_LIEU.md` de biet thong tin nao DA CO, thong tin nao CON THIEU, cau hoi nao CAN TRA LOI.
+>
+> **Ghi nhan thong tin**: BA DUOC dung `/alo` de log thong tin nhan duoc.
+> Khi doc tai lieu hoac noi chuyen voi ai ma PHAT HIEN thong tin moi → dung `/alo` ghi lai.
+> PM se doc va xu ly. BA KHONG tu tao task — chi ghi nhan.
 
 ---
 
